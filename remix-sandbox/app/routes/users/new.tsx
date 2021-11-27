@@ -5,19 +5,16 @@ import { useActionData, useNavigate, useSearchParams, useSubmit } from "remix";
 import { ActionData, UserForm } from "~/domains/user/components/UserForm";
 import { userSchema } from "~/domains/user/schema";
 import { db } from "~/utils/db.server";
+import { validateRequestBySchema } from "~/utils/validate.server";
 
-export async function action({
-  request,
-}: DataFunctionArgs): Promise<ActionData | Response> {
-  const form = await request.formData();
-  const data = Object.fromEntries(form.entries());
-  const result = userSchema.safeParse(data);
-  if (!result.success)
-    return { errors: result.error.issues.map((issue) => issue.message) };
+export async function action({ request }: DataFunctionArgs): Promise<ActionData | Response | null> {
+  const { data, errors } = await validateRequestBySchema(request, userSchema);
+  if (errors) return { errors };
+  if (!data) return null;
 
   try {
     await db.user.create({
-      data: { ...result.data, birthday: new Date(result.data.birthday) },
+      data: { ...data, birthday: new Date(data.birthday) },
     });
     return redirect("/users");
   } catch (err) {

@@ -1,15 +1,12 @@
 import { User } from "@prisma/client";
-import {
-  DataFunctionArgs,
-  LoaderFunction,
-  redirect,
-} from "@remix-run/server-runtime";
+import { DataFunctionArgs, LoaderFunction, redirect } from "@remix-run/server-runtime";
 import dayjs from "dayjs";
 
 import { useActionData, useLoaderData } from "remix";
 import { ActionData, UserForm } from "~/domains/user/components/UserForm";
 import { userSchema } from "~/domains/user/schema";
 import { db } from "~/utils/db.server";
+import { validateRequestBySchema } from "~/utils/validate.server";
 
 export const loader: LoaderFunction = async ({ params }) => {
   const user = await db.user.findUnique({ where: { id: params.id } });
@@ -20,18 +17,15 @@ export const loader: LoaderFunction = async ({ params }) => {
 export async function action({
   params,
   request,
-}: DataFunctionArgs): Promise<ActionData | Response> {
-  const form = await request.formData();
-  const data = Object.fromEntries(form.entries());
-  const result = userSchema.safeParse(data);
-
-  if (!result.success)
-    return { errors: result.error.issues.map((issue) => issue.message) };
+}: DataFunctionArgs): Promise<ActionData | Response | null> {
+  const { data, errors } = await validateRequestBySchema(request, userSchema);
+  if (errors) return { errors };
+  if (!data) return null;
 
   try {
     await db.user.update({
       where: { id: params.id },
-      data: { ...result.data, birthday: new Date(result.data.birthday) },
+      data: { ...data, birthday: new Date(data?.birthday) },
     });
     return redirect(`/users/${params.id}`);
   } catch {
