@@ -27,20 +27,15 @@ export async function action({
 }
 
 export default function UserNew() {
-  const navigate = useNavigate()
-  const { confirm } = useParams()
   const actionData = useActionData()
   const [data, setData] = useState<User | null>(null)
-  const [mode, setMode] = useState<"create" | "confirm">(
-    confirm ? "confirm" : "create"
-  )
+  const [mode, setMode] = useState<"create" | "confirm">("create")
   const submit = useSubmit()
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget)
     setData(Object.fromEntries(formData.entries()) as any)
     setMode("confirm")
-    navigate("?confirm=1")
   }
   const onConfirm = () => {
     if (data === null) return
