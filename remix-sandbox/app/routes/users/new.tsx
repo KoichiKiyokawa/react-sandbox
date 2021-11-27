@@ -1,5 +1,7 @@
+import { User } from "@prisma/client"
 import { DataFunctionArgs, redirect } from "@remix-run/server-runtime"
-import { useActionData } from "remix"
+import { FormEvent, useState } from "react"
+import { useActionData, useParams, useNavigate, useSubmit } from "remix"
 import { ActionData, UserForm } from "~/domains/user/components/UserForm"
 import { userSchema } from "~/domains/user/schema"
 import { db } from "~/utils/db.server"
@@ -25,10 +27,45 @@ export async function action({
 }
 
 export default function UserNew() {
+  const navigate = useNavigate()
+  const { confirm } = useParams()
   const actionData = useActionData()
+  const [data, setData] = useState<User | null>(null)
+  const [mode, setMode] = useState<"create" | "confirm">(
+    confirm ? "confirm" : "create"
+  )
+  const submit = useSubmit()
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const formData = new FormData(e.currentTarget)
+    setData(Object.fromEntries(formData.entries()) as any)
+    setMode("confirm")
+    navigate("?confirm=1")
+  }
+  const onConfirm = () => {
+    if (data === null) return
+
+    const form = new FormData()
+    for (const [key, value] of Object.entries(data)) {
+      form.append(key, String(value))
+    }
+    submit(form, { method: "post" })
+  }
+
   return (
     <main>
-      <UserForm actionData={actionData} />
+      {mode === "create" ? (
+        <UserForm actionData={actionData} onSubmit={onSubmit} />
+      ) : (
+        // 確認画面
+        <div>
+          <p>name: {data?.name}</p>
+          <p>email: {data?.email}</p>
+          <p>birthday: {data?.birthday}</p>
+
+          <button onClick={onConfirm}>confirm</button>
+        </div>
+      )}
     </main>
   )
 }

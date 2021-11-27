@@ -1,5 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { User } from "@prisma/client"
+import { FormEvent } from "react"
 import { useForm } from "react-hook-form"
 import { userSchema } from "../schema"
 
@@ -8,9 +9,11 @@ export type ActionData = { errors: string[] }
 export function UserForm({
   actionData,
   defaultValues,
+  onSubmit = () => {},
 }: {
   actionData?: ActionData
   defaultValues?: User
+  onSubmit?: (e: FormEvent<HTMLFormElement>) => void
 }) {
   const {
     register,
@@ -22,7 +25,7 @@ export function UserForm({
   })
 
   return (
-    <form method="post">
+    <form method="post" onSubmit={onSubmit}>
       <label>
         name: <input {...register("name")} />
       </label>
