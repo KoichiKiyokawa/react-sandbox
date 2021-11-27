@@ -8,7 +8,7 @@
     "dev": "remix dev",
     "postinstall": "remix setup node",
     "start": "remix-serve build",
-    "lint:fix": "eslint --fix app/**/*.{tsx,ts} && prettier --write app/**/*.{tsx,ts}"
+    "lint:fix": "eslint . --fix --ext .ts,.tsx && prettier --write . --ignore-path .gitignore"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.3",

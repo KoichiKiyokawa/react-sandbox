@@ -1,22 +1,23 @@
-import { zodResolver } from "@hookform/resolvers/zod"
-import { User } from "@prisma/client"
-import { FormEvent } from "react"
-import { useForm } from "react-hook-form"
-import { Form } from "remix"
-import { userSchema } from "../schema"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { User } from "@prisma/client";
+import { FormEvent } from "react";
+import { useForm } from "react-hook-form";
+import { Form } from "remix";
+import { userSchema } from "../schema";
 
-export type ActionData = { errors: string[] }
+export type ActionData = { errors: string[] };
 
 export function UserForm({
   actionData,
   defaultValues,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   onSubmit = () => {},
   action,
 }: {
-  action?: string
-  actionData?: ActionData
-  defaultValues?: User
-  onSubmit?: (e: FormEvent<HTMLFormElement>) => void
+  action?: string;
+  actionData?: ActionData;
+  defaultValues?: User;
+  onSubmit?: (e: FormEvent<HTMLFormElement>) => void;
 }) {
   const {
     register,
@@ -25,7 +26,7 @@ export function UserForm({
     defaultValues,
     resolver: zodResolver(userSchema),
     mode: "onTouched",
-  })
+  });
 
   return (
     <Form method="post" onSubmit={onSubmit} action={action}>
@@ -51,5 +52,5 @@ export function UserForm({
         )}
       </ul>
     </Form>
-  )
+  );
 }

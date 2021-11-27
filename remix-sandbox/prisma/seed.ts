@@ -1,7 +1,7 @@
-import { PrismaClient } from "@prisma/client"
-import dayjs from "dayjs"
+import { PrismaClient } from "@prisma/client";
+import dayjs from "dayjs";
 
-const db = new PrismaClient()
+const db = new PrismaClient();
 
 async function seed() {
   await Promise.all(
@@ -14,7 +14,7 @@ async function seed() {
         },
       })
     )
-  )
+  );
 }
 
-seed()
+seed();

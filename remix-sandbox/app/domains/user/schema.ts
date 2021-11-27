@@ -1,11 +1,10 @@
-import { User } from "@prisma/client"
-import dayjs from "dayjs"
-import { z, ZodSchema } from "zod"
-import { Jsonify } from "type-fest"
+import { User } from "@prisma/client";
+import dayjs from "dayjs";
+import { z, ZodSchema } from "zod";
 
 export const userSchema: ZodSchema<
   Omit<User, "id" | "createdAt" | "updatedAt" | "birthday"> & {
-    birthday: string
+    birthday: string;
   }
 > = z.object({
   name: z.string().min(3).max(20),
@@ -15,4 +14,4 @@ export const userSchema: ZodSchema<
     .refine((date) => dayjs(date).isValid(), {
       message: "invalid date format",
     }),
-})
+});

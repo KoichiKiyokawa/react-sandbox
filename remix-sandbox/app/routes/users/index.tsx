@@ -1,21 +1,21 @@
-import { LoaderFunction } from "@remix-run/server-runtime"
-import { Link, useLoaderData, useSearchParams } from "remix"
-import { UserForm } from "~/domains/user/components/UserForm"
-import { db } from "~/utils/db.server"
+import { LoaderFunction } from "@remix-run/server-runtime";
+import { Link, useLoaderData, useSearchParams } from "remix";
+import { UserForm } from "~/domains/user/components/UserForm";
+import { db } from "~/utils/db.server";
 
 type User = {
-  id: number
-  name: string
-}
+  id: number;
+  name: string;
+};
 
 export const loader: LoaderFunction = async () => {
-  const users = await db.user.findMany({ orderBy: { createdAt: "desc" } })
-  return users
-}
+  const users = await db.user.findMany({ orderBy: { createdAt: "desc" } });
+  return users;
+};
 
 export default function Users() {
-  const users = useLoaderData<User[]>()
-  const [searchParams, setSearchParams] = useSearchParams()
+  const users = useLoaderData<User[]>();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   return (
     <main>
@@ -41,5 +41,5 @@ export default function Users() {
         <button onClick={() => setSearchParams({})}>x</button>
       </dialog>
     </main>
-  )
+  );
 }
