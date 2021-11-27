@@ -7,7 +7,8 @@
     "build": "remix build",
     "dev": "remix dev",
     "postinstall": "remix setup node",
-    "start": "remix-serve build"
+    "start": "remix-serve build",
+    "lint:fix": "eslint --fix app/**/*.{tsx,ts} && prettier --write app/**/*.{tsx,ts}"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.3",
@@ -25,7 +26,13 @@
     "@remix-run/dev": "^1.0.6",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "esbuild-register": "^3.2.0",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.27.1",
+    "prettier": "^2.5.0",
     "prisma": "^3.5.0",
     "type-fest": "^2.6.0",
     "typescript": "^4.1.2"
