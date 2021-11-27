@@ -1,16 +1,14 @@
 import { json, LoaderFunction } from "@remix-run/server-runtime"
 import { Link, useLoaderData } from "remix"
+import { db } from "~/utils/db.server"
 
 type User = {
   id: number
   name: string
 }
 
-export const loader: LoaderFunction = () => {
-  const users: User[] = Array.from({ length: 10 }, (_, i) => ({
-    id: i,
-    name: `user${i}`,
-  }))
+export const loader: LoaderFunction = async () => {
+  const users = await db.user.findMany({ orderBy: { createdAt: "desc" } })
   return json(users)
 }
 
@@ -20,9 +18,10 @@ export default function Users() {
   return (
     <main>
       <h1>user index</h1>
+      <Link to="new">new user</Link>
       <ul>
         {users.map((user) => (
-          <li>
+          <li key={user.id}>
             <Link to={`${user.id}`}>{user.name}</Link>
           </li>
         ))}
