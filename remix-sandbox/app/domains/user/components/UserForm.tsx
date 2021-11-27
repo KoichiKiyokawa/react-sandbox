@@ -2,6 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { User } from "@prisma/client"
 import { FormEvent } from "react"
 import { useForm } from "react-hook-form"
+import { Form } from "remix"
 import { userSchema } from "../schema"
 
 export type ActionData = { errors: string[] }
@@ -10,7 +11,9 @@ export function UserForm({
   actionData,
   defaultValues,
   onSubmit = () => {},
+  action,
 }: {
+  action?: string
   actionData?: ActionData
   defaultValues?: User
   onSubmit?: (e: FormEvent<HTMLFormElement>) => void
@@ -25,7 +28,7 @@ export function UserForm({
   })
 
   return (
-    <form method="post" onSubmit={onSubmit}>
+    <Form method="post" onSubmit={onSubmit} action={action}>
       <label>
         name: <input {...register("name")} />
       </label>
@@ -47,6 +50,6 @@ export function UserForm({
           message ? <li key={i}>{message}</li> : null
         )}
       </ul>
-    </form>
+    </Form>
   )
 }
