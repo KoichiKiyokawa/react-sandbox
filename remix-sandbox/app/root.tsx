@@ -93,7 +93,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </header>
       <div className="remix-app__main">
-        <div className="container remix-app__main-content">{children}</div>
+        <main className="container p-2">{children}</main>
       </div>
       <footer className="fixed bottom-0">
         <div className="container remix-app__footer-content">

@@ -1,10 +1,11 @@
 import { Link } from "remix";
+import { Title } from "~/components/ui/Title";
 
 export default function Index() {
   return (
-    <main>
-      <h1>main</h1>
+    <>
+      <Title>index page</Title>
       <Link to="/users">users</Link>
-    </main>
+    </>
   );
 }

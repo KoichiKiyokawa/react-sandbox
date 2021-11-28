@@ -1,44 +1,40 @@
-import { User } from "@prisma/client"
-import {
-  DataFunctionArgs,
-  LoaderFunction,
-  redirect,
-} from "@remix-run/server-runtime"
-import dayjs from "dayjs"
-import { useState } from "react"
-import { Form, Link, useLoaderData, useTransition } from "remix"
-import { UserService } from "~/domains/user/service.server"
-import { db } from "~/utils/db.server"
+import { User } from "@prisma/client";
+import { DataFunctionArgs, LoaderFunction, redirect } from "@remix-run/server-runtime";
+import dayjs from "dayjs";
+import { useState } from "react";
+import { Form, Link, useLoaderData, useTransition } from "remix";
+import { UserService } from "~/domains/user/service.server";
+import { db } from "~/utils/db.server";
 
 export const loader: LoaderFunction = async ({ params }) => {
-  const user = await db.user.findUnique({ where: { id: params.id } })
-  return user
-}
+  const user = await db.user.findUnique({ where: { id: params.id } });
+  return user;
+};
 
 export async function action({ request, params }: DataFunctionArgs) {
   switch (request.method) {
     case "POST": {
-      if (!params.id) throw Error()
+      if (!params.id) throw Error();
 
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      await UserService.incrementLike(params.id)
-      return null
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await UserService.incrementLike(params.id);
+      return null;
     }
     case "DELETE": {
-      await db.user.delete({ where: { id: params.id } })
-      return redirect("/users")
+      await db.user.delete({ where: { id: params.id } });
+      return redirect("/users");
     }
   }
 }
 
 export default function UserShow() {
-  const user = useLoaderData<User>()
+  const user = useLoaderData<User>();
 
-  const transition = useTransition()
-  const [dialogOpen, setDialogOpen] = useState(false)
+  const transition = useTransition();
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   return (
-    <main>
+    <div className="">
       <h1>user show</h1>
       <p>name: {user.name}</p>
       <p>email: {user.email}</p>
@@ -49,10 +45,7 @@ export default function UserShow() {
       <Form method="post">
         <button disabled={transition.state === "submitting"}>Like</button>
       </Form>
-      <button
-        onClick={() => setDialogOpen(true)}
-        disabled={transition.state === "submitting"}
-      >
+      <button onClick={() => setDialogOpen(true)} disabled={transition.state === "submitting"}>
         delete
       </button>
 
@@ -69,6 +62,6 @@ export default function UserShow() {
           </button>
         </Form>
       </dialog>
-    </main>
-  )
+    </div>
+  );
 }

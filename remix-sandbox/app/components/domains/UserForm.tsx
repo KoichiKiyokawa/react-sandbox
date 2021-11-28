@@ -3,7 +3,7 @@ import { User } from "@prisma/client";
 import { FormEvent } from "react";
 import { useForm } from "react-hook-form";
 import { Form } from "remix";
-import { userSchema } from "../schema";
+import { userSchema } from "../../domains/user/schema";
 
 export type ActionData = { errors: string[] };
 
@@ -47,9 +47,7 @@ export function UserForm({
       <button disabled={isSubmitting || !isValid}>submit</button>
 
       <ul>
-        {actionData?.errors.map((message, i) =>
-          message ? <li key={i}>{message}</li> : null
-        )}
+        {actionData?.errors.map((message, i) => (message ? <li key={i}>{message}</li> : null))}
       </ul>
     </Form>
   );

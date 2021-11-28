@@ -1,6 +1,7 @@
 import { LoaderFunction } from "@remix-run/server-runtime";
 import { Link, useLoaderData, useSearchParams } from "remix";
-import { UserForm } from "~/domains/user/components/UserForm";
+import { UserForm } from "~/components/domains/UserForm";
+import { Button } from "~/components/ui/Button";
 import { db } from "~/utils/db.server";
 
 type User = {
@@ -29,14 +30,11 @@ export default function Users() {
         ))}
       </ul>
 
-      <button onClick={() => setSearchParams({ modal: "open" })}>
+      <Button variant="info" onClick={() => setSearchParams({ modal: "open" })}>
         open dialog form
-      </button>
+      </Button>
 
-      <dialog
-        open={searchParams.get("modal") != null}
-        style={{ position: "absolute", top: "300px" }}
-      >
+      <dialog open={searchParams.get("modal") != null} className="absolute top-300px border">
         <UserForm action="/users/new" />
         <button onClick={() => setSearchParams({})}>x</button>
       </dialog>
