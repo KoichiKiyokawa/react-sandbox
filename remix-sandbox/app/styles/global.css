@@ -1,0 +1,9 @@
+input {
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+}

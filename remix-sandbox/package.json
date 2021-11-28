@@ -7,7 +7,7 @@
     "build": "npm run windi:build && remix build",
     "dev": "concurrently \"npm run windi:base -- --dev\" \"remix dev\"",
     "windi:build": "npm run windi:base -- --minify",
-    "windi:base": "windicss 'app/**/*.tsx' --output app/styles/generated.css --preflight --fuzzy",
+    "windi:base": "windicss 'app/**/*.tsx' --output app/styles/generated.css --preflight",
     "postinstall": "remix setup node",
     "start": "remix-serve build",
     "lint:fix": "eslint . --fix --ext .ts,.tsx && prettier --write . --ignore-path .gitignore"

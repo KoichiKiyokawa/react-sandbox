@@ -1,7 +1,6 @@
-import { User } from "@prisma/client";
+import { User, Tag } from "@prisma/client";
 import { DataFunctionArgs, LoaderFunction, redirect } from "@remix-run/server-runtime";
 import dayjs from "dayjs";
-
 import { useActionData, useLoaderData } from "remix";
 import { ActionData, UserForm } from "~/components/domains/user/UserForm";
 import { userSchema } from "~/domains/user/schema";
@@ -9,9 +8,12 @@ import { db } from "~/utils/db.server";
 import { validateRequestBySchema } from "~/utils/validate.server";
 
 export const loader: LoaderFunction = async ({ params }) => {
-  const user = await db.user.findUnique({ where: { id: params.id } });
+  const [user, tags] = await Promise.all([
+    db.user.findUnique({ where: { id: params.id } }),
+    db.tag.findMany(),
+  ]);
   if (!user) return new Response("not found", { status: 404 });
-  return { ...user, birthday: dayjs(user.birthday).format("YYYY-MM-DD") };
+  return { users: { ...user, birthday: dayjs(user.birthday).format("YYYY-MM-DD") }, tags };
 };
 
 export async function action({
@@ -34,13 +36,13 @@ export async function action({
 }
 
 export default function UserEdit() {
-  const user = useLoaderData<User>();
+  const { user, tags } = useLoaderData<{ user: User; tags: Tag[] }>();
   const actionData = useActionData<ActionData | undefined>();
 
   return (
     <main>
       <h1>Edit User</h1>
-      <UserForm defaultValues={user} actionData={actionData} />
+      <UserForm defaultValues={user} actionData={actionData} tags={tags} />
     </main>
   );
 }

@@ -1,3 +1,4 @@
+import { Tag } from "@prisma/client";
 import { LoaderFunction } from "@remix-run/server-runtime";
 import { Link, useLoaderData, useSearchParams } from "remix";
 import { UserForm } from "~/components/domains/user/UserForm";
@@ -10,12 +11,13 @@ type User = {
 };
 
 export const loader: LoaderFunction = async () => {
-  const users = await db.user.findMany({ orderBy: { createdAt: "desc" } });
-  return users;
+  const usersPromise = db.user.findMany({ orderBy: { createdAt: "desc" } });
+  const tagsPromise = db.tag.findMany();
+  return { users: await usersPromise, tags: await tagsPromise };
 };
 
 export default function Users() {
-  const users = useLoaderData<User[]>();
+  const { users, tags } = useLoaderData<{ users: User[]; tags: Tag[] }>();
   const [searchParams, setSearchParams] = useSearchParams();
 
   return (
@@ -35,7 +37,7 @@ export default function Users() {
       </Button>
 
       <dialog open={searchParams.get("modal") != null} className="absolute top-300px border">
-        <UserForm action="/users/new" />
+        <UserForm action="/users/new" tags={tags} />
         <button onClick={() => setSearchParams({})}>x</button>
       </dialog>
     </main>

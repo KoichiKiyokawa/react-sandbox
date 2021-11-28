@@ -1,11 +1,17 @@
 import { User } from "@prisma/client";
-import { DataFunctionArgs, redirect } from "@remix-run/server-runtime";
+import { DataFunctionArgs, LoaderFunction, redirect } from "@remix-run/server-runtime";
 import { FormEvent, useState } from "react";
-import { useActionData, useNavigate, useSearchParams, useSubmit } from "remix";
+import { useActionData, useLoaderData, useNavigate, useSearchParams, useSubmit } from "remix";
 import { ActionData, UserForm } from "~/components/domains/user/UserForm";
 import { userSchema } from "~/domains/user/schema";
 import { db } from "~/utils/db.server";
 import { validateRequestBySchema } from "~/utils/validate.server";
+import { Tag } from "@prisma/client";
+
+export const loader: LoaderFunction = async () => {
+  const tags = await db.tag.findMany();
+  return { tags };
+};
 
 export async function action({ request }: DataFunctionArgs): Promise<ActionData | Response | null> {
   const { data, errors } = await validateRequestBySchema(request, userSchema);
@@ -24,12 +30,13 @@ export async function action({ request }: DataFunctionArgs): Promise<ActionData 
 }
 
 export default function UserNew() {
+  const { tags } = useLoaderData<{ tags: Tag[] }>();
   const actionData = useActionData();
   const [data, setData] = useState<User | null>(null);
   const [searchParams] = useSearchParams();
-  console.log(searchParams.get("confirm"));
   const navigate = useNavigate();
   const submit = useSubmit();
+
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -49,7 +56,7 @@ export default function UserNew() {
   return (
     <main>
       <div style={{ display: searchParams.get("confirm") ? "none" : "block" }}>
-        <UserForm actionData={actionData} onSubmit={onSubmit} />
+        <UserForm actionData={actionData} onSubmit={onSubmit} tags={tags} />
       </div>
       <div style={{ display: searchParams.get("confirm") ? "block" : "none" }}>
         <div>

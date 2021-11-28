@@ -16,6 +16,13 @@ model User {
   email     String
   birthday  DateTime
   likes     Int      @default(0)
+  tags      Tag[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Tag {
+  id    Int    @id @default(autoincrement())
+  name  String
+  users User[]
 }
