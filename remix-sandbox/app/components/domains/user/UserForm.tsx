@@ -3,7 +3,7 @@ import { User } from "@prisma/client";
 import { FormEvent } from "react";
 import { useForm } from "react-hook-form";
 import { Form } from "remix";
-import { userSchema } from "../../domains/user/schema";
+import { userSchema } from "../../../domains/user/schema";
 
 export type ActionData = { errors: string[] };
 

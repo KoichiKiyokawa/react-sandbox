@@ -3,7 +3,7 @@ import { DataFunctionArgs, LoaderFunction, redirect } from "@remix-run/server-ru
 import dayjs from "dayjs";
 
 import { useActionData, useLoaderData } from "remix";
-import { ActionData, UserForm } from "~/components/domains/UserForm";
+import { ActionData, UserForm } from "~/components/domains/user/UserForm";
 import { userSchema } from "~/domains/user/schema";
 import { db } from "~/utils/db.server";
 import { validateRequestBySchema } from "~/utils/validate.server";

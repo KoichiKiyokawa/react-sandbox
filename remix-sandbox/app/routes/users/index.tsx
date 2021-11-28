@@ -1,6 +1,6 @@
 import { LoaderFunction } from "@remix-run/server-runtime";
 import { Link, useLoaderData, useSearchParams } from "remix";
-import { UserForm } from "~/components/domains/UserForm";
+import { UserForm } from "~/components/domains/user/UserForm";
 import { Button } from "~/components/ui/Button";
 import { db } from "~/utils/db.server";
 
