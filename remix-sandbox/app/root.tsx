@@ -1,12 +1,8 @@
 import { Link, Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useCatch } from "remix";
 import { LinksFunction } from "@remix-run/server-runtime";
-import windicssStyle from "./styles/generated.css";
-import globalStyle from "./styles/global.css";
+import generatedStyle from "./styles/generated.css";
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: windicssStyle },
-  { rel: "stylesheet", href: globalStyle },
-];
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: generatedStyle }];
 
 // https://remix.run/api/conventions#default-export
 // https://remix.run/api/conventions#route-filenames

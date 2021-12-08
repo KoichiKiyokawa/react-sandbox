@@ -23,11 +23,13 @@ export default function Users() {
   return (
     <main>
       <h1>user index</h1>
-      <Link to="new">new user</Link>
+      <Button href="new">new user</Button>
       <ul>
         {users.map((user) => (
           <li key={user.id}>
-            <Link to={`${user.id}`}>{user.name}</Link>
+            <Link to={`${user.id}`} className="text-link">
+              {user.name}
+            </Link>
           </li>
         ))}
       </ul>

@@ -4,10 +4,10 @@
   "description": "",
   "license": "",
   "scripts": {
-    "build": "npm run windi:build && remix build",
-    "dev": "concurrently \"npm run windi:base -- --dev\" \"remix dev\"",
-    "windi:build": "npm run windi:base -- --minify",
-    "windi:base": "windicss 'app/**/*.tsx' --output app/styles/generated.css --preflight",
+    "build": "npm run build:css && remix build",
+    "build:css": "postcss 'app/styles/*.postcss' -o ./app/styles/generated.css",
+    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
+    "dev:css": "npm run build:css -- --watch",
     "postinstall": "remix setup node",
     "start": "remix-serve build",
     "lint:fix": "eslint . --fix --ext .ts,.tsx && prettier --write . --ignore-path .gitignore"
@@ -31,17 +31,20 @@
     "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
+    "autoprefixer": "^10.4.0",
     "concurrently": "^6.4.0",
     "esbuild-register": "^3.2.0",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.27.1",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.0.2",
     "prettier": "^2.5.0",
     "prisma": "^3.5.0",
+    "tailwindcss": "^2.2.19",
     "type-fest": "^2.6.0",
-    "typescript": "^4.1.2",
-    "windicss": "^3.2.1"
+    "typescript": "^4.1.2"
   },
   "engines": {
     "node": ">=14"
