@@ -1,16 +1,15 @@
 /* eslint-disable no-undef */
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const defaultTheme = require("tailwindcss/defaultTheme");
+/* eslint-disable @typescript-eslint/no-var-requires */
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
-  purge: ["./app/**/*.{ts,tsx}"],
+  content: ["./app/**/*.{ts,tsx}"],
   darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         link: {
-          DEFAULT: defaultTheme.colors.blue["500"],
+          DEFAULT: colors.blue["500"],
         },
       },
     },
