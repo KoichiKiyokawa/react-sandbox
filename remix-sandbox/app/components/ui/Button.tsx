@@ -11,13 +11,13 @@ type Props = {
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const variantToColor: Record<Variant, string> = {
-  primary: "bg-blue-400",
+  primary: "bg-primary",
   info: "bg-gray-400",
 };
 
 export const Button = ({ variant = "primary", href, children, className }: Props) => {
   const combinedClass = classNames(
-    `px-4 py-2 rounded text-white`,
+    `px-6 py-3 rounded text-white`,
     className,
     variantToColor[variant]
   );

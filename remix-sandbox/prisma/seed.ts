@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import dayjs from "dayjs";
+import bcrypt from "bcryptjs";
 
 const db = new PrismaClient();
 
@@ -10,6 +11,7 @@ async function seed() {
         data: {
           name: `User ${i}`,
           email: `user${i}@example.com`,
+          passwordHash: bcrypt.hashSync("password"),
           birthday: dayjs().subtract(i, "day").toDate(),
         },
       })
