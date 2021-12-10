@@ -1,4 +1,12 @@
 import { Link } from "remix";
+import { Article } from "@prisma/client";
+import { db } from "~/utils/db.server";
+
+type LoaderData = { articles: Article[] };
+
+export const loader = async (): Promise<LoaderData> => {
+  return { articles: await db.article.findMany() };
+};
 
 export default function Index() {
   return (

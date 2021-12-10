@@ -11,19 +11,30 @@ datasource db {
 }
 
 model User {
-  id           String   @id @default(cuid())
+  id           String    @id @default(cuid())
   name         String
-  email        String   @unique
+  email        String    @unique
   passwordHash String
   birthday     DateTime
-  likes        Int      @default(0)
-  tags         Tag[]
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  Article      Article[]
+}
+
+model Article {
+  slug      String   @id @default(cuid())
+  title     String
+  body      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  String
+  tags      Tag[]
 }
 
 model Tag {
-  id    Int    @id @default(autoincrement())
-  name  String
-  users User[]
+  id          Int      @id @default(autoincrement())
+  name        String
+  Article     Article? @relation(fields: [articleSlug], references: [slug])
+  articleSlug String?
 }
