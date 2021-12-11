@@ -33,7 +33,7 @@ export const Header = ({ isLoggedIn }: Props) => {
         )}
         {isLoggedIn && (
           <li>
-            <Form method="post" action="/">
+            <Form method="post" action="/logout">
               <input type="hidden" name="type" value="logout" />
               <button>Sign out</button>
             </Form>

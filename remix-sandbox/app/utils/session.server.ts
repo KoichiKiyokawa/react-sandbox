@@ -17,6 +17,15 @@ export async function login({ email, password }: LoginForm) {
   return user;
 }
 
+export async function logout(request: Request) {
+  const session = await storage.getSession(request.headers.get("Cookie"));
+  return redirect("/login", {
+    headers: {
+      "Set-Cookie": await storage.destroySession(session),
+    },
+  });
+}
+
 const sessionSecret = process.env.SESSION_SECRET || "session-secret";
 if (!sessionSecret) {
   throw new Error("SESSION_SECRET must be set");
