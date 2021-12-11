@@ -58,5 +58,9 @@
   "sideEffects": false,
   "prisma": {
     "seed": "node --require esbuild-register prisma/seed.ts"
+  },
+  "volta": {
+    "node": "16.13.1",
+    "npm": "8.3.0"
   }
 }
