@@ -10,7 +10,8 @@
     "dev:css": "npm run build:css -- --watch",
     "postinstall": "remix setup node",
     "start": "remix-serve build",
-    "lint:fix": "eslint . --fix --ext .ts,.tsx && prettier --write . --ignore-path .gitignore"
+    "lint:fix": "eslint . --fix --ext .ts,.tsx && prettier --write . --ignore-path .gitignore",
+    "check:all": "npm run lint:fix && npm exec tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.4",
