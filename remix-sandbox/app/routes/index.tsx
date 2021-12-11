@@ -9,6 +9,7 @@ export const action: ActionFunction = async ({ request }) => {
   const currentUserId = await getCurrentUserId(request);
 
   switch (form.get("type")) {
+    // いいねのつけ外しをおこなう
     case "like": {
       if (!currentUserId) return redirect("/login");
 
@@ -16,7 +17,14 @@ export const action: ActionFunction = async ({ request }) => {
       if (!articleSlug)
         return new Response("articleSlug is needed", { status: StatusCode.BAD_REQUEST });
 
-      await db.like.create({ data: { articleSlug, userId: currentUserId } });
+      const like = await db.like.findFirst({
+        where: { articleSlug, userId: currentUserId },
+      });
+      if (like) {
+        await db.like.delete({ where: { id: like.id } });
+      } else {
+        await db.like.create({ data: { articleSlug, userId: currentUserId } });
+      }
       return redirect(form.get("redirectTo") as string);
     }
   }

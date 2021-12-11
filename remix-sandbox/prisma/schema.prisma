@@ -52,5 +52,5 @@ model Like {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  @@unique([userId, articleSlug])
+  @@unique([userId, articleSlug], name: "unique_like")
 }
