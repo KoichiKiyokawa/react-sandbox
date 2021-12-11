@@ -9,7 +9,7 @@ import {
   useCatch,
   useLoaderData,
 } from "remix";
-import { Header } from "./components/ui/Header";
+import { Header } from "./domains/ui/Header";
 import generatedStyle from "./styles/generated.css";
 import { isLoggedIn } from "./utils/session.server";
 

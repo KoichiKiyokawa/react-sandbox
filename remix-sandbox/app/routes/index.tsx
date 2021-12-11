@@ -5,7 +5,7 @@ import { db } from "~/utils/db.server";
 type LoaderData = { articles: Article[] };
 
 export const loader = async (): Promise<LoaderData> => {
-  return { articles: await db.article.findMany() };
+  return { articles: await db.article.findMany({ include: { tags: true } }) };
 };
 
 export default function Index() {

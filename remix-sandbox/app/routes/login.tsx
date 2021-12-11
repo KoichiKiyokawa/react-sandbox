@@ -1,6 +1,6 @@
 import { ActionFunction, Form, Link } from "remix";
-import { Button } from "~/components/ui/Button";
-import { TextInput } from "~/components/ui/TextInput";
+import { Button } from "~/domains/ui/Button";
+import { TextInput } from "~/domains/ui/TextInput";
 import { loginSchema } from "~/domains/auth/schema";
 import { createUserSession, login } from "~/utils/session.server";
 import { validateRequestBySchema } from "~/utils/validate.server";
