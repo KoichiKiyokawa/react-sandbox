@@ -1,6 +1,6 @@
 import StatusCode from "http-status-codes";
 import { ActionFunction, Link, LoaderFunction, redirect, useLoaderData } from "remix";
-import { ArticleCard, ArticleWithAuthorAndTag } from "~/domains/article/ArticleCard";
+import { ArticleCard, ArticleWithAuthorAndTag } from "~/domains/article/components/ArticleCard";
 import { db } from "~/utils/db.server";
 import { getCurrentUserId } from "~/utils/session.server";
 
