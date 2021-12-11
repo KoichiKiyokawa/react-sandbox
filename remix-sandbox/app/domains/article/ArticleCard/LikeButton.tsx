@@ -22,10 +22,8 @@ export const LikeButton = ({
       <button
         {...props}
         className={classNames(
-          "flex items-center space-x-2",
-          hasLiked
-            ? "bg-primary text-white"
-            : "bg-white text-primary px-2 py-1 border border-primary rounded",
+          "flex items-center space-x-2 px-2 py-1 rounded border border-primary",
+          hasLiked ? "bg-primary text-white" : "bg-white text-primary",
           props.className
         )}
       >

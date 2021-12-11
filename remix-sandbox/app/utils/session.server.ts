@@ -47,7 +47,13 @@ export async function createUserSession(userId: string, redirectTo: string) {
   });
 }
 
-export async function getCurrentUserId(): Promise<string | null> {
-  const session = await storage.getSession();
-  return session.get("userId");
+export function getUserSession(request: Request) {
+  return storage.getSession(request.headers.get("Cookie"));
+}
+
+export async function getCurrentUserId(request: Request): Promise<string | null> {
+  const session = await getUserSession(request);
+  const userId = session.get("userId");
+  if (!userId || typeof userId !== "string") return null;
+  return userId;
 }
