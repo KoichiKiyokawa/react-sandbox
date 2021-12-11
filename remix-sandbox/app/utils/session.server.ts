@@ -47,8 +47,7 @@ export async function createUserSession(userId: string, redirectTo: string) {
   });
 }
 
-export async function isLoggedIn(): Promise<boolean> {
+export async function getCurrentUserId(): Promise<string | null> {
   const session = await storage.getSession();
-  console.log(session);
-  return !!session.get("userId");
+  return session.get("userId");
 }

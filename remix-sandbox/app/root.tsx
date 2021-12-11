@@ -11,14 +11,8 @@ import {
 } from "remix";
 import { Header } from "./domains/ui/Header";
 import generatedStyle from "./styles/generated.css";
-import { isLoggedIn } from "./utils/session.server";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: generatedStyle }];
-
-type LoaderData = { isLoggedIn: boolean };
-export const loader = async (): Promise<LoaderData> => {
-  return { isLoggedIn: await isLoggedIn() };
-};
 
 // https://remix.run/api/conventions#default-export
 // https://remix.run/api/conventions#route-filenames
@@ -99,10 +93,9 @@ function Document({ children, title }: { children: React.ReactNode; title?: stri
 }
 
 function Layout({ children }: { children: React.ReactNode }) {
-  const { isLoggedIn } = useLoaderData<LoaderData>();
   return (
     <div className="remix-app">
-      <Header isLoggedIn={isLoggedIn} />
+      <Header isLoggedIn={true} />
       <div className="remix-app__main">
         <main>{children}</main>
       </div>
