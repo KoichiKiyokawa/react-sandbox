@@ -1,4 +1,4 @@
-import { LinksFunction } from "@remix-run/server-runtime";
+import { LinksFunction, LoaderFunction } from "@remix-run/server-runtime";
 import {
   Links,
   LiveReload,
@@ -11,8 +11,16 @@ import {
 } from "remix";
 import { Header } from "./domains/ui/Header";
 import generatedStyle from "./styles/generated.css";
+import { getCurrentUserId } from "./utils/session.server";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: generatedStyle }];
+
+type LoaderData = { isLoggedIn: boolean };
+
+export const loader: LoaderFunction = async ({ request }): Promise<LoaderData> => {
+  const currentUserId = await getCurrentUserId(request);
+  return { isLoggedIn: !!currentUserId };
+};
 
 // https://remix.run/api/conventions#default-export
 // https://remix.run/api/conventions#route-filenames
@@ -93,9 +101,10 @@ function Document({ children, title }: { children: React.ReactNode; title?: stri
 }
 
 function Layout({ children }: { children: React.ReactNode }) {
+  const { isLoggedIn } = useLoaderData<LoaderData>();
   return (
     <div className="remix-app">
-      <Header isLoggedIn={true} />
+      <Header isLoggedIn={isLoggedIn} />
       <div className="remix-app__main">
         <main>{children}</main>
       </div>

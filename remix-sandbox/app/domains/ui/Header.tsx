@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "remix";
+import { Form, Link, NavLink, useLocation } from "remix";
 
 type Props = {
   isLoggedIn: boolean;
@@ -13,25 +13,31 @@ export const Header = ({ isLoggedIn }: Props) => {
         conduit
       </Link>
 
-      <ul className="flex space-x-4">
+      <ul className="flex space-x-4 text-[#0000004D]">
         {[
           { path: "/", name: "Home" },
           !isLoggedIn && { path: "/login", name: "Sign in" },
-          { path: "/register", name: "Sign up" },
+          !isLoggedIn && { path: "/register", name: "Sign up" },
         ].map(
           (item, i) =>
             item && (
               <li key={i}>
                 <NavLink
                   to={item.path}
-                  className={
-                    location.pathname === item.path ? "text-[#000000CC]" : "text-[#0000004D]"
-                  }
+                  className={location.pathname === item.path ? "text-[#000000CC]" : ""}
                 >
                   {item.name}
                 </NavLink>
               </li>
             )
+        )}
+        {isLoggedIn && (
+          <li>
+            <Form method="post" action="/">
+              <input type="hidden" name="type" value="logout" />
+              <button>Sign out</button>
+            </Form>
+          </li>
         )}
       </ul>
     </nav>
