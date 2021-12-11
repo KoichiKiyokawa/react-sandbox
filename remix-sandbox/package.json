@@ -11,7 +11,8 @@
     "postinstall": "remix setup node && prisma generate",
     "start": "remix-serve build",
     "lint:fix": "eslint . --fix --ext .ts,.tsx && prettier --write . --ignore-path .gitignore",
-    "check:all": "npm run lint:fix && tsc --noEmit"
+    "format:fix": "prettier --write . --ignore-path .gitignore",
+    "check:all": "npm run lint:fix && npm run format:fix && tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.4",
