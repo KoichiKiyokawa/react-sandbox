@@ -1,20 +1,24 @@
-import { ActionFunction, Form, Link } from "remix";
+import { ActionFunction, Form, json, Link, useActionData } from "remix";
+import { loginSchema } from "~/domains/auth/schema";
 import { Button } from "~/domains/ui/Button";
 import { TextInput } from "~/domains/ui/TextInput";
-import { loginSchema } from "~/domains/auth/schema";
 import { createUserSession, login } from "~/utils/session.server";
 import { validateRequestBySchema } from "~/utils/validate.server";
 
+type ActionData = { errorMessage: string };
+
 export const action: ActionFunction = async ({ request }) => {
   const { data } = await validateRequestBySchema(request, loginSchema);
-  if (!data) throw new Response("Unauthorized", { status: 401 });
+  if (!data) return json({ errorMessage: "username or password is wrong." }, { status: 401 });
   const user = await login(data);
-  if (!user) throw new Response("Unauthorized", { status: 401 });
+  if (!user) return json({ errorMessage: "username or password is wrong." }, { status: 401 });
 
   return createUserSession(user.id, "/");
 };
 
 const Login = () => {
+  const actionData = useActionData<ActionData>();
+
   return (
     <div className="container mx-auto">
       <div className="text-center">
@@ -25,7 +29,12 @@ const Login = () => {
       </div>
 
       <Form method="post" className="max-w-md mx-auto mt-8">
-        <TextInput type="email" name="email" placeholder="Email" className="block w-full" />
+        {actionData?.errorMessage && (
+          <p className="border border-red-500 bg-red-400 text-white p-2 rounded">
+            {actionData?.errorMessage}
+          </p>
+        )}
+        <TextInput type="email" name="email" placeholder="Email" className="block w-full mt-4" />
         <TextInput
           type="password"
           name="password"
