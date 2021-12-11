@@ -1,12 +1,12 @@
 import StatusCode from "http-status-codes";
 import { ActionFunction, Link, LoaderFunction, redirect, useLoaderData } from "remix";
 import { ArticleCard, ArticleWithAuthorAndTag } from "~/domains/article/components/ArticleCard";
+import { AuthService } from "~/domains/auth/service.server";
 import { db } from "~/utils/db.server";
-import { getCurrentUserId } from "~/utils/session.server";
 
 export const action: ActionFunction = async ({ request }) => {
   const form = await request.formData();
-  const currentUserId = await getCurrentUserId(request);
+  const currentUserId = await AuthService.getCurrentUserId(request);
 
   switch (form.get("type")) {
     // いいねのつけ外しをおこなう
@@ -33,7 +33,7 @@ export const action: ActionFunction = async ({ request }) => {
 type LoaderData = { articles: ArticleWithAuthorAndTag[] };
 
 export const loader: LoaderFunction = async ({ request }): Promise<LoaderData> => {
-  const currentUserId = await getCurrentUserId(request);
+  const currentUserId = await AuthService.getCurrentUserId(request);
   const data = await db.article.findMany({
     include: {
       author: { select: { id: true, name: true } },

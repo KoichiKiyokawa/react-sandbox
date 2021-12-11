@@ -1,8 +1,8 @@
 import { ActionFunction, redirect } from "remix";
-import { getCurrentUserId, logout } from "~/utils/session.server";
+import { AuthService } from "~/domains/auth/service.server";
 
 export const action: ActionFunction = async ({ request }) => {
-  const currentUserId = await getCurrentUserId(request);
+  const currentUserId = await AuthService.getCurrentUserId(request);
   if (!currentUserId) return redirect("/");
-  return await logout(request);
+  return await AuthService.logout(request);
 };

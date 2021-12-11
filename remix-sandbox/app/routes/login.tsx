@@ -1,8 +1,8 @@
 import { ActionFunction, Form, json, Link, useActionData } from "remix";
 import { loginSchema } from "~/domains/auth/schema";
+import { AuthService } from "~/domains/auth/service.server";
 import { Button } from "~/domains/ui/Button";
 import { TextInput } from "~/domains/ui/TextInput";
-import { createUserSession, login } from "~/utils/session.server";
 import { validateRequestBySchema } from "~/utils/validate.server";
 
 type ActionData = { errorMessage: string };
@@ -10,10 +10,10 @@ type ActionData = { errorMessage: string };
 export const action: ActionFunction = async ({ request }) => {
   const { data } = await validateRequestBySchema(request, loginSchema);
   if (!data) return json({ errorMessage: "username or password is wrong." }, { status: 401 });
-  const user = await login(data);
+  const user = await AuthService.login(data);
   if (!user) return json({ errorMessage: "username or password is wrong." }, { status: 401 });
 
-  return createUserSession(user.id, "/");
+  return AuthService.createUserSession(user.id, "/");
 };
 
 const Login = () => {

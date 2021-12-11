@@ -9,16 +9,16 @@ import {
   useCatch,
   useLoaderData,
 } from "remix";
+import { AuthService } from "./domains/auth/service.server";
 import { Header } from "./domains/ui/Header";
 import generatedStyle from "./styles/generated.css";
-import { getCurrentUserId } from "./utils/session.server";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: generatedStyle }];
 
 type LoaderData = { isLoggedIn: boolean };
 
 export const loader: LoaderFunction = async ({ request }): Promise<LoaderData> => {
-  const currentUserId = await getCurrentUserId(request);
+  const currentUserId = await AuthService.getCurrentUserId(request);
   return { isLoggedIn: !!currentUserId };
 };
 
