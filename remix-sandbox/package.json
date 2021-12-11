@@ -12,7 +12,7 @@
     "start": "remix-serve build",
     "lint:fix": "eslint . --fix --ext .ts,.tsx && prettier --write . --ignore-path .gitignore",
     "format:fix": "prettier --write . --ignore-path .gitignore",
-    "check:all": "npm run lint:fix && npm run format:fix && tsc --noEmit"
+    "check:all": "npm run lint:fix && npm run format:fix && prisma format && tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.4",
