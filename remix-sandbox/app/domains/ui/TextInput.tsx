@@ -5,7 +5,7 @@ export const TextInput = (props: React.InputHTMLAttributes<HTMLInputElement>) =>
     <input
       type="text"
       {...props}
-      className={`px-6 py-3 text-[1.25rem] rounded ${props.className}`}
+      className={`px-6 py-3 text-[1.25rem] border border-gray-400 rounded ${props.className}`}
     />
   );
 };
