@@ -39,7 +39,7 @@ export class AuthService {
   }
 
   static async logout(request: Request) {
-    const session = await storage.getSession(request.headers.get("Cookie"));
+    const session = await this.getUserSession(request);
     return redirect("/login", {
       headers: {
         "Set-Cookie": await storage.destroySession(session),
@@ -57,14 +57,14 @@ export class AuthService {
     });
   }
 
-  static getUserSession(request: Request) {
-    return storage.getSession(request.headers.get("Cookie"));
-  }
-
   static async getCurrentUserId(request: Request): Promise<string | null> {
     const session = await this.getUserSession(request);
     const userId = session.get("userId");
     if (!userId || typeof userId !== "string") return null;
     return userId;
+  }
+
+  private static getUserSession(request: Request) {
+    return storage.getSession(request.headers.get("Cookie"));
   }
 }
