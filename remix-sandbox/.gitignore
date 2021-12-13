@@ -6,3 +6,5 @@ node_modules
 .env
 *.db
 app/styles/*.css
+
+app/env.ts
