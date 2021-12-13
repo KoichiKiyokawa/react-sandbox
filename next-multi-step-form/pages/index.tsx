@@ -1,32 +1,41 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 import { Confirmation } from "../components/Confirmation"
-import { Step1 } from "../components/Step1"
-import { Step2 } from "../components/Step2"
+import Step1 from "../components/Step1"
+import Step2 from "../components/Step2"
 import { useRouter } from "next/router"
 import { Data } from "../components/type"
+
+const stepComponents = [Step1, Step2, Confirmation]
 
 export default function Home() {
   const router = useRouter()
   const [data, setData] = useState({} as Data)
   const [currentStepIndex, setCurrentStepIndex] = useState(0)
-  const stepComponents = [Step1, Step2, Confirmation]
-  const CurrentStepComponent = stepComponents[currentStepIndex]
+  const CurrentStepComponent = useMemo(
+    () => stepComponents[currentStepIndex],
+    [currentStepIndex]
+  )
 
   useEffect(() => {
-    setCurrentStepIndex(Number(router.query.step ?? 0))
-  }, [router.query.step])
+    const stepQuery = Number(router.query.step ?? 0)
+    if (Object.keys(data).length === 0 && stepQuery > 0) {
+      router.push("?step=0")
+    } else {
+      setCurrentStepIndex(stepQuery)
+    }
+  }, [data, router])
 
-  const goBack = () => {
+  const goBack = useCallback(() => {
     setCurrentStepIndex(currentStepIndex - 1)
     router.push("?step=" + (currentStepIndex - 1))
-  }
+  }, [currentStepIndex, router])
 
-  const onNext = () => {
+  const onNext = useCallback(() => {
     if (currentStepIndex + 1 <= stepComponents.length - 1) {
       setCurrentStepIndex(currentStepIndex + 1)
       router.push("?step=" + (currentStepIndex + 1))
     }
-  }
+  }, [currentStepIndex, router])
 
   return (
     <>

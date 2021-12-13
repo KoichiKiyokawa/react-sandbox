@@ -1,22 +1,14 @@
 import React from "react"
 import { StepComponentProps } from "./type"
 
-export const Step1 = ({ data, setData, onNext }: StepComponentProps) => {
-  const [form, setForm] = React.useState(data)
+const Step1 = ({ data, setData, onNext }: StepComponentProps) => {
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
+    setData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     onNext()
   }
-
-  React.useEffect(() => {
-    return () => {
-      console.log(form)
-      setData((prev) => ({ ...prev, ...form }))
-    }
-  }, [form, setData])
 
   return (
     <form onSubmit={onSubmit}>
@@ -32,3 +24,5 @@ export const Step1 = ({ data, setData, onNext }: StepComponentProps) => {
     </form>
   )
 }
+
+export default React.memo(Step1)
