@@ -15,7 +15,14 @@ const variantToColor: Record<Variant, string> = {
   info: "bg-gray-400",
 };
 
-export const Button = ({ variant = "primary", href, children, className }: Props) => {
+export const Button = ({
+  variant = "primary",
+  href,
+  children,
+  className,
+  type,
+  onClick,
+}: Props) => {
   const combinedClass = classNames(
     `px-6 py-3 rounded text-white`,
     className,
@@ -27,6 +34,8 @@ export const Button = ({ variant = "primary", href, children, className }: Props
       {children}
     </Link>
   ) : (
-    <button className={combinedClass}>{children}</button>
+    <button type={type} className={combinedClass} onClick={onClick}>
+      {children}
+    </button>
   );
 };
