@@ -5,7 +5,9 @@ import { Step1 } from "~/domains/multiple_form/components/steps/Step1";
 import { Step2 } from "~/domains/multiple_form/components/steps/Step2";
 import { MultipleForm } from "~/domains/multiple_form/model";
 
-export const action: ActionFunction = () => {};
+export const action: ActionFunction = () => {
+  // TODO
+};
 
 const MultipleForm = () => {
   const stepComponents = [Step1, Step2, Confirm];
