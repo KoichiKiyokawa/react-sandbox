@@ -26,9 +26,9 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
-          # cache: npm
-          # cache-dependency-path: remix-sandbox/package-lock.json
           node-version: ${{ matrix.node-version }}
+          cache: npm
+          cache-dependency-path: remix-sandbox/package-lock.json
       - run: npm ci
       - run: cp app/env.sample.ts app/env.ts
       - run: npm run check:all
