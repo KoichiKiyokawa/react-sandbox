@@ -10,9 +10,10 @@
     "dev:css": "npm run build:css -- --watch",
     "postinstall": "remix setup node && prisma generate",
     "start": "remix-serve build",
-    "lint:fix": "eslint . --fix --ext .ts,.tsx && prettier --write . --ignore-path .gitignore",
-    "format:fix": "prettier --write . --ignore-path .gitignore",
-    "check:all": "npm run lint:fix && npm run format:fix && prisma format && tsc --noEmit"
+    "lint": "eslint . --ext .ts,.tsx",
+    "fmt": "prettier --write . --ignore-path .gitignore",
+    "fix:all": "npm run lint --fix && npm run fmt && prisma format && tsc --noEmit",
+    "check:all": "npm run lint && npm run fmt -- --check && tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.4",
