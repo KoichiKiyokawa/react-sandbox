@@ -9,7 +9,7 @@ export const action: ActionFunction = () => {
   // TODO
 };
 
-const MultipleForm = () => {
+const MultipleFormIndex = () => {
   const stepComponents = [Step1, Step2, Confirm];
   const [searchParams, setSearchParams] = useSearchParams();
   const currentStepIndex = Number(searchParams.get("step"));
@@ -39,4 +39,4 @@ const MultipleForm = () => {
   );
 };
 
-export default MultipleForm;
+export default MultipleFormIndex;
