@@ -1,6 +1,6 @@
+import { DeleteIcon } from "@chakra-ui/icons"
 import {
   Button,
-  Container,
   FormControl,
   FormLabel,
   IconButton,
@@ -15,8 +15,8 @@ import { NextPage } from "next"
 import { handle, json, redirect } from "next-runtime"
 import { Form, useFormSubmit } from "next-runtime/form"
 import Link from "next/link"
-import { db } from "../utils/db.server"
-import { DeleteIcon } from "@chakra-ui/icons"
+import { MainLayout } from "src/components/layouts/MainLayout"
+import { db } from "src/utils/db.server"
 
 type Props = {
   posts: Post[]
@@ -24,14 +24,17 @@ type Props = {
 
 export const getServerSideProps = handle<Props, {}, Post>({
   async get() {
+    console.log("/#get")
     const posts = await db.post.findMany()
     return json({ posts })
   },
   async post({ req: { body } }) {
+    console.log("/#post")
     await db.post.create({ data: body })
     return redirect("/")
   },
   async delete({ req: { body } }) {
+    console.log("/#delete")
     await db.post.delete({ where: { id: body.id } })
     return redirect("/")
   },
@@ -44,7 +47,7 @@ const Home: NextPage<Props> = ({ posts }) => {
   }
 
   return (
-    <Container>
+    <MainLayout>
       <Form method="post" name="postForm" onSuccess={onSuccess}>
         <VStack align="flex-start" spacing={4}>
           <FormControl>
@@ -66,7 +69,7 @@ const Home: NextPage<Props> = ({ posts }) => {
       <UnorderedList>
         {posts.map((post) => (
           <ListItem key={post.id}>
-            <Link href={`/${post.id}`}>{post.title}</Link>
+            <Link href={`/posts/${post.id}`}>{post.title}</Link>
             <Form method="delete">
               <input type="hidden" name="id" value={post.id} />
               <IconButton
@@ -78,7 +81,7 @@ const Home: NextPage<Props> = ({ posts }) => {
           </ListItem>
         ))}
       </UnorderedList>
-    </Container>
+    </MainLayout>
   )
 }
 
