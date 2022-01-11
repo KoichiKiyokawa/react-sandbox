@@ -11,16 +11,24 @@
     "@chakra-ui/react": "^1.7.4",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@prisma/client": "^3.7.0",
     "framer-motion": "^5",
     "next": "12.0.7",
+    "next-runtime": "^2.3.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@types/node": "17.0.8",
     "@types/react": "17.0.38",
+    "esbuild": "^0.14.11",
+    "esbuild-register": "^3.3.1",
     "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
+    "prisma": "^3.7.0",
     "typescript": "4.5.4"
+  },
+  "prisma": {
+    "seed": "node -r esbuild-register prisma/seed.ts"
   }
 }
