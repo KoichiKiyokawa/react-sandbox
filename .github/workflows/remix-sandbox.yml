@@ -23,14 +23,15 @@ jobs:
           - 16.x
     steps:
       - uses: actions/checkout@v2
+      - run: corepack enable
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: npm
-          cache-dependency-path: remix-sandbox/package-lock.json
-      - run: npm ci
+          cache: pnpm
+          cache-dependency-path: remix-sandbox/pnpm-lock.yaml
+      - run: pnpm i
       - run: cp app/env.sample.ts app/env.ts
-      - run: npm run check:all
-      - run: npm run build
+      - run: pnpm run check:all
+      - run: pnpm run build
       # - run: npm test

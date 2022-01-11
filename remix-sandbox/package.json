@@ -4,16 +4,16 @@
   "description": "",
   "license": "",
   "scripts": {
-    "build": "rimraf build public/build && yarn run build:css && remix build",
+    "build": "rimraf build public/build && pnpm run build:css && remix build",
     "build:css": "postcss 'app/styles/*.postcss' -o ./app/styles/generated.css",
-    "dev": "concurrently \"yarn run dev:css\" \"remix dev\"",
-    "dev:css": "yarn run build:css -- --watch",
+    "dev": "concurrently \"pnpm run dev:css\" \"remix dev\"",
+    "dev:css": "pnpm run build:css -- --watch",
     "postinstall": "remix setup node && prisma generate",
     "start": "remix-serve build",
     "lint": "eslint . --ext .ts,.tsx",
     "fmt": "prettier --write . --ignore-path .gitignore",
-    "fix:all": "yarn run lint --fix && yarn run fmt && prisma format && tsc --noEmit",
-    "check:all": "yarn run lint && yarn run fmt -- --check && tsc --noEmit"
+    "fix:all": "pnpm run lint --fix && pnpm run fmt && prisma format && tsc --noEmit",
+    "check:all": "pnpm run lint && pnpm run fmt -- --check && tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.5",
@@ -60,7 +60,7 @@
     "seed": "node --require esbuild-register prisma/seed.ts"
   },
   "volta": {
-    "node": "16.13.1",
-    "yarn": "1.22.17"
-  }
+    "node": "16.13.1"
+  },
+  "packageManager": "pnpm@6.25.1"
 }
