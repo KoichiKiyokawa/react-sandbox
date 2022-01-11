@@ -1,4 +1,8 @@
-import { db } from "../src/utils/db.server"
+import { db } from "src/utils/db.server"
+
+async function reset() {
+  await db.post.deleteMany()
+}
 
 async function seed() {
   for (let i = 1; i <= 10; i++) {
@@ -6,4 +10,7 @@ async function seed() {
   }
 }
 
-seed()
+;(async () => {
+  await reset()
+  await seed()
+})()
