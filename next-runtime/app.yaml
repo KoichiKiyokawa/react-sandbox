@@ -1,0 +1,13 @@
+runtime: nodejs16
+service: next-runtime
+handlers:
+  - url: /_next/static
+    static_dir: .next/static
+  - url: /(.*\.(gif|png|jpg|ico|txt|svg))$
+    static_files: public/\1
+    upload: public/.*\.(gif|png|jpg|ico|txt|svg)$
+  - url: /.*
+    script: auto
+    secure: always
+
+default_expiration: "12h" # 静的ファイルのキャッシュ期間

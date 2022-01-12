@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gcloud app deploy --project kiyo-dev-944"
   },
   "dependencies": {
     "@chakra-ui/icons": "1.1.1",
@@ -32,5 +33,6 @@
   },
   "prisma": {
     "seed": "node -r esbuild-register prisma/seed.ts"
-  }
+  },
+  "packageManager": "pnpm@6.25.1"
 }
