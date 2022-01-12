@@ -35,8 +35,10 @@ export const getServerSideProps = handle<Props, {}, Post>({
   },
   async delete({ req: { body } }) {
     console.log("/#delete")
+    console.log(body.id)
     await db.post.delete({ where: { id: body.id } })
-    return redirect("/")
+    const posts = await db.post.findMany()
+    return json({ posts })
   },
 })
 

@@ -20,6 +20,6 @@ model Post {
 model Comment {
   id     String @id @default(cuid())
   text   String
-  post   Post   @relation(fields: [postId], references: [id])
+  post   Post   @relation(fields: [postId], references: [id], onDelete: Cascade)
   postId String
 }
