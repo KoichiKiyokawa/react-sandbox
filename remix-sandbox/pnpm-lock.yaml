@@ -27,7 +27,7 @@ specifiers:
   prisma: 3.8.1
   react: 17.0.2
   react-dom: 17.0.2
-  react-hook-form: 7.22.5
+  react-hook-form: 7.26.0
   react-icons: 4.3.1
   remix: 1.1.1
   rimraf: 3.0.2
@@ -37,7 +37,7 @@ specifiers:
   zod: 3.11.6
 
 dependencies:
-  '@hookform/resolvers': 2.8.5_react-hook-form@7.22.5
+  '@hookform/resolvers': 2.8.5_react-hook-form@7.26.0
   '@prisma/client': 3.8.1_prisma@3.8.1
   '@remix-run/react': 1.1.1_react-dom@17.0.2+react@17.0.2
   '@remix-run/serve': 1.1.1_react-dom@17.0.2+react@17.0.2
@@ -47,7 +47,7 @@ dependencies:
   http-status-codes: 2.2.0
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  react-hook-form: 7.22.5_react@17.0.2
+  react-hook-form: 7.26.0_react@17.0.2
   react-icons: 4.3.1_react@17.0.2
   remix: 1.1.1
   zod: 3.11.6
@@ -410,12 +410,12 @@ packages:
     resolution: {integrity: sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==}
     dev: true
 
-  /@hookform/resolvers/2.8.5_react-hook-form@7.22.5:
+  /@hookform/resolvers/2.8.5_react-hook-form@7.26.0:
     resolution: {integrity: sha512-n7eFm4snsejpfZVH8q2NU7YJbsGhF61IHB0TxgK11nmg08RymEr3KscnbTAZaPd9RaXa3vUPoULgBRN2nVDtMg==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
-      react-hook-form: 7.22.5_react@17.0.2
+      react-hook-form: 7.26.0_react@17.0.2
     dev: false
 
   /@humanwhocodes/config-array/0.9.3:
@@ -4338,8 +4338,8 @@ packages:
       scheduler: 0.20.2
     dev: false
 
-  /react-hook-form/7.22.5_react@17.0.2:
-    resolution: {integrity: sha512-Q2zaeQFXdVQ8l3hcywhltH+Nzj4vo50wMVujHDVN/1Xy9IOaSZJwYBXA2CYTpK6rq41fnXviw3jTLb04c7Gu9Q==}
+  /react-hook-form/7.26.0_react@17.0.2:
+    resolution: {integrity: sha512-nSkCyJB5Ey5QUw3AGQp22JP7TNfPdyC4wqfmheH87NNsHhQwCZgGjexXdBfd7SRt4SHoVzbdPvu6kXG5sSs66Q==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17
