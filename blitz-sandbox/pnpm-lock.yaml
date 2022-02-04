@@ -16,17 +16,17 @@ specifiers:
   prisma: 3.8.1
   react: 18.0.0-beta-149b420f6-20211119
   react-dom: 18.0.0-alpha-5ca4b0433-20211020
-  react-hook-form: 7.24.0
+  react-hook-form: 7.26.0
   typescript: 4.5.5
   zod: 3.11.6
 
 dependencies:
-  '@hookform/resolvers': 2.8.5_react-hook-form@7.24.0
+  '@hookform/resolvers': 2.8.5_react-hook-form@7.26.0
   '@prisma/client': 3.8.1_prisma@3.8.1
   blitz: 0.45.0_e51e9443bf4d855124372246e4b7f506
   react: 18.0.0-beta-149b420f6-20211119
   react-dom: 18.0.0-alpha-5ca4b0433-20211020_a8287eeb816f3a61086a2ec9626d63b2
-  react-hook-form: 7.24.0_a8287eeb816f3a61086a2ec9626d63b2
+  react-hook-form: 7.26.0_a8287eeb816f3a61086a2ec9626d63b2
   zod: 3.11.6
 
 devDependencies:
@@ -914,12 +914,12 @@ packages:
     resolution: {integrity: sha512-gfta+H8aziZsm8pZa0vj04KO6biEiisppNgA1kbJvFrrWu9Vm7eaUEy76DIxsuTaWvti5fkJVhllWc6ZTE+Mdw==}
     dev: false
 
-  /@hookform/resolvers/2.8.5_react-hook-form@7.24.0:
+  /@hookform/resolvers/2.8.5_react-hook-form@7.26.0:
     resolution: {integrity: sha512-n7eFm4snsejpfZVH8q2NU7YJbsGhF61IHB0TxgK11nmg08RymEr3KscnbTAZaPd9RaXa3vUPoULgBRN2nVDtMg==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
-      react-hook-form: 7.24.0_a8287eeb816f3a61086a2ec9626d63b2
+      react-hook-form: 7.26.0_a8287eeb816f3a61086a2ec9626d63b2
     dev: false
 
   /@humanwhocodes/config-array/0.5.0:
@@ -3923,7 +3923,7 @@ packages:
       eslint: '*'
       eslint-plugin-import: '*'
     dependencies:
-      debug: 4.3.1
+      debug: 4.3.3
       eslint: 7.32.0
       eslint-plugin-import: 2.25.4_eslint@7.32.0
       glob: 7.2.0
@@ -7744,8 +7744,8 @@ packages:
       scheduler: 0.21.0-alpha-5ca4b0433-20211020
     dev: false
 
-  /react-hook-form/7.24.0_a8287eeb816f3a61086a2ec9626d63b2:
-    resolution: {integrity: sha512-N2GT4wmdcgP5bw72q/a+vKUBqy14iNQz+4vaFBJLz9Bw+KNYKUjTzcV/kHfOYbcboMeHP2zgf4i4wTmAwrXssg==}
+  /react-hook-form/7.26.0_a8287eeb816f3a61086a2ec9626d63b2:
+    resolution: {integrity: sha512-nSkCyJB5Ey5QUw3AGQp22JP7TNfPdyC4wqfmheH87NNsHhQwCZgGjexXdBfd7SRt4SHoVzbdPvu6kXG5sSs66Q==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17
