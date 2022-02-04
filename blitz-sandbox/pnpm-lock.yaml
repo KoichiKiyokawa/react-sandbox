@@ -14,8 +14,8 @@ specifiers:
   pretty-quick: 3.1.3
   preview-email: 3.0.5
   prisma: 3.8.1
-  react: 18.0.0-beta-149b420f6-20211119
-  react-dom: 18.0.0-alpha-5ca4b0433-20211020
+  react: 18.0.0-rc.0-next-fe905f152-20220107
+  react-dom: 18.0.0-rc.0-next-fe905f152-20220107
   react-hook-form: 7.26.0
   typescript: 4.5.5
   zod: 3.11.6
@@ -23,10 +23,10 @@ specifiers:
 dependencies:
   '@hookform/resolvers': 2.8.8_react-hook-form@7.26.0
   '@prisma/client': 3.8.1_prisma@3.8.1
-  blitz: 0.45.0_e4d4e6b26a4d85e43e52d0a17870d10d
-  react: 18.0.0-beta-149b420f6-20211119
-  react-dom: 18.0.0-alpha-5ca4b0433-20211020_a8287eeb816f3a61086a2ec9626d63b2
-  react-hook-form: 7.26.0_a8287eeb816f3a61086a2ec9626d63b2
+  blitz: 0.45.0_d0636cbd6da1598a8bbdbe3e129a33c3
+  react: 18.0.0-rc.0-next-fe905f152-20220107
+  react-dom: 18.0.0-rc.0-next-fe905f152-20220107_e32785dbcafa2fde92a71a8f50f52ce6
+  react-hook-form: 7.26.0_e32785dbcafa2fde92a71a8f50f52ce6
   zod: 3.11.6
 
 devDependencies:
@@ -655,11 +655,11 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: false
 
-  /@blitzjs/cli/0.45.0_5dca5f8c7dadea9425c4db6be3ae5225:
+  /@blitzjs/cli/0.45.0_8b37a3fb7b1db5db123fe4fb79231f28:
     resolution: {integrity: sha512-/yp8cUUfkQP+i1p3pCFgsh9p2jwVqzPffP2pdKX7f7n7miL3d+GjBe42ZthR/YiIIJ4S2yG7nG6C1FGYFKf2zw==}
     dependencies:
       '@blitzjs/generator': 0.45.0
-      '@blitzjs/installer': 0.45.0_7e17f1b0d7edc39580c428776514a346
+      '@blitzjs/installer': 0.45.0_4b8d64232caa8773561dc446edfddfc3
       '@blitzjs/server': 0.45.0
       '@oclif/command': 1.8.0
       '@oclif/config': 1.17.0
@@ -730,7 +730,7 @@ packages:
       - supports-color
     dev: false
 
-  /@blitzjs/installer/0.45.0_7e17f1b0d7edc39580c428776514a346:
+  /@blitzjs/installer/0.45.0_4b8d64232caa8773561dc446edfddfc3:
     resolution: {integrity: sha512-i+AgUY1Sm1K/k7mf2nFCXB3PFCK6UgYtv9e0JRx6KHXba0AubjZBLrQWau38sVCS63uT3rE80UXB/J/v6mmglw==}
     dependencies:
       '@babel/core': 7.12.10
@@ -745,8 +745,8 @@ packages:
       enquirer: 2.3.6
       fs-extra: 9.1.0
       globby: 11.0.2
-      ink: 3.2.0_7e17f1b0d7edc39580c428776514a346
-      ink-spinner: 4.0.3_83e0c7934989de86f898b14db097c379
+      ink: 3.2.0_4b8d64232caa8773561dc446edfddfc3
+      ink-spinner: 4.0.3_f4911b1398f59cd5cfff66f3e78c96d2
       ink-testing-library: 2.1.0_@types+react@17.0.39
       jscodeshift: 0.13.0
       recast: 0.20.5
@@ -759,7 +759,7 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@blitzjs/next/11.1.0-0.45.0_25313b7dab0a65243c0262c9646d9f61:
+  /@blitzjs/next/11.1.0-0.45.0_782e727086a06a6bcf36a53511216233:
     resolution: {integrity: sha512-AE7+WXiyLHV87XYOk/JPZArCKUisXvFRN3cybyQxQAhqgAvrbwOQ0LKsgHeucSe57p2tUIiJ+IwKddRQ1fA5uw==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -780,7 +780,7 @@ packages:
       '@blitzjs/env': 0.45.0
       '@hapi/accept': 5.0.2
       '@next/polyfill-module': 11.1.0
-      '@next/react-dev-overlay': 11.1.0_cdfcb4530267413f37f9ef405c0dd0c8
+      '@next/react-dev-overlay': 11.1.0_88bc4fee344d9ebe6e1abd431fb36b31
       '@next/react-refresh-utils': 11.1.0_react-refresh@0.8.3
       '@node-rs/helper': 1.2.1
       '@types/secure-password': 3.1.0
@@ -826,7 +826,7 @@ packages:
       querystring-es3: 0.2.1
       raw-body: 2.4.1
       react-is: 17.0.2
-      react-query: 3.21.1_cdfcb4530267413f37f9ef405c0dd0c8
+      react-query: 3.21.1_88bc4fee344d9ebe6e1abd431fb36b31
       react-refresh: 0.8.3
       readline: 1.3.0
       resolve-from: 5.0.0
@@ -834,12 +834,12 @@ packages:
       stream-browserify: 3.0.0
       stream-http: 3.1.1
       string_decoder: 1.3.0
-      styled-jsx: 4.0.0_a8287eeb816f3a61086a2ec9626d63b2
+      styled-jsx: 4.0.0_e32785dbcafa2fde92a71a8f50f52ce6
       superjson: 1.7.5
       timers-browserify: 2.0.12
       tslog: 3.3.1
       tty-browserify: 0.0.1
-      use-subscription: 1.5.1_a8287eeb816f3a61086a2ec9626d63b2
+      use-subscription: 1.5.1_e32785dbcafa2fde92a71a8f50f52ce6
       util: 0.12.3
       vm-browserify: 1.1.2
       watchpack: 2.1.1
@@ -920,7 +920,7 @@ packages:
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
-      react-hook-form: 7.26.0_a8287eeb816f3a61086a2ec9626d63b2
+      react-hook-form: 7.26.0_e32785dbcafa2fde92a71a8f50f52ce6
     dev: false
 
   /@humanwhocodes/config-array/0.9.3:
@@ -1195,7 +1195,7 @@ packages:
     resolution: {integrity: sha512-64EgW8SzJRQls2yJ5DkuljRxgE24o2kYtX/ghTkPUJYsfidHMWzQGwg26IgRbb/uHqTd1G0W5UkKag+Nt8TWaQ==}
     dev: false
 
-  /@next/react-dev-overlay/11.1.0_cdfcb4530267413f37f9ef405c0dd0c8:
+  /@next/react-dev-overlay/11.1.0_88bc4fee344d9ebe6e1abd431fb36b31:
     resolution: {integrity: sha512-h+ry0sTk1W3mJw+TwEf91aqLbBJ5oqAsxfx+QryqEItNtfW6zLSSjxkyTYTqX8DkgSssQQutQfATkzBVgOR+qQ==}
     peerDependencies:
       react: ^17.0.2
@@ -1208,8 +1208,8 @@ packages:
       css.escape: 1.5.1
       data-uri-to-buffer: 3.0.1
       platform: 1.3.6
-      react: 18.0.0-beta-149b420f6-20211119
-      react-dom: 18.0.0-alpha-5ca4b0433-20211020_a8287eeb816f3a61086a2ec9626d63b2
+      react: 18.0.0-rc.0-next-fe905f152-20220107
+      react-dom: 18.0.0-rc.0-next-fe905f152-20220107_e32785dbcafa2fde92a71a8f50f52ce6
       shell-quote: 1.7.2
       source-map: 0.8.0-beta.0
       stacktrace-parser: 0.1.10
@@ -1630,7 +1630,7 @@ packages:
       redent: 3.0.0
     dev: false
 
-  /@testing-library/react-hooks/4.0.1_a731e667145cdd169504e83d3010a78e:
+  /@testing-library/react-hooks/4.0.1_1ed9b098be5d25e2ba88dc62a6d90287:
     resolution: {integrity: sha512-DufI8Q2GOM7W2yFEEfz85VNVNaHZL0tPZyBT6ytV7HK+1A4frL1ty+W5NBE0u0K3EFV/Pg5O28HGNEtp9D5EyA==}
     peerDependencies:
       react: '>=16.9.0'
@@ -1639,11 +1639,11 @@ packages:
       '@babel/runtime': 7.16.7
       '@types/react': 17.0.39
       '@types/react-test-renderer': 17.0.1
-      react: 18.0.0-beta-149b420f6-20211119
-      react-test-renderer: 17.0.1_a8287eeb816f3a61086a2ec9626d63b2
+      react: 18.0.0-rc.0-next-fe905f152-20220107
+      react-test-renderer: 17.0.1_e32785dbcafa2fde92a71a8f50f52ce6
     dev: false
 
-  /@testing-library/react/11.2.5_cdfcb4530267413f37f9ef405c0dd0c8:
+  /@testing-library/react/11.2.5_88bc4fee344d9ebe6e1abd431fb36b31:
     resolution: {integrity: sha512-yEx7oIa/UWLe2F2dqK0FtMF9sJWNXD+2PPtp39BvE0Kh9MJ9Kl0HrZAgEuhUJR+Lx8Di6Xz+rKwSdEPY2UV8ZQ==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -1652,8 +1652,8 @@ packages:
     dependencies:
       '@babel/runtime': 7.16.7
       '@testing-library/dom': 7.31.2
-      react: 18.0.0-beta-149b420f6-20211119
-      react-dom: 18.0.0-alpha-5ca4b0433-20211020_a8287eeb816f3a61086a2ec9626d63b2
+      react: 18.0.0-rc.0-next-fe905f152-20220107
+      react-dom: 18.0.0-rc.0-next-fe905f152-20220107_e32785dbcafa2fde92a71a8f50f52ce6
     dev: false
 
   /@timsuchanek/copy/1.4.5:
@@ -2511,18 +2511,18 @@ packages:
       readable-stream: 3.6.0
     dev: false
 
-  /blitz/0.45.0_e4d4e6b26a4d85e43e52d0a17870d10d:
+  /blitz/0.45.0_d0636cbd6da1598a8bbdbe3e129a33c3:
     resolution: {integrity: sha512-1JQ/8dxvKvKQfWlyzesxMW44c9CO3inAxiz2VPycPtStCUyq/buKr5H/J5CLmR2RJ0c5mXvkG4u0ZSMDOJFFmw==}
     engines: {node: '>= 10.13.0'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@blitzjs/cli': 0.45.0_5dca5f8c7dadea9425c4db6be3ae5225
+      '@blitzjs/cli': 0.45.0_8b37a3fb7b1db5db123fe4fb79231f28
       '@blitzjs/generator': 0.45.0
       '@blitzjs/server': 0.45.0
       '@testing-library/jest-dom': 5.11.9
-      '@testing-library/react': 11.2.5_cdfcb4530267413f37f9ef405c0dd0c8
-      '@testing-library/react-hooks': 4.0.1_a731e667145cdd169504e83d3010a78e
+      '@testing-library/react': 11.2.5_88bc4fee344d9ebe6e1abd431fb36b31
+      '@testing-library/react-hooks': 4.0.1_1ed9b098be5d25e2ba88dc62a6d90287
       '@types/jest': 26.0.20
       chalk: 4.1.2
       cross-spawn: 7.0.3
@@ -2532,10 +2532,10 @@ packages:
       jest: 26.6.3
       jest-watch-typeahead: 0.6.5_jest@26.6.3
       minimist: 1.2.5
-      next: /@blitzjs/next/11.1.0-0.45.0_25313b7dab0a65243c0262c9646d9f61
+      next: /@blitzjs/next/11.1.0-0.45.0_782e727086a06a6bcf36a53511216233
       os-name: 4.0.1
       pkg-dir: 5.0.0
-      react-test-renderer: 17.0.1_a8287eeb816f3a61086a2ec9626d63b2
+      react-test-renderer: 17.0.1_e32785dbcafa2fde92a71a8f50f52ce6
       resolve-from: 5.0.0
       symlink-dir: 4.1.0
       ts-jest: 26.5.0_jest@26.6.3+typescript@4.5.5
@@ -4983,7 +4983,7 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /ink-spinner/4.0.3_83e0c7934989de86f898b14db097c379:
+  /ink-spinner/4.0.3_f4911b1398f59cd5cfff66f3e78c96d2:
     resolution: {integrity: sha512-uJ4nbH00MM9fjTJ5xdw0zzvtXMkeGb0WV6dzSWvFv2/+ks6FIhpkt+Ge/eLdh0Ah6Vjw5pLMyNfoHQpRDRVFbQ==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -4991,8 +4991,8 @@ packages:
       react: '>=16.8.2'
     dependencies:
       cli-spinners: 2.6.1
-      ink: 3.2.0_7e17f1b0d7edc39580c428776514a346
-      react: 18.0.0-beta-149b420f6-20211119
+      ink: 3.2.0_4b8d64232caa8773561dc446edfddfc3
+      react: 18.0.0-rc.0-next-fe905f152-20220107
     dev: false
 
   /ink-testing-library/2.1.0_@types+react@17.0.39:
@@ -5007,7 +5007,7 @@ packages:
       '@types/react': 17.0.39
     dev: false
 
-  /ink/3.2.0_7e17f1b0d7edc39580c428776514a346:
+  /ink/3.2.0_4b8d64232caa8773561dc446edfddfc3:
     resolution: {integrity: sha512-firNp1q3xxTzoItj/eOOSZQnYSlyrWks5llCTVX37nJ59K3eXbQ8PtzCguqo8YI19EELo5QxaKnJd4VxzhU8tg==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -5029,9 +5029,9 @@ packages:
       is-ci: 2.0.0
       lodash: 4.17.21
       patch-console: 1.0.0
-      react: 18.0.0-beta-149b420f6-20211119
+      react: 18.0.0-rc.0-next-fe905f152-20220107
       react-devtools-core: 4.22.1
-      react-reconciler: 0.26.2_a8287eeb816f3a61086a2ec9626d63b2
+      react-reconciler: 0.26.2_e32785dbcafa2fde92a71a8f50f52ce6
       scheduler: 0.20.2
       signal-exit: 3.0.6
       slice-ansi: 3.0.0
@@ -7731,24 +7731,24 @@ packages:
       - utf-8-validate
     dev: false
 
-  /react-dom/18.0.0-alpha-5ca4b0433-20211020_a8287eeb816f3a61086a2ec9626d63b2:
-    resolution: {integrity: sha512-9nZyZIXGcP5GrpE67Q5jmA9U6KahE3e0F3q6iV9PpWwWD40V0xiLMJmk8icTKke+YCbircr3nEuPSBctqXL6Nw==}
+  /react-dom/18.0.0-rc.0-next-fe905f152-20220107_e32785dbcafa2fde92a71a8f50f52ce6:
+    resolution: {integrity: sha512-tl+6q+8h9Vj7r4iI1jYQfLp4oHLC+f7tenqlYBw9eOyJ/SXJXzZ0Mp7QG1LYkK+oapO3vlj5I7ddnbnf8bcDJQ==}
     peerDependencies:
-      react: 18.0.0-alpha-5ca4b0433-20211020
+      react: 18.0.0-rc.0-next-fe905f152-20220107
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-      react: 18.0.0-beta-149b420f6-20211119
-      scheduler: 0.21.0-alpha-5ca4b0433-20211020
+      react: 18.0.0-rc.0-next-fe905f152-20220107
+      scheduler: 0.21.0-rc.0-next-fe905f152-20220107
     dev: false
 
-  /react-hook-form/7.26.0_a8287eeb816f3a61086a2ec9626d63b2:
+  /react-hook-form/7.26.0_e32785dbcafa2fde92a71a8f50f52ce6:
     resolution: {integrity: sha512-nSkCyJB5Ey5QUw3AGQp22JP7TNfPdyC4wqfmheH87NNsHhQwCZgGjexXdBfd7SRt4SHoVzbdPvu6kXG5sSs66Q==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17
     dependencies:
-      react: 18.0.0-beta-149b420f6-20211119
+      react: 18.0.0-rc.0-next-fe905f152-20220107
     dev: false
 
   /react-is/16.13.1:
@@ -7759,7 +7759,7 @@ packages:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: false
 
-  /react-query/3.21.1_cdfcb4530267413f37f9ef405c0dd0c8:
+  /react-query/3.21.1_88bc4fee344d9ebe6e1abd431fb36b31:
     resolution: {integrity: sha512-aKFLfNJc/m21JBXJk7sR9tDUYPjotWA4EHAKvbZ++GgxaY+eI0tqBxXmGBuJo0Pisis1W4pZWlZgoRv9yE8yjA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
@@ -7774,11 +7774,11 @@ packages:
       '@babel/runtime': 7.16.7
       broadcast-channel: 3.7.0
       match-sorter: 6.3.1
-      react: 18.0.0-beta-149b420f6-20211119
-      react-dom: 18.0.0-alpha-5ca4b0433-20211020_a8287eeb816f3a61086a2ec9626d63b2
+      react: 18.0.0-rc.0-next-fe905f152-20220107
+      react-dom: 18.0.0-rc.0-next-fe905f152-20220107_e32785dbcafa2fde92a71a8f50f52ce6
     dev: false
 
-  /react-reconciler/0.26.2_a8287eeb816f3a61086a2ec9626d63b2:
+  /react-reconciler/0.26.2_e32785dbcafa2fde92a71a8f50f52ce6:
     resolution: {integrity: sha512-nK6kgY28HwrMNwDnMui3dvm3rCFjZrcGiuwLc5COUipBK5hWHLOxMJhSnSomirqWwjPBJKV1QcbkI0VJr7Gl1Q==}
     engines: {node: '>=0.10.0'}
     peerDependencies:
@@ -7786,7 +7786,7 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-      react: 18.0.0-beta-149b420f6-20211119
+      react: 18.0.0-rc.0-next-fe905f152-20220107
       scheduler: 0.20.2
     dev: false
 
@@ -7795,30 +7795,30 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-shallow-renderer/16.14.1_a8287eeb816f3a61086a2ec9626d63b2:
+  /react-shallow-renderer/16.14.1_e32785dbcafa2fde92a71a8f50f52ce6:
     resolution: {integrity: sha512-rkIMcQi01/+kxiTE9D3fdS959U1g7gs+/rborw++42m1O9FAQiNI/UNRZExVUoAOprn4umcXf+pFRou8i4zuBg==}
     peerDependencies:
       react: ^16.0.0 || ^17.0.0
     dependencies:
       object-assign: 4.1.1
-      react: 18.0.0-beta-149b420f6-20211119
+      react: 18.0.0-rc.0-next-fe905f152-20220107
       react-is: 17.0.2
     dev: false
 
-  /react-test-renderer/17.0.1_a8287eeb816f3a61086a2ec9626d63b2:
+  /react-test-renderer/17.0.1_e32785dbcafa2fde92a71a8f50f52ce6:
     resolution: {integrity: sha512-/dRae3mj6aObwkjCcxZPlxDFh73XZLgvwhhyON2haZGUEhiaY5EjfAdw+d/rQmlcFwdTpMXCSGVk374QbCTlrA==}
     peerDependencies:
       react: 17.0.1
     dependencies:
       object-assign: 4.1.1
-      react: 18.0.0-beta-149b420f6-20211119
+      react: 18.0.0-rc.0-next-fe905f152-20220107
       react-is: 17.0.2
-      react-shallow-renderer: 16.14.1_a8287eeb816f3a61086a2ec9626d63b2
+      react-shallow-renderer: 16.14.1_e32785dbcafa2fde92a71a8f50f52ce6
       scheduler: 0.20.2
     dev: false
 
-  /react/18.0.0-beta-149b420f6-20211119:
-    resolution: {integrity: sha512-cxLRM4Yqhe5fYAeYyMEGphtDnSJmKrvrsQyXskcVViGN/EmONHbFfwt1lRUCiZyXX44+/NOgIJ1OjGX2rHmpdQ==}
+  /react/18.0.0-rc.0-next-fe905f152-20220107:
+    resolution: {integrity: sha512-eePjzo6pCiwk9iDRYG0Hn5F0p9e7dlLGIys/eeLUCxByHP90rsXg/H/842S6ggBgarcfvRtDu8cAU7kxfLC4MA==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
@@ -8147,8 +8147,8 @@ packages:
       object-assign: 4.1.1
     dev: false
 
-  /scheduler/0.21.0-alpha-5ca4b0433-20211020:
-    resolution: {integrity: sha512-DE1mG4MVdX5Zj/mkxnx69tpPPAyOKAgbm3RiNSB7DjbpqFcKILHMbiBfVNzLI0wuT++zoY+4howMFxzDUtgoXA==}
+  /scheduler/0.21.0-rc.0-next-fe905f152-20220107:
+    resolution: {integrity: sha512-+sY0WajWdMjoxbmHM8P6P1FKGw8sSVKKG/HthqTFQFPxVGbKLmV1BiFPaVF9gOyQWqmnLYSXJMN+4Bs5ZygsTw==}
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
@@ -8679,7 +8679,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /styled-jsx/4.0.0_a8287eeb816f3a61086a2ec9626d63b2:
+  /styled-jsx/4.0.0_e32785dbcafa2fde92a71a8f50f52ce6:
     resolution: {integrity: sha512-2USeoWMoJ/Lx5s2y1PxuvLy/cz2Yrr8cTySV3ILHU1Vmaw1bnV7suKdblLPjnyhMD+qzN7B1SWyh4UZTARn/WA==}
     peerDependencies:
       react: '>= 16.8.0 || 17.x.x || 18.x.x'
@@ -8688,7 +8688,7 @@ packages:
       '@babel/types': 7.15.0
       convert-source-map: 1.7.0
       loader-utils: 1.2.3
-      react: 18.0.0-beta-149b420f6-20211119
+      react: 18.0.0-rc.0-next-fe905f152-20220107
       source-map: 0.7.3
       string-hash: 1.1.3
       stylis: 3.5.4
@@ -9237,13 +9237,13 @@ packages:
       querystring: 0.2.0
     dev: false
 
-  /use-subscription/1.5.1_a8287eeb816f3a61086a2ec9626d63b2:
+  /use-subscription/1.5.1_e32785dbcafa2fde92a71a8f50f52ce6:
     resolution: {integrity: sha512-Xv2a1P/yReAjAbhylMfFplFKj9GssgTwN7RlcTxBujFQcloStWNDQdc4g4NRWH9xS4i/FDk04vQBptAXoF3VcA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
     dependencies:
       object-assign: 4.1.1
-      react: 18.0.0-beta-149b420f6-20211119
+      react: 18.0.0-rc.0-next-fe905f152-20220107
     dev: false
 
   /use/3.1.1:
