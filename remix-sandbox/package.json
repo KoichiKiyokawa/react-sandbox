@@ -11,7 +11,7 @@
     "postinstall": "remix setup node && prisma generate",
     "start": "remix-serve build",
     "lint": "eslint . --ext .ts,.tsx",
-    "fmt": "prettier --write . --ignore-path .gitignore",
+    "fmt": "prettier --write .",
     "fix:all": "pnpm run lint --fix && pnpm run fmt && prisma format && tsc --noEmit",
     "check:all": "pnpm run lint && pnpm run fmt -- --check && tsc --noEmit"
   },
