@@ -9,7 +9,7 @@ specifiers:
   '@types/node': 17.0.8
   '@types/react': 17.0.39
   esbuild: 0.14.18
-  esbuild-register: 3.3.1
+  esbuild-register: 3.3.2
   eslint: 8.6.0
   eslint-config-next: 12.0.7
   framer-motion: 5.5.6
@@ -38,7 +38,7 @@ devDependencies:
   '@types/node': 17.0.8
   '@types/react': 17.0.39
   esbuild: 0.14.18
-  esbuild-register: 3.3.1_esbuild@0.14.18
+  esbuild-register: 3.3.2_esbuild@0.14.18
   eslint: 8.6.0
   eslint-config-next: 12.0.7_7d5ff8d8e1054d856b46ec86cec9a25f
   prisma: 3.8.1
@@ -2457,8 +2457,8 @@ packages:
     dev: true
     optional: true
 
-  /esbuild-register/3.3.1_esbuild@0.14.18:
-    resolution: {integrity: sha512-DjK9rOeo+Dhq8DXKy52DF2+O7zNPXkFRg9lZfqXDGLU6AzrULxBJZPOOFcH6WCNfkwqymKOZoNvd/ncCvEjwdw==}
+  /esbuild-register/3.3.2_esbuild@0.14.18:
+    resolution: {integrity: sha512-jceAtTO6zxPmCfSD5cBb3rgIK1vmuqCKYwgylHiS1BF4pq0jJiJb4K2QMuqF4BEw7XDBRatYzip0upyTzfkgsQ==}
     peerDependencies:
       esbuild: '>=0.12 <1'
     dependencies:

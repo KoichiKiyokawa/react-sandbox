@@ -16,7 +16,7 @@ specifiers:
   classnames: 2.3.1
   concurrently: 7.0.0
   dayjs: 1.10.7
-  esbuild-register: 3.3.1
+  esbuild-register: 3.3.2
   eslint: 8.6.0
   eslint-config-prettier: 8.3.0
   http-status-codes: 2.2.0
@@ -61,7 +61,7 @@ devDependencies:
   '@types/react-dom': 17.0.11
   autoprefixer: 10.4.2_postcss@8.4.6
   concurrently: 7.0.0
-  esbuild-register: 3.3.1
+  esbuild-register: 3.3.2
   eslint: 8.6.0
   eslint-config-prettier: 8.3.0_eslint@8.6.0
   npm-run-all: 4.1.5
@@ -1938,8 +1938,8 @@ packages:
     dev: true
     optional: true
 
-  /esbuild-register/3.3.1:
-    resolution: {integrity: sha512-DjK9rOeo+Dhq8DXKy52DF2+O7zNPXkFRg9lZfqXDGLU6AzrULxBJZPOOFcH6WCNfkwqymKOZoNvd/ncCvEjwdw==}
+  /esbuild-register/3.3.2:
+    resolution: {integrity: sha512-jceAtTO6zxPmCfSD5cBb3rgIK1vmuqCKYwgylHiS1BF4pq0jJiJb4K2QMuqF4BEw7XDBRatYzip0upyTzfkgsQ==}
     peerDependencies:
       esbuild: '>=0.12 <1'
     dev: true
