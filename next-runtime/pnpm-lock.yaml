@@ -18,7 +18,7 @@ specifiers:
   prisma: 3.8.1
   react: 17.0.2
   react-dom: 17.0.2
-  rhodash: 1.5.1
+  rhodash: 1.6.0
   typescript: 4.5.5
 
 dependencies:
@@ -32,7 +32,7 @@ dependencies:
   next-runtime: 2.3.2_61390be992b634a688f7c2555547b55b
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  rhodash: 1.5.1
+  rhodash: 1.6.0
 
 devDependencies:
   '@types/node': 17.0.8
@@ -3442,8 +3442,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rhodash/1.5.1:
-    resolution: {integrity: sha512-mqsdL/eS3du6qMOSc4Bsafk1V+eGSJm8YP02b6vr1tut7gkwHfIZhM1W4dlZawW6Sc41r42OFR+6lNIx0ciw2A==}
+  /rhodash/1.6.0:
+    resolution: {integrity: sha512-2kdu1KYLthg4Y+mr6Bq8BcV2vzBVnhfY433iFocmC32M3YibBOqbGLfW18ms6UfjEbvqWmS+ewqG+MXyCDTeLw==}
     dev: false
 
   /rimraf/3.0.2:
