@@ -5,7 +5,7 @@ specifiers:
   '@hookform/resolvers': 2.8.8
   '@prisma/client': 3.9.2
   '@remix-run/dev': 1.2.1
-  '@remix-run/eslint-config': 1.1.3
+  '@remix-run/eslint-config': 1.2.1
   '@remix-run/react': 1.2.1
   '@remix-run/serve': 1.1.3
   '@types/bcryptjs': 2.4.2
@@ -55,7 +55,7 @@ dependencies:
 devDependencies:
   '@babel/core': 7.17.4
   '@remix-run/dev': 1.2.1_react-dom@17.0.2+react@17.0.2
-  '@remix-run/eslint-config': 1.1.3_f3a45b7b1fc94d5ca5ee1664753bdc3b
+  '@remix-run/eslint-config': 1.2.1_8c9fbd14a4af5b4862a8a416c619021b
   '@types/bcryptjs': 2.4.2
   '@types/react': 17.0.39
   '@types/react-dom': 17.0.11
@@ -548,8 +548,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@remix-run/eslint-config/1.1.3_f3a45b7b1fc94d5ca5ee1664753bdc3b:
-    resolution: {integrity: sha512-v7GFrnxI648xGKhwcXU0LRQKjLg3X0S8ivFmgoABa2CFmndEo+GpQ1LJlPJ9/y5K9PAnHwjyWM0zGTJGSxleSQ==}
+  /@remix-run/eslint-config/1.2.1_8c9fbd14a4af5b4862a8a416c619021b:
+    resolution: {integrity: sha512-ms/nEu4amOoe3AitIHEdKIcKD/LFmrC4ZnvQtl8nq57Jq4GphuH/1TJlf9iJCbew4yq0uJuotUl0lFCvDTiecw==}
     peerDependencies:
       '@remix-run/react': '>=1.0.0'
       eslint: '>=8.1.0'
@@ -561,6 +561,7 @@ packages:
       typescript:
         optional: true
     dependencies:
+      '@babel/core': 7.17.4
       '@babel/eslint-parser': 7.17.0_@babel+core@7.17.4+eslint@8.9.0
       '@babel/preset-react': 7.16.7_@babel+core@7.17.4
       '@remix-run/react': 1.2.1_react-dom@17.0.2+react@17.0.2
@@ -581,7 +582,6 @@ packages:
       remix: 1.1.3
       typescript: 4.5.5
     transitivePeerDependencies:
-      - '@babel/core'
       - jest
       - supports-color
     dev: true
