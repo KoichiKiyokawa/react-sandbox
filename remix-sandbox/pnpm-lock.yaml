@@ -6,7 +6,7 @@ specifiers:
   '@prisma/client': 3.9.2
   '@remix-run/dev': 1.1.3
   '@remix-run/eslint-config': 1.1.3
-  '@remix-run/react': 1.1.3
+  '@remix-run/react': 1.2.1
   '@remix-run/serve': 1.1.3
   '@types/bcryptjs': 2.4.2
   '@types/react': 17.0.39
@@ -39,7 +39,7 @@ specifiers:
 dependencies:
   '@hookform/resolvers': 2.8.8_react-hook-form@7.27.0
   '@prisma/client': 3.9.2_prisma@3.9.2
-  '@remix-run/react': 1.1.3_react-dom@17.0.2+react@17.0.2
+  '@remix-run/react': 1.2.1_react-dom@17.0.2+react@17.0.2
   '@remix-run/serve': 1.1.3_react-dom@17.0.2+react@17.0.2
   bcryptjs: 2.4.3
   classnames: 2.3.1
@@ -55,7 +55,7 @@ dependencies:
 devDependencies:
   '@babel/core': 7.17.4
   '@remix-run/dev': 1.1.3
-  '@remix-run/eslint-config': 1.1.3_75ad66e05b92fcfcbd505aacd8140461
+  '@remix-run/eslint-config': 1.1.3_f3a45b7b1fc94d5ca5ee1664753bdc3b
   '@types/bcryptjs': 2.4.2
   '@types/react': 17.0.39
   '@types/react-dom': 17.0.11
@@ -532,7 +532,7 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@remix-run/eslint-config/1.1.3_75ad66e05b92fcfcbd505aacd8140461:
+  /@remix-run/eslint-config/1.1.3_f3a45b7b1fc94d5ca5ee1664753bdc3b:
     resolution: {integrity: sha512-v7GFrnxI648xGKhwcXU0LRQKjLg3X0S8ivFmgoABa2CFmndEo+GpQ1LJlPJ9/y5K9PAnHwjyWM0zGTJGSxleSQ==}
     peerDependencies:
       '@remix-run/react': '>=1.0.0'
@@ -547,7 +547,7 @@ packages:
     dependencies:
       '@babel/eslint-parser': 7.17.0_@babel+core@7.17.4+eslint@8.9.0
       '@babel/preset-react': 7.16.7_@babel+core@7.17.4
-      '@remix-run/react': 1.1.3_react-dom@17.0.2+react@17.0.2
+      '@remix-run/react': 1.2.1_react-dom@17.0.2+react@17.0.2
       '@rushstack/eslint-patch': 1.1.0
       '@typescript-eslint/eslint-plugin': 5.10.2_1b08c9fe96cd93d27d9e149ef6ced69d
       '@typescript-eslint/parser': 5.10.2_eslint@8.9.0+typescript@4.5.5
@@ -604,12 +604,13 @@ packages:
       - react-dom
     dev: false
 
-  /@remix-run/react/1.1.3_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-1vYwRi4qQGJLByZR15o47TRZ3/xT3+vhM97UCPJPu4GtzbPldNYLuQlVmAzWWjGuQmSqmwWv818U/+U7rke18g==}
+  /@remix-run/react/1.2.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-s+3dvT+LaRCj0AR47LxXjbgArbAWcgUCZi4NPA+B2M8bKMoSFkHDBshuDmUm4squLrRk6JSvC6QiKvrxeyuuQg==}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
     dependencies:
+      history: 5.2.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-router-dom: 6.2.1_react-dom@17.0.2+react@17.0.2
