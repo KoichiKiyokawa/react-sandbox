@@ -9,8 +9,8 @@
     "deploy": "gcloud app deploy --project kiyo-dev-944"
   },
   "dependencies": {
-    "@chakra-ui/icons": "1.1.5",
-    "@chakra-ui/react": "1.8.3",
+    "@chakra-ui/icons": "1.1.7",
+    "@chakra-ui/react": "1.8.5",
     "@emotion/react": "11.8.1",
     "@emotion/styled": "11.8.1",
     "@prisma/client": "3.9.2",
