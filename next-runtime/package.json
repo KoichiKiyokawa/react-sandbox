@@ -19,7 +19,7 @@
     "next-runtime": "2.3.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "rhodash": "1.6.0"
+    "rhodash": "2.0.0"
   },
   "devDependencies": {
     "@types/node": "17.0.8",
