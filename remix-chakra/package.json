@@ -14,7 +14,7 @@
     "@emotion/react": "11.8.1",
     "@emotion/styled": "11.8.1",
     "@prisma/client": "3.9.2",
-    "@remix-run/react": "1.2.1",
+    "@remix-run/react": "1.2.2",
     "@remix-run/serve": "1.2.2",
     "dayjs": "1.10.7",
     "framer-motion": "6.2.7",
