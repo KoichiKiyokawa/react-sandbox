@@ -6,7 +6,7 @@ specifiers:
   '@remix-run/dev': 1.2.2
   '@remix-run/eslint-config': 1.2.1
   '@remix-run/react': 1.2.1
-  '@remix-run/serve': 1.2.1
+  '@remix-run/serve': 1.2.2
   '@types/bcryptjs': 2.4.2
   '@types/react': 17.0.39
   '@types/react-dom': 17.0.11
@@ -39,7 +39,7 @@ dependencies:
   '@hookform/resolvers': 2.8.8_react-hook-form@7.27.1
   '@prisma/client': 3.9.2_prisma@3.9.2
   '@remix-run/react': 1.2.1_react-dom@17.0.2+react@17.0.2
-  '@remix-run/serve': 1.2.1_react-dom@17.0.2+react@17.0.2
+  '@remix-run/serve': 1.2.2_react-dom@17.0.2+react@17.0.2
   bcryptjs: 2.4.3
   classnames: 2.3.1
   dayjs: 1.10.7
@@ -584,13 +584,13 @@ packages:
       - supports-color
     dev: true
 
-  /@remix-run/express/1.2.1_c249933f376ca18b25ea8a9b07171fbd:
-    resolution: {integrity: sha512-X0bRnPUin6maFyAnt37dDsxZXOh6obFPfWl6KbtPYZrc+dVJnX78GFKOL160Qbqwqb7nvSFsBmewkWnyaU0Tpw==}
+  /@remix-run/express/1.2.2_c249933f376ca18b25ea8a9b07171fbd:
+    resolution: {integrity: sha512-ayO38B4siwFom53ZcK3JWyknhwExyTHztjji8NqZrVrSXGkD0WdHcSef3n1DBGasZnj+nvh4Z2ibZfBpP8wCHw==}
     peerDependencies:
       express: ^4.17.1
     dependencies:
-      '@remix-run/node': 1.2.1_react-dom@17.0.2+react@17.0.2
-      '@remix-run/server-runtime': 1.2.1_react-dom@17.0.2+react@17.0.2
+      '@remix-run/node': 1.2.2_react-dom@17.0.2+react@17.0.2
+      '@remix-run/server-runtime': 1.2.2_react-dom@17.0.2+react@17.0.2
       express: 4.17.2
     transitivePeerDependencies:
       - encoding
@@ -598,10 +598,10 @@ packages:
       - react-dom
     dev: false
 
-  /@remix-run/node/1.2.1_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-T1+2UOoACniVBAiJBH1vnqeGokidLBd547vLHcaqxqy4iNG3/IVOdf1XsHQAc7H0ql93tIun940QMSY4OBTN5w==}
+  /@remix-run/node/1.2.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-ZTPrR4RCAJZFLGp9dTkUFAWbD+bvHVb07cODQ2gmFeKwozRM3oFOG882flNcBkwZ4jO5XmLA7Rha8qDMpIWIGQ==}
     dependencies:
-      '@remix-run/server-runtime': 1.2.1_react-dom@17.0.2+react@17.0.2
+      '@remix-run/server-runtime': 1.2.2_react-dom@17.0.2+react@17.0.2
       '@types/busboy': 0.3.2
       '@types/node-fetch': 2.5.12
       '@web-std/file': 3.0.2
@@ -611,7 +611,7 @@ packages:
       cookie-signature: 1.1.0
       form-data: 4.0.0
       node-fetch: 2.6.7
-      source-map: 0.7.3
+      source-map-support: 0.5.21
     transitivePeerDependencies:
       - encoding
       - react
@@ -630,11 +630,11 @@ packages:
       react-router-dom: 6.2.1_react-dom@17.0.2+react@17.0.2
     dev: false
 
-  /@remix-run/serve/1.2.1_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-gFfmnhifubDdmLN9yLU+n1FzieKRnwp3q+BOp0TjQVVXu0I45tvqwM2/0i3xC6Nus2ihZwszFtCQO5qDzeCD8Q==}
+  /@remix-run/serve/1.2.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-9Fs4EtiyPsC5kYJ7xwUoTUgytVILF0b3GeN2eqHlruuZBn4cMrCYK9gB3hliBJRMrIUGvEwjXcOW/h8dSUJMVQ==}
     hasBin: true
     dependencies:
-      '@remix-run/express': 1.2.1_c249933f376ca18b25ea8a9b07171fbd
+      '@remix-run/express': 1.2.2_c249933f376ca18b25ea8a9b07171fbd
       compression: 1.7.4
       express: 4.17.2
       morgan: 1.10.0
@@ -642,22 +642,6 @@ packages:
       - encoding
       - react
       - react-dom
-    dev: false
-
-  /@remix-run/server-runtime/1.2.1_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-wn01V+O7y4dHQ059QGeXOpbG+d3IrqYnil9YDsJi4kielEFRDHDAFbmrMC+oF5qRYTuVRR3i6h2CSCyV2ICfeQ==}
-    peerDependencies:
-      react: '>=16.8'
-      react-dom: '>=16.8'
-    dependencies:
-      '@types/cookie': 0.4.1
-      cookie: 0.4.2
-      jsesc: 3.0.2
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      react-router-dom: 6.2.1_react-dom@17.0.2+react@17.0.2
-      set-cookie-parser: 2.4.8
-      source-map: 0.7.3
     dev: false
 
   /@remix-run/server-runtime/1.2.2_react-dom@17.0.2+react@17.0.2:
@@ -674,7 +658,6 @@ packages:
       react-router-dom: 6.2.1_react-dom@17.0.2+react@17.0.2
       set-cookie-parser: 2.4.8
       source-map: 0.7.3
-    dev: true
 
   /@rollup/pluginutils/4.1.2:
     resolution: {integrity: sha512-ROn4qvkxP9SyPeHaf7uQC/GPFY6L/OWy9+bd9AwcjOAWQwxRscoEyAUD8qCY5o5iL4jqQwoLk2kaTKJPb/HwzQ==}
@@ -1289,6 +1272,10 @@ packages:
       node-releases: 2.0.1
       picocolors: 1.0.0
     dev: true
+
+  /buffer-from/1.1.2:
+    resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
+    dev: false
 
   /busboy/0.3.1:
     resolution: {integrity: sha512-y7tTxhGKXcyBxRKAni+awqx8uqaJKrSFSNFSeRG5CsWNdmy2BIK+6VGWEW7TZnIO/533mtMEA4rOevQV815YJw==}
@@ -4777,10 +4764,22 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /source-map-support/0.5.21:
+    resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
+    dependencies:
+      buffer-from: 1.1.2
+      source-map: 0.6.1
+    dev: false
+
   /source-map/0.5.7:
     resolution: {integrity: sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /source-map/0.6.1:
+    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   /source-map/0.7.3:
     resolution: {integrity: sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==}
