@@ -6,7 +6,7 @@ specifiers:
   '@emotion/styled': 11.8.1
   '@prisma/client': 3.10.0
   '@remix-run/dev': 1.2.3
-  '@remix-run/react': 1.2.2
+  '@remix-run/react': 1.2.3
   '@remix-run/serve': 1.2.2
   '@types/react': 17.0.39
   '@types/react-dom': 17.0.11
@@ -25,7 +25,7 @@ dependencies:
   '@emotion/react': 11.8.1_a0c521d4794c7ad97f5f4c1c4a7d5818
   '@emotion/styled': 11.8.1_d24c5a2cd50724e2cbcff1306f0cc72d
   '@prisma/client': 3.10.0_prisma@3.10.0
-  '@remix-run/react': 1.2.2_react-dom@17.0.2+react@17.0.2
+  '@remix-run/react': 1.2.3_react-dom@17.0.2+react@17.0.2
   '@remix-run/serve': 1.2.2_react-dom@17.0.2+react@17.0.2
   dayjs: 1.10.8
   framer-motion: 6.2.8_react-dom@17.0.2+react@17.0.2
@@ -1175,16 +1175,16 @@ packages:
       - react-dom
     dev: false
 
-  /@remix-run/react/1.2.2_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-A+g/Y4QnT4ldZovjbP4sNJ29ZZt+oDP152pN8oYOHoQuqqrlc+CnLSMKCN1D+EljBfJx66553TwMIS5kCwdNzg==}
+  /@remix-run/react/1.2.3_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-8q4TEs9rCT+j1yx0ZVaNkTO+z9c/2ESEWWH4exNBF+KwxYPkWYaRrxDevAHpW/c5ymr+z0WyFckdxU07UNnq5g==}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
     dependencies:
-      history: 5.2.0
+      history: 5.3.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      react-router-dom: 6.2.1_react-dom@17.0.2+react@17.0.2
+      react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
     dev: false
 
   /@remix-run/serve/1.2.2_react-dom@17.0.2+react@17.0.2:
@@ -2607,8 +2607,8 @@ packages:
     resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==}
     dev: false
 
-  /history/5.2.0:
-    resolution: {integrity: sha512-uPSF6lAJb3nSePJ43hN3eKj1dTWpN9gMod0ZssbFTIsen+WehTmEadgL+kg78xLJFdRfrrC//SavDzmRVdE+Ig==}
+  /history/5.3.0:
+    resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
     dependencies:
       '@babel/runtime': 7.17.2
 
@@ -3900,44 +3900,23 @@ packages:
       use-sidecar: 1.0.5_react@17.0.2
     dev: false
 
-  /react-router-dom/6.2.1_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-I6Zax+/TH/cZMDpj3/4Fl2eaNdcvoxxHoH1tYOREsQ22OKDYofGebrNm6CTPUcvLvZm63NL/vzCYdjf9CUhqmA==}
-    peerDependencies:
-      react: '>=16.8'
-      react-dom: '>=16.8'
-    dependencies:
-      history: 5.2.0
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      react-router: 6.2.1_react@17.0.2
-    dev: false
-
   /react-router-dom/6.2.2_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-AtYEsAST7bDD4dLSQHDnk/qxWLJdad5t1HFa1qJyUrCeGgEuCSw0VB/27ARbF9Fi/W5598ujvJOm3ujUCVzuYQ==}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
     dependencies:
-      history: 5.2.0
+      history: 5.3.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-router: 6.2.2_react@17.0.2
-
-  /react-router/6.2.1_react@17.0.2:
-    resolution: {integrity: sha512-2fG0udBtxou9lXtK97eJeET2ki5//UWfQSl1rlJ7quwe6jrktK9FCCc8dQb5QY6jAv3jua8bBQRhhDOM/kVRsg==}
-    peerDependencies:
-      react: '>=16.8'
-    dependencies:
-      history: 5.2.0
-      react: 17.0.2
-    dev: false
 
   /react-router/6.2.2_react@17.0.2:
     resolution: {integrity: sha512-/MbxyLzd7Q7amp4gDOGaYvXwhEojkJD5BtExkuKmj39VEE0m3l/zipf6h2WIB2jyAO0lI6NGETh4RDcktRm4AQ==}
     peerDependencies:
       react: '>=16.8'
     dependencies:
-      history: 5.2.0
+      history: 5.3.0
       react: 17.0.2
 
   /react-style-singleton/2.1.1_a0c521d4794c7ad97f5f4c1c4a7d5818:
