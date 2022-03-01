@@ -29,7 +29,7 @@
     "esbuild-register": "3.3.2",
     "prettier": "2.5.1",
     "prisma": "3.10.0",
-    "typescript": "4.5.5"
+    "typescript": "4.6.2"
   },
   "engines": {
     "node": ">=14"
