@@ -18,7 +18,7 @@ specifiers:
   react-dom: 18.0.0-rc.1-next-f468816ef-20220225
   react-hook-form: 7.27.1
   typescript: 4.6.2
-  zod: 3.12.1
+  zod: 3.13.2
 
 dependencies:
   '@hookform/resolvers': 2.8.8_react-hook-form@7.27.1
@@ -27,7 +27,7 @@ dependencies:
   react: 18.0.0-rc.1-next-f468816ef-20220225
   react-dom: 18.0.0-rc.1-next-f468816ef-20220225_a28f1fd517be1d2b056a3673720bd102
   react-hook-form: 7.27.1_a28f1fd517be1d2b056a3673720bd102
-  zod: 3.12.1
+  zod: 3.13.2
 
 devDependencies:
   '@types/preview-email': 2.0.1
@@ -9798,6 +9798,6 @@ packages:
       readable-stream: 3.6.0
     dev: false
 
-  /zod/3.12.1:
-    resolution: {integrity: sha512-wm4Gm6ACayAagHRDIGyDS0H4dRI4gGVqOJ9M4X2UjwgN/rv+QPRUjcvGqZRHiVYVuvQTOszRSkZ074I1dzEy9A==}
+  /zod/3.13.2:
+    resolution: {integrity: sha512-xN+PKyFQEs4t/j4V6pAwYwglR2aXNcGc6T825dpVfVdlSZg58Bb3i90YAl5V6ItZIxO5HzceJ6bmvmmlPcclVw==}
     dev: false
