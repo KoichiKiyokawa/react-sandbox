@@ -17,7 +17,7 @@ specifiers:
   dayjs: 1.10.8
   esbuild-register: 3.3.2
   eslint: 8.10.0
-  eslint-config-prettier: 8.4.0
+  eslint-config-prettier: 8.5.0
   http-status-codes: 2.2.0
   npm-run-all: 4.1.5
   postcss: 8.4.7
@@ -61,7 +61,7 @@ devDependencies:
   concurrently: 7.0.0
   esbuild-register: 3.3.2
   eslint: 8.10.0
-  eslint-config-prettier: 8.4.0_eslint@8.10.0
+  eslint-config-prettier: 8.5.0_eslint@8.10.0
   npm-run-all: 4.1.5
   postcss: 8.4.7
   postcss-cli: 9.1.0_postcss@8.4.7
@@ -2147,8 +2147,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-prettier/8.4.0_eslint@8.10.0:
-    resolution: {integrity: sha512-CFotdUcMY18nGRo5KGsnNxpznzhkopOcOo0InID+sgQssPrzjvsyKZPvOgymTFeHrFuC3Tzdf2YndhXtULK9Iw==}
+  /eslint-config-prettier/8.5.0_eslint@8.10.0:
+    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
