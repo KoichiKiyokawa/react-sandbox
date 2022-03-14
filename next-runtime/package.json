@@ -24,7 +24,7 @@
   "devDependencies": {
     "@types/node": "17.0.8",
     "@types/react": "17.0.40",
-    "esbuild": "0.14.26",
+    "esbuild": "0.14.27",
     "esbuild-register": "3.3.2",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
