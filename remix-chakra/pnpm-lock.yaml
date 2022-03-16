@@ -13,7 +13,7 @@ specifiers:
   dayjs: 1.11.0
   esbuild-register: 3.3.2
   framer-motion: 6.2.8
-  prettier: 2.5.1
+  prettier: 2.6.0
   prisma: 3.11.0
   react: 17.0.2
   react-dom: 17.0.2
@@ -38,7 +38,7 @@ devDependencies:
   '@types/react': 17.0.40
   '@types/react-dom': 17.0.13
   esbuild-register: 3.3.2
-  prettier: 2.5.1
+  prettier: 2.6.0
   prisma: 3.11.0
   typescript: 4.6.2
 
@@ -3720,8 +3720,8 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /prettier/2.5.1:
-    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
+  /prettier/2.6.0:
+    resolution: {integrity: sha512-m2FgJibYrBGGgQXNzfd0PuDGShJgRavjUoRCw1mZERIWVSXF0iLzLm+aOqTAbLnC3n6JzUhAA8uZnFVghHJ86A==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
