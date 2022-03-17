@@ -7,7 +7,7 @@ specifiers:
   '@prisma/client': 3.11.0
   '@remix-run/dev': 1.2.3
   '@remix-run/react': 1.2.3
-  '@remix-run/serve': 1.2.3
+  '@remix-run/serve': 1.3.1
   '@types/react': 17.0.40
   '@types/react-dom': 17.0.13
   dayjs: 1.11.0
@@ -26,7 +26,7 @@ dependencies:
   '@emotion/styled': 11.8.1_19c9b884401318110e0b35fad34f7b03
   '@prisma/client': 3.11.0_prisma@3.11.0
   '@remix-run/react': 1.2.3_react-dom@17.0.2+react@17.0.2
-  '@remix-run/serve': 1.2.3_react-dom@17.0.2+react@17.0.2
+  '@remix-run/serve': 1.3.1_react-dom@17.0.2+react@17.0.2
   dayjs: 1.11.0
   framer-motion: 6.2.8_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
@@ -1140,13 +1140,13 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@remix-run/express/1.2.3_466ebc0d4851fc8110767791966a48f3:
-    resolution: {integrity: sha512-BFDmxO16A/IR9I3G6FXqLNY6fy6MZmjxesDpk+IHIfuSj2X0hTP66N1jco/dRTSKgNXL+wG64EDQ7Dz9XGo1vw==}
+  /@remix-run/express/1.3.1_466ebc0d4851fc8110767791966a48f3:
+    resolution: {integrity: sha512-fFH0xmtLWs0rrMkSIw/wOrWxDT50C+bXx49L02RLmJwFGRlMfXDqL92uvuYq5bQO+lZGLoI6oqsSxdWk6ovyhw==}
     peerDependencies:
       express: ^4.17.1
     dependencies:
-      '@remix-run/node': 1.2.3_react-dom@17.0.2+react@17.0.2
-      '@remix-run/server-runtime': 1.2.3_react-dom@17.0.2+react@17.0.2
+      '@remix-run/node': 1.3.1_react-dom@17.0.2+react@17.0.2
+      '@remix-run/server-runtime': 1.3.1_react-dom@17.0.2+react@17.0.2
       express: 4.17.3
     transitivePeerDependencies:
       - encoding
@@ -1154,10 +1154,10 @@ packages:
       - react-dom
     dev: false
 
-  /@remix-run/node/1.2.3_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-AYCHzK0Rl1uftEi0OILY9/U9UOTbKu1SwtfgnBbWIl/Cs5yLVuO+3DQL0boaiz2orFpNaIv2Z2M//m3S/hvcyQ==}
+  /@remix-run/node/1.3.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-Xby9miYiGhyhnqtJCv8W1EPpWwp4XLKJ2S7kqnULq0Sr+2pRRpdDBI8MaiXYOUEOaAXCp8Qk+vnf88u92z8I6w==}
     dependencies:
-      '@remix-run/server-runtime': 1.2.3_react-dom@17.0.2+react@17.0.2
+      '@remix-run/server-runtime': 1.3.1_react-dom@17.0.2+react@17.0.2
       '@types/busboy': 0.3.2
       '@types/node-fetch': 2.6.1
       '@web-std/file': 3.0.2
@@ -1186,11 +1186,11 @@ packages:
       react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
     dev: false
 
-  /@remix-run/serve/1.2.3_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-7YobtXHe5t1VZZlSHU29ZnkgugZ9WXKmh972/DClqBzsAyyvT0ucUe5jDR0rZ2pO1HqF06nntP88EiR1pPVqRQ==}
+  /@remix-run/serve/1.3.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-NuMwUF2+Ds9csK9arDAFMAzv69eb5S303PRhWq60JrFogtN/dUdaIZf79C2z1z7uKmI29TIoMeTVE/8IFPWHsw==}
     hasBin: true
     dependencies:
-      '@remix-run/express': 1.2.3_466ebc0d4851fc8110767791966a48f3
+      '@remix-run/express': 1.3.1_466ebc0d4851fc8110767791966a48f3
       compression: 1.7.4
       express: 4.17.3
       morgan: 1.10.0
@@ -1214,6 +1214,23 @@ packages:
       react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
       set-cookie-parser: 2.4.8
       source-map: 0.7.3
+    dev: true
+
+  /@remix-run/server-runtime/1.3.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-bbfBjm8Hgl0DOC2PhS+gis7j/a4ladle/zmTM2DflUgQMBGRNHXxOIr+qUckLgn0EVICXfMOttRSirBhrUre0w==}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@types/cookie': 0.4.1
+      cookie: 0.4.2
+      jsesc: 3.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
+      set-cookie-parser: 2.4.8
+      source-map: 0.7.3
+    dev: false
 
   /@rollup/pluginutils/4.1.2:
     resolution: {integrity: sha512-ROn4qvkxP9SyPeHaf7uQC/GPFY6L/OWy9+bd9AwcjOAWQwxRscoEyAUD8qCY5o5iL4jqQwoLk2kaTKJPb/HwzQ==}
