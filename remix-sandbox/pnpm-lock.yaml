@@ -33,7 +33,7 @@ specifiers:
   tailwindcss: 3.0.23
   type-fest: 2.12.1
   typescript: 4.6.2
-  zod: 3.14.1
+  zod: 3.14.2
 
 dependencies:
   '@hookform/resolvers': 2.8.8_react-hook-form@7.28.0
@@ -49,7 +49,7 @@ dependencies:
   react-hook-form: 7.28.0_react@17.0.2
   react-icons: 4.3.1_react@17.0.2
   remix: 1.3.2
-  zod: 3.14.1
+  zod: 3.14.2
 
 devDependencies:
   '@remix-run/dev': 1.3.2_react-dom@17.0.2+react@17.0.2
@@ -6099,8 +6099,8 @@ packages:
       yargs-parser: 21.0.0
     dev: true
 
-  /zod/3.14.1:
-    resolution: {integrity: sha512-eKN/fIHKSGnHFjKBj4pnHDX69uJ2XxU01rilItLtLNt4mQoINo3aipnBLrbIqH9IHHwGnN+v0Zcc9vRKku/2fQ==}
+  /zod/3.14.2:
+    resolution: {integrity: sha512-iF+wrtzz7fQfkmn60PG6XFxaWBhYYKzp2i+nv24WbLUWb2JjymdkHlzBwP0erpc78WotwP5g9AAu7Sk8GWVVNw==}
     dev: false
 
   /zwitch/2.0.2:
