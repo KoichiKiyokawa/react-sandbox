@@ -18,7 +18,7 @@ specifiers:
   react: 17.0.2
   react-dom: 17.0.2
   remix: 1.3.2
-  typescript: 4.6.2
+  typescript: 4.6.3
 
 dependencies:
   '@chakra-ui/react': 1.8.6_37db9e2125ddc2c12d29b117b44b9fc1
@@ -40,7 +40,7 @@ devDependencies:
   esbuild-register: 3.3.2
   prettier: 2.6.1
   prisma: 3.11.0
-  typescript: 4.6.2
+  typescript: 4.6.3
 
 packages:
 
@@ -5152,8 +5152,8 @@ packages:
       mime-types: 2.1.34
     dev: false
 
-  /typescript/4.6.2:
-    resolution: {integrity: sha512-HM/hFigTBHZhLXshn9sN37H085+hQGeJHJ/X7LpBWLID/fbc2acUMfU+lGD98X81sKP+pFa9f0DZmCwB9GnbAg==}
+  /typescript/4.6.3:
+    resolution: {integrity: sha512-yNIatDa5iaofVozS/uQJEl3JRWLKKGJKh6Yaiv0GLGSuhpFJe7P3SbHZ8/yjAHRQwKRoA6YZqlfjXWmVzoVSMw==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
