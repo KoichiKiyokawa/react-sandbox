@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@types/node": "17.0.8",
-    "@types/react": "17.0.41",
+    "@types/react": "17.0.43",
     "esbuild": "0.14.27",
     "esbuild-register": "3.3.2",
     "eslint": "8.12.0",
