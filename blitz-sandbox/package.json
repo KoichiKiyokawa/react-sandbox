@@ -26,8 +26,8 @@
   "dependencies": {
     "@prisma/client": "3.11.1",
     "blitz": "0.45.3",
-    "react-dom": "18.0.0-rc.2-next-b9de50d2f-20220308",
-    "react": "18.0.0-rc.2-next-b9de50d2f-20220308",
+    "react-dom": "18.0.0-rc.3-next-de516ca5a-20220321",
+    "react": "18.0.0-rc.3-next-de516ca5a-20220321",
     "zod": "3.14.2",
     "react-hook-form": "7.28.1",
     "@hookform/resolvers": "2.8.8"
