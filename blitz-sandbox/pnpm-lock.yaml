@@ -16,17 +16,17 @@ specifiers:
   prisma: 3.11.1
   react: 18.0.0-rc.3-next-de516ca5a-20220321
   react-dom: 18.0.0-rc.3-next-de516ca5a-20220321
-  react-hook-form: 7.28.1
+  react-hook-form: 7.29.0
   typescript: 4.6.3
   zod: 3.14.3
 
 dependencies:
-  '@hookform/resolvers': 2.8.8_react-hook-form@7.28.1
+  '@hookform/resolvers': 2.8.8_react-hook-form@7.29.0
   '@prisma/client': 3.11.1_prisma@3.11.1
   blitz: 0.45.3_1b6c8295ade68c1c7a4cb04331a1bbcc
   react: 18.0.0-rc.3-next-de516ca5a-20220321
   react-dom: 18.0.0-rc.3-next-de516ca5a-20220321_1d81fe1bff57e86f30d2d405110ea7f4
-  react-hook-form: 7.28.1_1d81fe1bff57e86f30d2d405110ea7f4
+  react-hook-form: 7.29.0_1d81fe1bff57e86f30d2d405110ea7f4
   zod: 3.14.3
 
 devDependencies:
@@ -919,12 +919,12 @@ packages:
     resolution: {integrity: sha512-gfta+H8aziZsm8pZa0vj04KO6biEiisppNgA1kbJvFrrWu9Vm7eaUEy76DIxsuTaWvti5fkJVhllWc6ZTE+Mdw==}
     dev: false
 
-  /@hookform/resolvers/2.8.8_react-hook-form@7.28.1:
+  /@hookform/resolvers/2.8.8_react-hook-form@7.29.0:
     resolution: {integrity: sha512-meAEDur1IJBfKyTo9yPYAuzjIfrxA7m9Ov+1nxaW/YupsqMeseWifoUjWK03+hz/RJizsVQAaUjVxFEkyu0GWg==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
-      react-hook-form: 7.28.1_1d81fe1bff57e86f30d2d405110ea7f4
+      react-hook-form: 7.29.0_1d81fe1bff57e86f30d2d405110ea7f4
     dev: false
 
   /@humanwhocodes/config-array/0.9.3:
@@ -7876,11 +7876,11 @@ packages:
       scheduler: 0.21.0-rc.3-next-de516ca5a-20220321
     dev: false
 
-  /react-hook-form/7.28.1_1d81fe1bff57e86f30d2d405110ea7f4:
-    resolution: {integrity: sha512-mgwxvXuvt3FMY/mdnWbPc++Zf1U5xYzkhOaL05mtFMLvXc9MvUhMUlKtUVuO12sOrgT3nPXBgVFawtiJ4ONrgg==}
+  /react-hook-form/7.29.0_1d81fe1bff57e86f30d2d405110ea7f4:
+    resolution: {integrity: sha512-NcJqWRF6el5HMW30fqZRt27s+lorvlCCDbTpAyHoodQeYWXgQCvZJJQLC1kRMKdrJknVH0NIg3At6TUzlZJFOQ==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
-      react: ^16.8.0 || ^17
+      react: ^16.8.0 || ^17 || ^18
     dependencies:
       react: 18.0.0-rc.3-next-de516ca5a-20220321
     dev: false
