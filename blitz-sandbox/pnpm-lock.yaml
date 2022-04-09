@@ -4,7 +4,7 @@ specifiers:
   '@hookform/resolvers': 2.8.8
   '@prisma/client': 3.12.0
   '@types/preview-email': 2.0.1
-  '@types/react': 17.0.43
+  '@types/react': 17.0.44
   blitz: 0.45.3
   eslint: 8.12.0
   husky: 7.0.4
@@ -23,7 +23,7 @@ specifiers:
 dependencies:
   '@hookform/resolvers': 2.8.8_react-hook-form@7.29.0
   '@prisma/client': 3.12.0_prisma@3.12.0
-  blitz: 0.45.3_aaadf4f0be2ccaca62752edaaaf2c757
+  blitz: 0.45.3_9390e5b6c9fc0facb8dc653e22e8b2cd
   react: 18.0.0
   react-dom: 18.0.0_react@18.0.0
   react-hook-form: 7.29.0_react@18.0.0
@@ -31,7 +31,7 @@ dependencies:
 
 devDependencies:
   '@types/preview-email': 2.0.1
-  '@types/react': 17.0.43
+  '@types/react': 17.0.44
   eslint: 8.12.0
   husky: 7.0.4
   lint-staged: 12.3.7
@@ -657,11 +657,11 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: false
 
-  /@blitzjs/cli/0.45.3_a08570f155f39d6abe336506e0876e98:
+  /@blitzjs/cli/0.45.3_216518ef4b9bc989c784dde94ae9d03c:
     resolution: {integrity: sha512-pT/VME9TLaCdTKl+jEIVirB979xUNZpWeA06DFjTohf7aeUYSF/jyeKTx96LzCg8DOCA6aCAqrM7kTboy9IufA==}
     dependencies:
       '@blitzjs/generator': 0.45.3
-      '@blitzjs/installer': 0.45.3_00a11a054056e3746b551a83b9229751
+      '@blitzjs/installer': 0.45.3_3adb690023d1157f64abd5db2f6a6306
       '@blitzjs/server': 0.45.3
       '@oclif/command': 1.8.0
       '@oclif/config': 1.17.0
@@ -733,7 +733,7 @@ packages:
       - supports-color
     dev: false
 
-  /@blitzjs/installer/0.45.3_00a11a054056e3746b551a83b9229751:
+  /@blitzjs/installer/0.45.3_3adb690023d1157f64abd5db2f6a6306:
     resolution: {integrity: sha512-TE8DZZ3Bh9B3aO8qVQd3J+XRd3BNe33Sk5qHMdNLO4UYdwwABf8TKvIhCFUq+MmGfpe/uETRDD1sPd+QBo8XIg==}
     dependencies:
       '@babel/core': 7.12.10
@@ -748,9 +748,9 @@ packages:
       enquirer: 2.3.6
       fs-extra: 9.1.0
       globby: 11.0.2
-      ink: 3.2.0_00a11a054056e3746b551a83b9229751
+      ink: 3.2.0_3adb690023d1157f64abd5db2f6a6306
       ink-spinner: 4.0.3_ink@3.2.0+react@18.0.0
-      ink-testing-library: 2.1.0_@types+react@17.0.43
+      ink-testing-library: 2.1.0_@types+react@17.0.44
       jscodeshift: 0.13.0
       recast: 0.20.5
     transitivePeerDependencies:
@@ -1693,7 +1693,7 @@ packages:
       react-test-renderer: '>=16.9.0'
     dependencies:
       '@babel/runtime': 7.16.7
-      '@types/react': 17.0.43
+      '@types/react': 17.0.44
       '@types/react-test-renderer': 17.0.1
       react: 18.0.0
       react-test-renderer: 17.0.1_react@18.0.0
@@ -1880,11 +1880,11 @@ packages:
   /@types/react-test-renderer/17.0.1:
     resolution: {integrity: sha512-3Fi2O6Zzq/f3QR9dRnlnHso9bMl7weKCviFmfF6B4LS1Uat6Hkm15k0ZAQuDz+UBq6B3+g+NM6IT2nr5QgPzCw==}
     dependencies:
-      '@types/react': 17.0.43
+      '@types/react': 17.0.44
     dev: false
 
-  /@types/react/17.0.43:
-    resolution: {integrity: sha512-8Q+LNpdxf057brvPu1lMtC5Vn7J119xrP1aq4qiaefNioQUYANF/CYeK4NsKorSZyUGJ66g0IM+4bbjwx45o2A==}
+  /@types/react/17.0.44:
+    resolution: {integrity: sha512-Ye0nlw09GeMp2Suh8qoOv0odfgCoowfM/9MG6WeRD60Gq9wS90bdkdRtYbRkNhXOpG4H+YXGvj4wOWhAC0LJ1g==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
@@ -2590,13 +2590,13 @@ packages:
       readable-stream: 3.6.0
     dev: false
 
-  /blitz/0.45.3_aaadf4f0be2ccaca62752edaaaf2c757:
+  /blitz/0.45.3_9390e5b6c9fc0facb8dc653e22e8b2cd:
     resolution: {integrity: sha512-XUErXAboH07BdGAhg01iJXQjwi5MYg6EfTMQScBRFaB9lU828WZY0S6JUgP2x98Q1VUlw43FUZuTSec1ckldvw==}
     engines: {node: '>= 10.13.0'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@blitzjs/cli': 0.45.3_a08570f155f39d6abe336506e0876e98
+      '@blitzjs/cli': 0.45.3_216518ef4b9bc989c784dde94ae9d03c
       '@blitzjs/generator': 0.45.3
       '@blitzjs/server': 0.45.3
       '@testing-library/jest-dom': 5.11.9
@@ -5092,11 +5092,11 @@ packages:
       react: '>=16.8.2'
     dependencies:
       cli-spinners: 2.6.1
-      ink: 3.2.0_00a11a054056e3746b551a83b9229751
+      ink: 3.2.0_3adb690023d1157f64abd5db2f6a6306
       react: 18.0.0
     dev: false
 
-  /ink-testing-library/2.1.0_@types+react@17.0.43:
+  /ink-testing-library/2.1.0_@types+react@17.0.44:
     resolution: {integrity: sha512-7TNlOjJlJXB33vG7yVa+MMO7hCjaC1bCn+zdpSjknWoLbOWMaFdKc7LJvqVkZ0rZv2+akhjXPrcR/dbxissjUw==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -5105,10 +5105,10 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 17.0.43
+      '@types/react': 17.0.44
     dev: false
 
-  /ink/3.2.0_00a11a054056e3746b551a83b9229751:
+  /ink/3.2.0_3adb690023d1157f64abd5db2f6a6306:
     resolution: {integrity: sha512-firNp1q3xxTzoItj/eOOSZQnYSlyrWks5llCTVX37nJ59K3eXbQ8PtzCguqo8YI19EELo5QxaKnJd4VxzhU8tg==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -5118,7 +5118,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 17.0.43
+      '@types/react': 17.0.44
       ansi-escapes: 4.3.2
       auto-bind: 4.0.0
       chalk: 4.1.2
