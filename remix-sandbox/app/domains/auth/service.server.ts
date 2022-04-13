@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import { createCookieSessionStorage, redirect } from "remix";
+import { createCookieSessionStorage, redirect } from "@remix-run/node";
 import * as env from "~/env";
 import { db } from "~/utils/db.server";
 
