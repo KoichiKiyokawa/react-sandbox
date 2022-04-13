@@ -14,7 +14,7 @@ specifiers:
   eslint-config-next: 12.1.5
   framer-motion: 6.2.10
   next: 12.1.5
-  next-runtime: 2.3.4
+  next-runtime: 2.3.6
   prisma: 3.12.0
   react: 18.0.0
   react-dom: 18.0.0
@@ -29,7 +29,7 @@ dependencies:
   '@prisma/client': 3.12.0_prisma@3.12.0
   framer-motion: 6.2.10_react-dom@18.0.0+react@18.0.0
   next: 12.1.5_react-dom@18.0.0+react@18.0.0
-  next-runtime: 2.3.4_1cf2cc49e2c27648b440cc4e09213966
+  next-runtime: 2.3.6_1cf2cc49e2c27648b440cc4e09213966
   react: 18.0.0
   react-dom: 18.0.0_react@18.0.0
   rhodash: 2.1.0
@@ -3002,8 +3002,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /next-runtime/2.3.4_1cf2cc49e2c27648b440cc4e09213966:
-    resolution: {integrity: sha512-Oc+lWf9J2mkwzZ4rKGIvty30c/DBJAxh5n41D76VJeX3EzSCQl6Zl+Yq1DWRkXLFNgX3fqWsCmDiqF25RuZhPA==}
+  /next-runtime/2.3.6_1cf2cc49e2c27648b440cc4e09213966:
+    resolution: {integrity: sha512-eYI0CEmtMZXyhi9n/9iTszItSmnSbVcf8YOAf25QqbL2UBcro9p3y0IgCtLXa1GbTF6r3wLMhBpIvZMI9GMo/g==}
     peerDependencies:
       next: '>=11.1.2'
       react: '>=17.0.2'
