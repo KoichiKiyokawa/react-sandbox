@@ -1,4 +1,4 @@
-import { Article, Tag, User } from "@prisma/client";
+import type { Article, Tag, User } from "@prisma/client";
 import dayjs from "dayjs";
 import { Link } from "remix";
 import { LikeButton } from "./LikeButton";

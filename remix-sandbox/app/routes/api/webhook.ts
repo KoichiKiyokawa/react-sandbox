@@ -1,4 +1,4 @@
-import { ActionFunction, LoaderFunction } from "@remix-run/server-runtime";
+import type { ActionFunction, LoaderFunction } from "@remix-run/server-runtime";
 
 /**
  * GET /api/webhook

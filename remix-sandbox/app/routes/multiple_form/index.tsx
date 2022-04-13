@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { ActionFunction, useSearchParams } from "remix";
+import { type ActionFunction, useSearchParams } from "remix";
 import { Confirm } from "~/domains/multiple_form/components/steps/Confirm";
 import { Step1 } from "~/domains/multiple_form/components/steps/Step1";
 import { Step2 } from "~/domains/multiple_form/components/steps/Step2";
-import { MultipleForm } from "~/domains/multiple_form/model";
+import type { MultipleForm } from "~/domains/multiple_form/model";
 
 export const action: ActionFunction = () => {
   // TODO
