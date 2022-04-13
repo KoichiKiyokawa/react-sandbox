@@ -1,4 +1,4 @@
-import { LinksFunction, LoaderFunction } from "@remix-run/server-runtime";
+import type { LinksFunction, LoaderFunction } from "@remix-run/server-runtime";
 import {
   Links,
   LiveReload,

@@ -1,6 +1,9 @@
 import StatusCode from "http-status-codes";
-import { ActionFunction, Link, LoaderFunction, redirect, useLoaderData } from "remix";
-import { ArticleCard, ArticleWithAuthorAndTag } from "~/domains/article/components/ArticleCard";
+import { type ActionFunction, Link, type LoaderFunction, redirect, useLoaderData } from "remix";
+import {
+  ArticleCard,
+  type ArticleWithAuthorAndTag,
+} from "~/domains/article/components/ArticleCard";
 import { AuthService } from "~/domains/auth/service.server";
 import { db } from "~/utils/db.server";
 

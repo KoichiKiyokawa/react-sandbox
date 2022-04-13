@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
 import { Button } from "~/domains/ui/Button";
 import { TextInput } from "~/domains/ui/TextInput";
-import { MultipleForm } from "../../model";
+import type { MultipleForm } from "../../model";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { step2Schema } from "~/domains/multiple_form/model";
-import { StepComponentProps } from "./type";
+import type { StepComponentProps } from "./type";
 import { useEffect } from "react";
 
 export const Step2 = ({ onNext, data, setData }: StepComponentProps) => {

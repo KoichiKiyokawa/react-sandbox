@@ -1,4 +1,4 @@
-import { MultipleForm } from "../../model";
+import type { MultipleForm } from "../../model";
 
 type Props = {
   data: MultipleForm;
