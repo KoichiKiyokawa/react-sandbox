@@ -16,7 +16,7 @@
     "@prisma/client": "3.12.0",
     "framer-motion": "6.2.10",
     "next": "12.1.5",
-    "next-runtime": "2.3.4",
+    "next-runtime": "2.3.6",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "rhodash": "2.1.0"
