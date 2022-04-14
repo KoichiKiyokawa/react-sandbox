@@ -6,7 +6,7 @@ specifiers:
   '@remix-run/dev': 1.3.5
   '@remix-run/eslint-config': 1.3.5
   '@remix-run/node': 1.3.5
-  '@remix-run/react': 1.3.5
+  '@remix-run/react': 1.4.0
   '@remix-run/serve': 1.3.5
   '@types/bcryptjs': 2.4.2
   '@types/react': 18.0.5
@@ -40,7 +40,7 @@ dependencies:
   '@hookform/resolvers': 2.8.8_react-hook-form@7.29.0
   '@prisma/client': 3.12.0_prisma@3.12.0
   '@remix-run/node': 1.3.5_react-dom@18.0.0+react@18.0.0
-  '@remix-run/react': 1.3.5_react-dom@18.0.0+react@18.0.0
+  '@remix-run/react': 1.4.0_react-dom@18.0.0+react@18.0.0
   '@remix-run/serve': 1.3.5_react-dom@18.0.0+react@18.0.0
   bcryptjs: 2.4.3
   classnames: 2.3.1
@@ -919,8 +919,8 @@ packages:
       - react-dom
     dev: false
 
-  /@remix-run/react/1.3.5_react-dom@18.0.0+react@18.0.0:
-    resolution: {integrity: sha512-o6Spv6OcN6MEqxrgsn/YYItsXItaMJ3jdHJYOr4FQi2Huyol1gezTz+JcuUjVsHP9pVY/xA1aSfnCfWTbK2+WQ==}
+  /@remix-run/react/1.4.0_react-dom@18.0.0+react@18.0.0:
+    resolution: {integrity: sha512-sG1G6qoDNJXxnUqEh1DR+JaKM4jPDW9+xUs0npET5VhsyZWez116sQ39vBzL/ZUrif1WgQDr4YIL3Yo3MZR0vA==}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
