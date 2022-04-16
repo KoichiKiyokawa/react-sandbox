@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import { createCookieSessionStorage, redirect } from "@remix-run/node";
-import * as env from "~/env";
+import { SESSION_SECRET } from "~/env";
 import { db } from "~/utils/db.server";
 
 type LoginForm = {
@@ -15,7 +15,7 @@ const storage = createCookieSessionStorage({
     // but that doesn't work on localhost for Safari
     // https://web.dev/when-to-use-local-https/
     secure: process.env.NODE_ENV === "production",
-    secrets: [env.SESSION_SECRET],
+    secrets: [SESSION_SECRET],
     sameSite: "lax",
     path: "/",
     maxAge: 60 * 60 * 24 * 30,
