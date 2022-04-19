@@ -6,7 +6,7 @@ specifiers:
   '@emotion/styled': 11.8.1
   '@prisma/client': 3.12.0
   '@remix-run/dev': 1.4.0
-  '@remix-run/react': 1.4.0
+  '@remix-run/react': 1.4.1
   '@remix-run/serve': 1.4.0
   '@types/react': 18.0.5
   '@types/react-dom': 18.0.1
@@ -25,7 +25,7 @@ dependencies:
   '@emotion/react': 11.9.0_@types+react@18.0.5+react@18.0.0
   '@emotion/styled': 11.8.1_04780a0aa92a2187cfa4f37702da5815
   '@prisma/client': 3.12.0_prisma@3.12.0
-  '@remix-run/react': 1.4.0_react-dom@18.0.0+react@18.0.0
+  '@remix-run/react': 1.4.1_react-dom@18.0.0+react@18.0.0
   '@remix-run/serve': 1.4.0_react-dom@18.0.0+react@18.0.0
   dayjs: 1.11.1
   framer-motion: 6.3.0_react-dom@18.0.0+react@18.0.0
@@ -1632,8 +1632,8 @@ packages:
       - react-dom
     dev: false
 
-  /@remix-run/react/1.4.0_react-dom@18.0.0+react@18.0.0:
-    resolution: {integrity: sha512-sG1G6qoDNJXxnUqEh1DR+JaKM4jPDW9+xUs0npET5VhsyZWez116sQ39vBzL/ZUrif1WgQDr4YIL3Yo3MZR0vA==}
+  /@remix-run/react/1.4.1_react-dom@18.0.0+react@18.0.0:
+    resolution: {integrity: sha512-SNUQV1jFm8zPtQdVsXOjNwlsyMhr3RAy/5hQOo19G1KAP7eHALmG2dpbm+La1s6oN7ngSdey0ahLnDPHmU0xeQ==}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
