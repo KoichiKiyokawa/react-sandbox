@@ -9,7 +9,7 @@ specifiers:
   '@remix-run/react': 1.4.1
   '@remix-run/serve': 1.4.1
   '@types/react': 18.0.5
-  '@types/react-dom': 18.0.1
+  '@types/react-dom': 18.0.2
   dayjs: 1.11.1
   esbuild-register: 3.3.2
   framer-motion: 6.3.0
@@ -36,7 +36,7 @@ dependencies:
 devDependencies:
   '@remix-run/dev': 1.4.1_react-dom@18.0.0+react@18.0.0
   '@types/react': 18.0.5
-  '@types/react-dom': 18.0.1
+  '@types/react-dom': 18.0.2
   esbuild-register: 3.3.2
   prettier: 2.6.2
   prisma: 3.12.0
@@ -1820,8 +1820,8 @@ packages:
     resolution: {integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==}
     dev: true
 
-  /@types/react-dom/18.0.1:
-    resolution: {integrity: sha512-jCwTXvHtRLiyVvKm9aEdHXs8rflVOGd5Sl913JZrPshfXjn8NYsTNZOz70bCsA31IR0TOqwi3ad+X4tSCBoMTw==}
+  /@types/react-dom/18.0.2:
+    resolution: {integrity: sha512-UxeS+Wtj5bvLRREz9tIgsK4ntCuLDo0EcAcACgw3E+9wE8ePDr9uQpq53MfcyxyIS55xJ+0B6mDS8c4qkkHLBg==}
     dependencies:
       '@types/react': 18.0.5
     dev: true
