@@ -9,7 +9,7 @@ specifiers:
   '@remix-run/react': 1.4.1
   '@remix-run/serve': 1.4.1
   '@types/bcryptjs': 2.4.2
-  '@types/react': 18.0.5
+  '@types/react': 18.0.6
   '@types/react-dom': 18.0.2
   autoprefixer: 10.4.4
   bcryptjs: 2.4.3
@@ -57,7 +57,7 @@ devDependencies:
   '@remix-run/dev': 1.4.1_react-dom@18.0.0+react@18.0.0
   '@remix-run/eslint-config': 1.4.1_59ee6695ee8d2c044b85f4337b5e7aa3
   '@types/bcryptjs': 2.4.2
-  '@types/react': 18.0.5
+  '@types/react': 18.0.6
   '@types/react-dom': 18.0.2
   autoprefixer: 10.4.4_postcss@8.4.12
   concurrently: 7.1.0
@@ -1056,11 +1056,11 @@ packages:
   /@types/react-dom/18.0.2:
     resolution: {integrity: sha512-UxeS+Wtj5bvLRREz9tIgsK4ntCuLDo0EcAcACgw3E+9wE8ePDr9uQpq53MfcyxyIS55xJ+0B6mDS8c4qkkHLBg==}
     dependencies:
-      '@types/react': 18.0.5
+      '@types/react': 18.0.6
     dev: true
 
-  /@types/react/18.0.5:
-    resolution: {integrity: sha512-UPxNGInDCIKlfqBrm8LDXYWNfLHwIdisWcsH5GpMyGjhEDLFgTtlRBaoWuCua9HcyuE0rMkmAeZ3FXV1pYLIYQ==}
+  /@types/react/18.0.6:
+    resolution: {integrity: sha512-bPqwzJRzKtfI0mVYr5R+1o9BOE8UEXefwc1LwcBtfnaAn6OoqMhLa/91VA8aeWfDPJt1kHvYKI8RHcQybZLHHA==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
