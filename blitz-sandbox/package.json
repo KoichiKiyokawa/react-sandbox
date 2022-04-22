@@ -35,7 +35,7 @@
   "devDependencies": {
     "@types/preview-email": "2.0.1",
     "@types/react": "18.0.6",
-    "eslint": "8.13.0",
+    "eslint": "8.14.0",
     "husky": "7.0.4",
     "lint-staged": "12.4.0",
     "prettier-plugin-prisma": "3.12.0",
