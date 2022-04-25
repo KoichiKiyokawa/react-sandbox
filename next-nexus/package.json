@@ -36,5 +36,8 @@
     ],
     "ext": "ts",
     "exec": "npm run gen-nexus-types"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   }
 }
