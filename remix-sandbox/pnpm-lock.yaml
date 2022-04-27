@@ -4,7 +4,7 @@ specifiers:
   '@hookform/resolvers': 2.8.8
   '@prisma/client': 3.12.0
   '@remix-run/dev': 1.4.1
-  '@remix-run/eslint-config': 1.4.1
+  '@remix-run/eslint-config': 1.4.3
   '@remix-run/node': 1.4.1
   '@remix-run/react': 1.4.1
   '@remix-run/serve': 1.4.1
@@ -55,7 +55,7 @@ dependencies:
 
 devDependencies:
   '@remix-run/dev': 1.4.1_react-dom@18.0.0+react@18.0.0
-  '@remix-run/eslint-config': 1.4.1_a7f515df8376aaebe10c9e764e78c913
+  '@remix-run/eslint-config': 1.4.3_a7f515df8376aaebe10c9e764e78c913
   '@types/bcryptjs': 2.4.2
   '@types/react': 18.0.6
   '@types/react-dom': 18.0.2
@@ -778,8 +778,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@remix-run/eslint-config/1.4.1_a7f515df8376aaebe10c9e764e78c913:
-    resolution: {integrity: sha512-3jkD4YOw0J1G+5eobrVv89O6bXtCH+YzeoHAvVu8ZpJQb9PJ41mQrXXhZQ/EJjWXdjDyEhb9bt+lKIoKPqdt+w==}
+  /@remix-run/eslint-config/1.4.3_a7f515df8376aaebe10c9e764e78c913:
+    resolution: {integrity: sha512-eDWw9e0vId9ogC1lI75514wJeIFqE4bcSOl1u3JwC6H8rEXBuuPuAQQzjBdL61naEmAvS1yKfbUzmbP6ghEPog==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^8.0.0
