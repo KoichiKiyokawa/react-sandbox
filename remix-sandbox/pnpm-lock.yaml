@@ -25,8 +25,8 @@ specifiers:
   postcss-cli: 9.1.0
   prettier: 2.6.2
   prisma: 3.12.0
-  react: 18.0.0
-  react-dom: 18.0.0
+  react: 18.1.0
+  react-dom: 18.1.0
   react-hook-form: 7.30.0
   react-icons: 4.3.1
   remix: 1.4.1
@@ -39,23 +39,23 @@ specifiers:
 dependencies:
   '@hookform/resolvers': 2.8.8_react-hook-form@7.30.0
   '@prisma/client': 3.12.0_prisma@3.12.0
-  '@remix-run/node': 1.4.1_react-dom@18.0.0+react@18.0.0
-  '@remix-run/react': 1.4.1_react-dom@18.0.0+react@18.0.0
-  '@remix-run/serve': 1.4.1_react-dom@18.0.0+react@18.0.0
+  '@remix-run/node': 1.4.1_react-dom@18.1.0+react@18.1.0
+  '@remix-run/react': 1.4.1_react-dom@18.1.0+react@18.1.0
+  '@remix-run/serve': 1.4.1_react-dom@18.1.0+react@18.1.0
   bcryptjs: 2.4.3
   classnames: 2.3.1
   dayjs: 1.11.1
   http-status-codes: 2.2.0
-  react: 18.0.0
-  react-dom: 18.0.0_react@18.0.0
-  react-hook-form: 7.30.0_react@18.0.0
-  react-icons: 4.3.1_react@18.0.0
+  react: 18.1.0
+  react-dom: 18.1.0_react@18.1.0
+  react-hook-form: 7.30.0_react@18.1.0
+  react-icons: 4.3.1_react@18.1.0
   remix: 1.4.1
   zod: 3.14.4
 
 devDependencies:
-  '@remix-run/dev': 1.4.1_react-dom@18.0.0+react@18.0.0
-  '@remix-run/eslint-config': 1.4.3_a7f515df8376aaebe10c9e764e78c913
+  '@remix-run/dev': 1.4.1_react-dom@18.1.0+react@18.1.0
+  '@remix-run/eslint-config': 1.4.3_fab377e2955ad5dbcd319e5cac4d5bfb
   '@types/bcryptjs': 2.4.2
   '@types/react': 18.0.6
   '@types/react-dom': 18.0.2
@@ -622,7 +622,7 @@ packages:
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
-      react-hook-form: 7.30.0_react@18.0.0
+      react-hook-form: 7.30.0_react@18.1.0
     dev: false
 
   /@humanwhocodes/config-array/0.9.3:
@@ -724,7 +724,7 @@ packages:
     requiresBuild: true
     dev: true
 
-  /@remix-run/dev/1.4.1_react-dom@18.0.0+react@18.0.0:
+  /@remix-run/dev/1.4.1_react-dom@18.1.0+react@18.1.0:
     resolution: {integrity: sha512-bIq6UPjOJeBp8ifA9MAMGQ4WLjkMOGSqNlomEwmga1VwZUYmx/rZUFy0vqtBdCLSuhTj6tmfWA6b+aMdi1kcew==}
     hasBin: true
     dependencies:
@@ -733,7 +733,7 @@ packages:
       '@babel/preset-typescript': 7.16.7_@babel+core@7.17.8
       '@esbuild-plugins/node-modules-polyfill': 0.1.4_esbuild@0.14.22
       '@npmcli/package-json': 2.0.0
-      '@remix-run/server-runtime': 1.4.1_react-dom@18.0.0+react@18.0.0
+      '@remix-run/server-runtime': 1.4.1_react-dom@18.1.0+react@18.1.0
       cacache: 15.3.0
       chalk: 4.1.2
       chokidar: 3.5.3
@@ -778,7 +778,7 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@remix-run/eslint-config/1.4.3_a7f515df8376aaebe10c9e764e78c913:
+  /@remix-run/eslint-config/1.4.3_fab377e2955ad5dbcd319e5cac4d5bfb:
     resolution: {integrity: sha512-eDWw9e0vId9ogC1lI75514wJeIFqE4bcSOl1u3JwC6H8rEXBuuPuAQQzjBdL61naEmAvS1yKfbUzmbP6ghEPog==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -807,20 +807,20 @@ packages:
       eslint-plugin-react: 7.28.0_eslint@8.14.0
       eslint-plugin-react-hooks: 4.3.0_eslint@8.14.0
       eslint-plugin-testing-library: 5.0.5_eslint@8.14.0+typescript@4.6.3
-      react: 18.0.0
-      react-dom: 18.0.0_react@18.0.0
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
       typescript: 4.6.3
     transitivePeerDependencies:
       - jest
       - supports-color
     dev: true
 
-  /@remix-run/express/1.4.1_17235ad0e1d43a72cc57be0110e8c8a2:
+  /@remix-run/express/1.4.1_9f1816deb09346333fd0750bd0c91f03:
     resolution: {integrity: sha512-nXoAIws+i3GUeAujqJPJNT3l2XZi6wLSmxPua46eeFLnStzk4FyW9Ckqtypzq7WYb+yaOMhXPrTv1puvrAAbLA==}
     peerDependencies:
       express: ^4.17.1
     dependencies:
-      '@remix-run/node': 1.4.1_react-dom@18.0.0+react@18.0.0
+      '@remix-run/node': 1.4.1_react-dom@18.1.0+react@18.1.0
       express: 4.17.3
     transitivePeerDependencies:
       - encoding
@@ -828,10 +828,10 @@ packages:
       - react-dom
     dev: false
 
-  /@remix-run/node/1.4.1_react-dom@18.0.0+react@18.0.0:
+  /@remix-run/node/1.4.1_react-dom@18.1.0+react@18.1.0:
     resolution: {integrity: sha512-82nujfiZTt7DyceeTWtKRL0L6QtHZy6WnW0zGFnOW2mjCsG9dA166po8X7026VWTa254BxckJLY9GgF+5957Bw==}
     dependencies:
-      '@remix-run/server-runtime': 1.4.1_react-dom@18.0.0+react@18.0.0
+      '@remix-run/server-runtime': 1.4.1_react-dom@18.1.0+react@18.1.0
       '@types/busboy': 0.3.2
       '@types/node-fetch': 2.5.12
       '@web-std/file': 3.0.2
@@ -848,23 +848,23 @@ packages:
       - react-dom
     dev: false
 
-  /@remix-run/react/1.4.1_react-dom@18.0.0+react@18.0.0:
+  /@remix-run/react/1.4.1_react-dom@18.1.0+react@18.1.0:
     resolution: {integrity: sha512-SNUQV1jFm8zPtQdVsXOjNwlsyMhr3RAy/5hQOo19G1KAP7eHALmG2dpbm+La1s6oN7ngSdey0ahLnDPHmU0xeQ==}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
     dependencies:
       history: 5.3.0
-      react: 18.0.0
-      react-dom: 18.0.0_react@18.0.0
-      react-router-dom: 6.2.2_react-dom@18.0.0+react@18.0.0
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+      react-router-dom: 6.2.2_react-dom@18.1.0+react@18.1.0
     dev: false
 
-  /@remix-run/serve/1.4.1_react-dom@18.0.0+react@18.0.0:
+  /@remix-run/serve/1.4.1_react-dom@18.1.0+react@18.1.0:
     resolution: {integrity: sha512-K/tGLiT3zPywLIb1nqcJaXioo0xV9/nCCoNPQFiPHnUIAsYcY0sEVRWYct0ff4TlxJkZfJ9wY0xu1K6Vr9rrOw==}
     hasBin: true
     dependencies:
-      '@remix-run/express': 1.4.1_17235ad0e1d43a72cc57be0110e8c8a2
+      '@remix-run/express': 1.4.1_9f1816deb09346333fd0750bd0c91f03
       compression: 1.7.4
       express: 4.17.3
       morgan: 1.10.0
@@ -874,7 +874,7 @@ packages:
       - react-dom
     dev: false
 
-  /@remix-run/server-runtime/1.4.1_react-dom@18.0.0+react@18.0.0:
+  /@remix-run/server-runtime/1.4.1_react-dom@18.1.0+react@18.1.0:
     resolution: {integrity: sha512-vC5+7IZSNbAQEHC0436O3bYl6DpPAguJT0sSoemHE1jwJ1x+hUej3/k1QjIy1T/bioa6/7eHPggnm0hUlIFX1g==}
     peerDependencies:
       react: '>=16.8'
@@ -883,9 +883,9 @@ packages:
       '@types/cookie': 0.4.1
       cookie: 0.4.2
       jsesc: 3.0.2
-      react: 18.0.0
-      react-dom: 18.0.0_react@18.0.0
-      react-router-dom: 6.2.2_react-dom@18.0.0+react@18.0.0
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+      react-router-dom: 6.2.2_react-dom@18.1.0+react@18.1.0
       set-cookie-parser: 2.4.8
       source-map: 0.7.3
 
@@ -5549,31 +5549,31 @@ packages:
       iconv-lite: 0.4.24
       unpipe: 1.0.0
 
-  /react-dom/18.0.0_react@18.0.0:
-    resolution: {integrity: sha512-XqX7uzmFo0pUceWFCt7Gff6IyIMzFUn7QMZrbrQfGxtaxXZIcGQzoNpRLE3fQLnS4XzLLPMZX2T9TRcSrasicw==}
+  /react-dom/18.1.0_react@18.1.0:
+    resolution: {integrity: sha512-fU1Txz7Budmvamp7bshe4Zi32d0ll7ect+ccxNu9FlObT605GOEB8BfO4tmRJ39R5Zj831VCpvQ05QPBW5yb+w==}
     peerDependencies:
-      react: ^18.0.0
+      react: ^18.1.0
     dependencies:
       loose-envify: 1.4.0
-      react: 18.0.0
-      scheduler: 0.21.0
+      react: 18.1.0
+      scheduler: 0.22.0
     dev: false
 
-  /react-hook-form/7.30.0_react@18.0.0:
+  /react-hook-form/7.30.0_react@18.1.0:
     resolution: {integrity: sha512-DzjiM6o2vtDGNMB9I4yCqW8J21P314SboNG1O0obROkbg7KVS0I7bMtwSdKyapnCPjHgnxc3L7E5PEdISeEUcQ==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
     dependencies:
-      react: 18.0.0
+      react: 18.1.0
     dev: false
 
-  /react-icons/4.3.1_react@18.0.0:
+  /react-icons/4.3.1_react@18.1.0:
     resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
     peerDependencies:
       react: '*'
     dependencies:
-      react: 18.0.0
+      react: 18.1.0
     dev: false
 
   /react-is/16.13.1:
@@ -5584,27 +5584,27 @@ packages:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: true
 
-  /react-router-dom/6.2.2_react-dom@18.0.0+react@18.0.0:
+  /react-router-dom/6.2.2_react-dom@18.1.0+react@18.1.0:
     resolution: {integrity: sha512-AtYEsAST7bDD4dLSQHDnk/qxWLJdad5t1HFa1qJyUrCeGgEuCSw0VB/27ARbF9Fi/W5598ujvJOm3ujUCVzuYQ==}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
     dependencies:
       history: 5.3.0
-      react: 18.0.0
-      react-dom: 18.0.0_react@18.0.0
-      react-router: 6.2.2_react@18.0.0
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+      react-router: 6.2.2_react@18.1.0
 
-  /react-router/6.2.2_react@18.0.0:
+  /react-router/6.2.2_react@18.1.0:
     resolution: {integrity: sha512-/MbxyLzd7Q7amp4gDOGaYvXwhEojkJD5BtExkuKmj39VEE0m3l/zipf6h2WIB2jyAO0lI6NGETh4RDcktRm4AQ==}
     peerDependencies:
       react: '>=16.8'
     dependencies:
       history: 5.3.0
-      react: 18.0.0
+      react: 18.1.0
 
-  /react/18.0.0:
-    resolution: {integrity: sha512-x+VL6wbT4JRVPm7EGxXhZ8w8LTROaxPXOqhlGyVSrv0sB1jkyFGgXxJ8LVoPRLvPR6/CIZGFmfzqUa2NYeMr2A==}
+  /react/18.1.0:
+    resolution: {integrity: sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
@@ -5911,8 +5911,8 @@ packages:
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  /scheduler/0.21.0:
-    resolution: {integrity: sha512-1r87x5fz9MXqswA2ERLo0EbOAU74DpIUO090gIasYTqlVoJeMcl+Z1Rg7WHz+qtPujhS/hGIt9kxZOYBV3faRQ==}
+  /scheduler/0.22.0:
+    resolution: {integrity: sha512-6QAm1BgQI88NPYymgGQLCZgvep4FyePDWFpXVK+zNSUgHwlqpJy8VEh8Et0KxTACS4VWwMousBElAZOH9nkkoQ==}
     dependencies:
       loose-envify: 1.4.0
     dev: false
