@@ -20,7 +20,7 @@
     "framer-motion": "6.3.3",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "remix": "1.4.1"
+    "remix": "1.4.3"
   },
   "devDependencies": {
     "@remix-run/dev": "1.4.1",
