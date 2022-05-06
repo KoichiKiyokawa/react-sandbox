@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/node": "17.0.25",
-    "@types/react": "18.0.6",
+    "@types/react": "18.0.9",
     "@types/react-dom": "18.0.2",
     "concurrently": "^7.1.0",
     "eslint": "8.14.0",
