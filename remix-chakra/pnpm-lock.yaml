@@ -5,7 +5,7 @@ specifiers:
   '@emotion/react': 11.9.0
   '@emotion/styled': 11.8.1
   '@prisma/client': 3.12.0
-  '@remix-run/dev': 1.4.1
+  '@remix-run/dev': 1.4.3
   '@remix-run/react': 1.4.1
   '@remix-run/serve': 1.4.1
   '@types/react': 18.0.9
@@ -34,7 +34,7 @@ dependencies:
   remix: 1.4.1
 
 devDependencies:
-  '@remix-run/dev': 1.4.1_react-dom@18.1.0+react@18.1.0
+  '@remix-run/dev': 1.4.3_react-dom@18.1.0+react@18.1.0
   '@types/react': 18.0.9
   '@types/react-dom': 18.0.2
   esbuild-register: 3.3.2
@@ -1544,8 +1544,8 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /@remix-run/dev/1.4.1_react-dom@18.1.0+react@18.1.0:
-    resolution: {integrity: sha512-bIq6UPjOJeBp8ifA9MAMGQ4WLjkMOGSqNlomEwmga1VwZUYmx/rZUFy0vqtBdCLSuhTj6tmfWA6b+aMdi1kcew==}
+  /@remix-run/dev/1.4.3_react-dom@18.1.0+react@18.1.0:
+    resolution: {integrity: sha512-uvN0UzN97KlGIyotQKB631N92eRAffsMmzC6meoqrejZ9aYQrIM0l/hX3nMjjmbCTKI1Dq29szpMIn6fs5T78g==}
     hasBin: true
     dependencies:
       '@babel/core': 7.17.8
@@ -1553,7 +1553,7 @@ packages:
       '@babel/preset-typescript': 7.16.7_@babel+core@7.17.8
       '@esbuild-plugins/node-modules-polyfill': 0.1.4_esbuild@0.14.22
       '@npmcli/package-json': 2.0.0
-      '@remix-run/server-runtime': 1.4.1_react-dom@18.1.0+react@18.1.0
+      '@remix-run/server-runtime': 1.4.3_react-dom@18.1.0+react@18.1.0
       cacache: 15.3.0
       chalk: 4.1.2
       chokidar: 3.5.3
@@ -1671,6 +1671,23 @@ packages:
       react-router-dom: 6.2.2_react-dom@18.1.0+react@18.1.0
       set-cookie-parser: 2.4.8
       source-map: 0.7.3
+    dev: false
+
+  /@remix-run/server-runtime/1.4.3_react-dom@18.1.0+react@18.1.0:
+    resolution: {integrity: sha512-NgzoEAlIuZWv53oZRgxGz+jqkEtAa+veAuxlp5/UcZ/VhygpYIcfKwdx4eCOqJOi1TqILNWrh3cedEVvV0jccQ==}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@types/cookie': 0.4.1
+      cookie: 0.4.2
+      jsesc: 3.0.2
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+      react-router-dom: 6.2.2_react-dom@18.1.0+react@18.1.0
+      set-cookie-parser: 2.4.8
+      source-map: 0.7.3
+    dev: true
 
   /@rollup/pluginutils/4.1.2:
     resolution: {integrity: sha512-ROn4qvkxP9SyPeHaf7uQC/GPFY6L/OWy9+bd9AwcjOAWQwxRscoEyAUD8qCY5o5iL4jqQwoLk2kaTKJPb/HwzQ==}
