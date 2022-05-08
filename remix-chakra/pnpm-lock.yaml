@@ -18,7 +18,7 @@ specifiers:
   react: 18.1.0
   react-dom: 18.1.0
   remix: 1.4.1
-  typescript: 4.6.3
+  typescript: 4.6.4
 
 dependencies:
   '@chakra-ui/react': 1.8.8_ace265dca407ae145e82e4f1594aea0f
@@ -40,7 +40,7 @@ devDependencies:
   esbuild-register: 3.3.2
   prettier: 2.6.2
   prisma: 3.13.0
-  typescript: 4.6.3
+  typescript: 4.6.4
 
 packages:
 
@@ -6261,8 +6261,8 @@ packages:
       media-typer: 0.3.0
       mime-types: 2.1.34
 
-  /typescript/4.6.3:
-    resolution: {integrity: sha512-yNIatDa5iaofVozS/uQJEl3JRWLKKGJKh6Yaiv0GLGSuhpFJe7P3SbHZ8/yjAHRQwKRoA6YZqlfjXWmVzoVSMw==}
+  /typescript/4.6.4:
+    resolution: {integrity: sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
