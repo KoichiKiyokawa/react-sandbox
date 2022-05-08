@@ -60,5 +60,5 @@
   "prisma": {
     "seed": "node --require esbuild-register prisma/seed.ts"
   },
-  "packageManager": "pnpm@6.32.11"
+  "packageManager": "pnpm@6.32.12"
 }
