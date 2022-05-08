@@ -37,7 +37,7 @@
     "@remix-run/eslint-config": "1.4.3",
     "@types/bcryptjs": "2.4.2",
     "@types/react": "18.0.9",
-    "@types/react-dom": "18.0.2",
+    "@types/react-dom": "18.0.3",
     "autoprefixer": "10.4.7",
     "concurrently": "7.1.0",
     "esbuild-register": "3.3.2",
