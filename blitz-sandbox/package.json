@@ -30,7 +30,7 @@
     "react": "18.1.0",
     "zod": "3.16.0",
     "react-hook-form": "7.31.1",
-    "@hookform/resolvers": "2.8.8"
+    "@hookform/resolvers": "2.8.9"
   },
   "devDependencies": {
     "@types/preview-email": "2.0.1",

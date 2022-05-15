@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@hookform/resolvers': 2.8.8
+  '@hookform/resolvers': 2.8.9
   '@prisma/client': 3.14.0
   '@remix-run/dev': 1.4.3
   '@remix-run/eslint-config': 1.4.3
@@ -14,7 +14,7 @@ specifiers:
   autoprefixer: 10.4.7
   bcryptjs: 2.4.3
   classnames: 2.3.1
-  concurrently: 7.1.0
+  concurrently: 7.2.0
   dayjs: 1.11.2
   esbuild-register: 3.3.2
   eslint: 8.15.0
@@ -37,7 +37,7 @@ specifiers:
   zod: 3.16.0
 
 dependencies:
-  '@hookform/resolvers': 2.8.8_react-hook-form@7.31.1
+  '@hookform/resolvers': 2.8.9_react-hook-form@7.31.1
   '@prisma/client': 3.14.0_prisma@3.14.0
   '@remix-run/node': 1.4.3_react-dom@18.1.0+react@18.1.0
   '@remix-run/react': 1.4.3_react-dom@18.1.0+react@18.1.0
@@ -60,7 +60,7 @@ devDependencies:
   '@types/react': 18.0.9
   '@types/react-dom': 18.0.4
   autoprefixer: 10.4.7_postcss@8.4.13
-  concurrently: 7.1.0
+  concurrently: 7.2.0
   esbuild-register: 3.3.2
   eslint: 8.15.0
   eslint-config-prettier: 8.5.0_eslint@8.15.0
@@ -666,8 +666,8 @@ packages:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
     dev: true
 
-  /@hookform/resolvers/2.8.8_react-hook-form@7.31.1:
-    resolution: {integrity: sha512-meAEDur1IJBfKyTo9yPYAuzjIfrxA7m9Ov+1nxaW/YupsqMeseWifoUjWK03+hz/RJizsVQAaUjVxFEkyu0GWg==}
+  /@hookform/resolvers/2.8.9_react-hook-form@7.31.1:
+    resolution: {integrity: sha512-IXwGpjewxScF4N2kuyYDip6ABqH4lCg9n1f1mp0vbmKik+u+nestpbtdEs6U1WQZxwaoK/2APv1+MEr4czX7XA==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
@@ -2049,8 +2049,8 @@ packages:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
     dev: true
 
-  /concurrently/7.1.0:
-    resolution: {integrity: sha512-Bz0tMlYKZRUDqJlNiF/OImojMB9ruKUz6GCfmhFnSapXgPe+3xzY4byqoKG9tUZ7L2PGEUjfLPOLfIX3labnmw==}
+  /concurrently/7.2.0:
+    resolution: {integrity: sha512-4KIVY5HopDRhN3ndAgfFOLsMk1PZUPgghlgTMZ5Pb5aTrqYg86RcZaIZC2Cz+qpZ9DsX36WHGjvWnXPqdnblhw==}
     engines: {node: ^12.20.0 || ^14.13.0 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -2058,10 +2058,11 @@ packages:
       date-fns: 2.28.0
       lodash: 4.17.21
       rxjs: 6.6.7
+      shell-quote: 1.7.3
       spawn-command: 0.0.2-1
       supports-color: 8.1.1
       tree-kill: 1.2.2
-      yargs: 16.2.0
+      yargs: 17.4.1
     dev: true
 
   /content-disposition/0.5.4:
@@ -7262,27 +7263,9 @@ packages:
       decamelize: 1.2.0
     dev: true
 
-  /yargs-parser/20.2.9:
-    resolution: {integrity: sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==}
-    engines: {node: '>=10'}
-    dev: true
-
   /yargs-parser/21.0.1:
     resolution: {integrity: sha512-9BK1jFpLzJROCI5TzwZL/TU4gqjK5xiHV/RfWLOahrjAko/e4DJkRDZQXfvqAsiZzzYhgAzbgz6lg48jcm4GLg==}
     engines: {node: '>=12'}
-    dev: true
-
-  /yargs/16.2.0:
-    resolution: {integrity: sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==}
-    engines: {node: '>=10'}
-    dependencies:
-      cliui: 7.0.4
-      escalade: 3.1.1
-      get-caller-file: 2.0.5
-      require-directory: 2.1.1
-      string-width: 4.2.3
-      y18n: 5.0.8
-      yargs-parser: 20.2.9
     dev: true
 
   /yargs/17.4.1:
