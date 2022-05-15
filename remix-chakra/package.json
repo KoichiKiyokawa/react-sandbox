@@ -13,23 +13,23 @@
     "@chakra-ui/react": "1.8.8",
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
-    "@prisma/client": "3.13.0",
-    "@remix-run/react": "1.4.1",
-    "@remix-run/serve": "1.4.1",
+    "@prisma/client": "3.14.0",
+    "@remix-run/react": "1.4.3",
+    "@remix-run/serve": "1.4.3",
     "dayjs": "1.11.2",
     "framer-motion": "6.3.3",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "remix": "1.4.1"
+    "remix": "1.4.3"
   },
   "devDependencies": {
     "@remix-run/dev": "1.4.3",
     "@types/react": "18.0.9",
-    "@types/react-dom": "18.0.2",
+    "@types/react-dom": "18.0.4",
     "esbuild-register": "3.3.2",
     "prettier": "2.6.2",
-    "prisma": "3.13.0",
-    "typescript": "4.6.3"
+    "prisma": "3.14.0",
+    "typescript": "4.6.4"
   },
   "engines": {
     "node": ">=14"
