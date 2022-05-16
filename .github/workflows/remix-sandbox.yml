@@ -32,7 +32,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: pnpm
+          # cache: pnpm
           cache-dependency-path: remix-sandbox/pnpm-lock.yaml
       - run: pnpm i
       - run: cp app/env.sample.ts app/env.ts
