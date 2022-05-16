@@ -13,7 +13,7 @@
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore",
     "fmt": "prettier --write .",
     "fix:all": "pnpm run lint --fix && pnpm run fmt && prisma format && tsc --noEmit",
-    "check:all": "pnpm run lint && pnpm run fmt -- --check && tsc --noEmit"
+    "check:all": "pnpm run lint && pnpm run fmt --check && tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "2.8.8",
