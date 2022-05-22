@@ -10,20 +10,20 @@
     "start": "remix-serve build"
   },
   "dependencies": {
-    "@chakra-ui/react": "2.0.0",
+    "@chakra-ui/react": "2.1.0",
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
     "@prisma/client": "3.14.0",
-    "@remix-run/react": "1.4.3",
-    "@remix-run/serve": "1.4.3",
+    "@remix-run/react": "1.5.1",
+    "@remix-run/serve": "1.5.1",
     "dayjs": "1.11.2",
     "framer-motion": "6.3.3",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "remix": "1.4.3"
+    "remix": "1.5.1"
   },
   "devDependencies": {
-    "@remix-run/dev": "1.4.3",
+    "@remix-run/dev": "1.5.1",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.4",
     "esbuild-register": "3.3.2",

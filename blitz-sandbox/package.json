@@ -28,14 +28,14 @@
     "blitz": "0.45.4",
     "react-dom": "18.1.0",
     "react": "18.1.0",
-    "zod": "3.16.0",
-    "react-hook-form": "7.31.1",
-    "@hookform/resolvers": "2.8.9"
+    "zod": "3.17.2",
+    "react-hook-form": "7.31.2",
+    "@hookform/resolvers": "2.8.10"
   },
   "devDependencies": {
     "@types/preview-email": "2.0.1",
     "@types/react": "18.0.9",
-    "eslint": "8.15.0",
+    "eslint": "8.16.0",
     "husky": "8.0.1",
     "lint-staged": "12.4.1",
     "prettier-plugin-prisma": "3.14.0",
