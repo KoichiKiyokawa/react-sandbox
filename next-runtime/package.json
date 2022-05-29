@@ -24,7 +24,7 @@
   "devDependencies": {
     "@types/node": "17.0.36",
     "@types/react": "18.0.9",
-    "esbuild": "0.14.41",
+    "esbuild": "0.14.42",
     "esbuild-register": "3.3.2",
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6",
@@ -34,5 +34,5 @@
   "prisma": {
     "seed": "node -r esbuild-register prisma/seed.ts"
   },
-  "packageManager": "pnpm@7.1.6"
+  "packageManager": "pnpm@7.1.7"
 }
