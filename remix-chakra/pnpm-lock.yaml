@@ -11,7 +11,7 @@ specifiers:
   '@types/react': 18.0.11
   '@types/react-dom': 18.0.5
   dayjs: 1.11.2
-  esbuild-register: 3.3.2
+  esbuild-register: 3.3.3
   framer-motion: 6.3.10
   prettier: 2.6.2
   prisma: 3.14.0
@@ -37,7 +37,7 @@ devDependencies:
   '@remix-run/dev': 1.5.1_react-dom@18.1.0+react@18.1.0
   '@types/react': 18.0.11
   '@types/react-dom': 18.0.5
-  esbuild-register: 3.3.2
+  esbuild-register: 3.3.3
   prettier: 2.6.2
   prisma: 3.14.0
   typescript: 4.7.3
@@ -2836,8 +2836,8 @@ packages:
     dev: true
     optional: true
 
-  /esbuild-register/3.3.2:
-    resolution: {integrity: sha512-jceAtTO6zxPmCfSD5cBb3rgIK1vmuqCKYwgylHiS1BF4pq0jJiJb4K2QMuqF4BEw7XDBRatYzip0upyTzfkgsQ==}
+  /esbuild-register/3.3.3:
+    resolution: {integrity: sha512-eFHOkutgIMJY5gc8LUp/7c+LLlDqzNi9T6AwCZ2WKKl3HmT+5ef3ZRyPPxDOynInML0fgaC50yszPKfPnjC0NQ==}
     peerDependencies:
       esbuild: '>=0.12 <1'
     dev: true
