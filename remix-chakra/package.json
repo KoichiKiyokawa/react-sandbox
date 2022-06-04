@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@remix-run/dev": "1.5.1",
-    "@types/react": "18.0.10",
+    "@types/react": "18.0.11",
     "@types/react-dom": "18.0.5",
     "esbuild-register": "3.3.2",
     "prettier": "2.6.2",
