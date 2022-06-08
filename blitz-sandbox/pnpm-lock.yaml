@@ -2,9 +2,9 @@ lockfileVersion: 5.3
 
 specifiers:
   '@hookform/resolvers': 2.9.0
-  '@prisma/client': 3.14.0
+  '@prisma/client': 3.15.0
   '@types/preview-email': 2.0.1
-  '@types/react': 18.0.11
+  '@types/react': 18.0.12
   blitz: 0.45.4
   eslint: 8.17.0
   husky: 8.0.1
@@ -13,7 +13,7 @@ specifiers:
   prettier-plugin-prisma: 3.14.0
   pretty-quick: 3.1.3
   preview-email: 3.0.5
-  prisma: 3.14.0
+  prisma: 3.15.0
   react: 18.1.0
   react-dom: 18.1.0
   react-hook-form: 7.31.3
@@ -22,8 +22,8 @@ specifiers:
 
 dependencies:
   '@hookform/resolvers': 2.9.0_react-hook-form@7.31.3
-  '@prisma/client': 3.14.0_prisma@3.14.0
-  blitz: 0.45.4_543515640cdada65fec1fcda426acdfc
+  '@prisma/client': 3.15.0_prisma@3.15.0
+  blitz: 0.45.4_c1ca121c7e38cf96de82c5dd928cdeb2
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   react-hook-form: 7.31.3_react@18.1.0
@@ -31,7 +31,7 @@ dependencies:
 
 devDependencies:
   '@types/preview-email': 2.0.1
-  '@types/react': 18.0.11
+  '@types/react': 18.0.12
   eslint: 8.17.0
   husky: 8.0.1
   lint-staged: 13.0.0
@@ -39,7 +39,7 @@ devDependencies:
   prettier-plugin-prisma: 3.14.0_prettier@2.6.2
   pretty-quick: 3.1.3_prettier@2.6.2
   preview-email: 3.0.5
-  prisma: 3.14.0
+  prisma: 3.15.0
   typescript: 4.7.3
 
 packages:
@@ -659,11 +659,11 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: false
 
-  /@blitzjs/cli/0.45.4_035aeeccf25e51478fa61eb71f017f6a:
+  /@blitzjs/cli/0.45.4_0566ab269bc38e04d6f19d52c15f236c:
     resolution: {integrity: sha512-y3agE/s3dF+2hoXFBM/Bkib9I+YnZOf1fSXsleDy65f71EI/ywGSOti4pTziaEvU/8oBG885rXhkCx2Rku2KwA==}
     dependencies:
       '@blitzjs/generator': 0.45.4
-      '@blitzjs/installer': 0.45.4_be42b9411d2b818ab9698e8c4a3f3720
+      '@blitzjs/installer': 0.45.4_105ed41200946591595021fa8fe7ed91
       '@blitzjs/server': 0.45.4
       '@oclif/command': 1.8.0
       '@oclif/config': 1.17.0
@@ -735,7 +735,7 @@ packages:
       - supports-color
     dev: false
 
-  /@blitzjs/installer/0.45.4_be42b9411d2b818ab9698e8c4a3f3720:
+  /@blitzjs/installer/0.45.4_105ed41200946591595021fa8fe7ed91:
     resolution: {integrity: sha512-QNgmQpPXWV+XjeD9cNqOke8CWfpFDRP3wPL/+O936RsSO6keDMLHGiFylKwDnk8Jq3rZ4BfrRGrbtTeMeYblcw==}
     dependencies:
       '@babel/core': 7.12.10
@@ -750,9 +750,9 @@ packages:
       enquirer: 2.3.6
       fs-extra: 9.1.0
       globby: 11.0.2
-      ink: 3.2.0_be42b9411d2b818ab9698e8c4a3f3720
+      ink: 3.2.0_105ed41200946591595021fa8fe7ed91
       ink-spinner: 4.0.3_ink@3.2.0+react@18.1.0
-      ink-testing-library: 2.1.0_@types+react@18.0.11
+      ink-testing-library: 2.1.0_@types+react@18.0.12
       jscodeshift: 0.13.0
       recast: 0.20.5
     transitivePeerDependencies:
@@ -1465,8 +1465,8 @@ packages:
     engines: {node: '>=8.0.0'}
     dev: false
 
-  /@prisma/client/3.14.0_prisma@3.14.0:
-    resolution: {integrity: sha512-atb41UpgTR1MCst0VIbiHTMw8lmXnwUvE1KyUCAkq08+wJyjRE78Due+nSf+7uwqQn+fBFYVmoojtinhlLOSaA==}
+  /@prisma/client/3.15.0_prisma@3.15.0:
+    resolution: {integrity: sha512-0bwpIXtE3qkkm8JV6kSHLPyEbEUQD+hFAO7NM5INr23vFBOoyKwKI1Q4V08A7jq3NdI7g2NlBuugCHE9//1ANw==}
     engines: {node: '>=12.6'}
     requiresBuild: true
     peerDependencies:
@@ -1475,8 +1475,8 @@ packages:
       prisma:
         optional: true
     dependencies:
-      '@prisma/engines-version': 3.14.0-36.2b0c12756921c891fec4f68d9444e18c7d5d4a6a
-      prisma: 3.14.0
+      '@prisma/engines-version': 3.15.0-29.b9297dc3a59307060c1c39d7e4f5765066f38372
+      prisma: 3.15.0
     dev: false
 
   /@prisma/debug/3.8.1:
@@ -1513,12 +1513,12 @@ packages:
       undici: 3.3.6
     dev: false
 
-  /@prisma/engines-version/3.14.0-36.2b0c12756921c891fec4f68d9444e18c7d5d4a6a:
-    resolution: {integrity: sha512-D+yHzq4a2r2Rrd0ZOW/mTZbgDIkUkD8ofKgusEI1xPiZz60Daks+UM7Me2ty5FzH3p/TgyhBpRrfIHx+ha20RQ==}
+  /@prisma/engines-version/3.15.0-29.b9297dc3a59307060c1c39d7e4f5765066f38372:
+    resolution: {integrity: sha512-VRj1Svti6h4UnUxEbIpio+40zppFztGKogVbkgblndbEQfmNdLh2M5bzDD6kaO+r8LBxHUBzUG/zEmlpxTvwoA==}
     dev: false
 
-  /@prisma/engines/3.14.0-36.2b0c12756921c891fec4f68d9444e18c7d5d4a6a:
-    resolution: {integrity: sha512-LwZvI3FY6f43xFjQNRuE10JM5R8vJzFTSmbV9X0Wuhv9kscLkjRlZt0BEoiHmO+2HA3B3xxbMfB5du7ZoSFXGg==}
+  /@prisma/engines/3.15.0-29.b9297dc3a59307060c1c39d7e4f5765066f38372:
+    resolution: {integrity: sha512-S5T0NuVF2+NoKoxY5bN6O/7avv4ifcjqqk5+JFZ6C4g+P7JMM3nY0wGBPI+46A8yGIDsyyFmvFTYiIDsEUwUeQ==}
     requiresBuild: true
 
   /@prisma/engines/3.9.0-58.bcc2ff906db47790ee902e7bbc76d7ffb1893009:
@@ -1695,7 +1695,7 @@ packages:
       react-test-renderer: '>=16.9.0'
     dependencies:
       '@babel/runtime': 7.16.7
-      '@types/react': 18.0.11
+      '@types/react': 18.0.12
       '@types/react-test-renderer': 17.0.1
       react: 18.1.0
       react-test-renderer: 17.0.1_react@18.1.0
@@ -1882,11 +1882,11 @@ packages:
   /@types/react-test-renderer/17.0.1:
     resolution: {integrity: sha512-3Fi2O6Zzq/f3QR9dRnlnHso9bMl7weKCviFmfF6B4LS1Uat6Hkm15k0ZAQuDz+UBq6B3+g+NM6IT2nr5QgPzCw==}
     dependencies:
-      '@types/react': 18.0.11
+      '@types/react': 18.0.12
     dev: false
 
-  /@types/react/18.0.11:
-    resolution: {integrity: sha512-JxSwm54IgMW4XTR+zFF5QpNx4JITmFbB4WHR2J0vg9RpjNeyqEMlODXsD2e64br6GX70TL0UYjZJETpyyC1WdA==}
+  /@types/react/18.0.12:
+    resolution: {integrity: sha512-duF1OTASSBQtcigUvhuiTB1Ya3OvSy+xORCiEf20H0P0lzx+/KeVsA99U5UjLXSbyo1DRJDlLKqTeM1ngosqtg==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
@@ -2592,13 +2592,13 @@ packages:
       readable-stream: 3.6.0
     dev: false
 
-  /blitz/0.45.4_543515640cdada65fec1fcda426acdfc:
+  /blitz/0.45.4_c1ca121c7e38cf96de82c5dd928cdeb2:
     resolution: {integrity: sha512-St3RlsMdBXDaNgEVOh1MnJwTAzLN0DzGjYbnvaLXqRpyjLlS2R7C8zBozX7AULJn0JMiJ/KiaDH0FGHh707FGA==}
     engines: {node: '>= 10.13.0'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@blitzjs/cli': 0.45.4_035aeeccf25e51478fa61eb71f017f6a
+      '@blitzjs/cli': 0.45.4_0566ab269bc38e04d6f19d52c15f236c
       '@blitzjs/generator': 0.45.4
       '@blitzjs/server': 0.45.4
       '@testing-library/jest-dom': 5.11.9
@@ -5158,11 +5158,11 @@ packages:
       react: '>=16.8.2'
     dependencies:
       cli-spinners: 2.6.1
-      ink: 3.2.0_be42b9411d2b818ab9698e8c4a3f3720
+      ink: 3.2.0_105ed41200946591595021fa8fe7ed91
       react: 18.1.0
     dev: false
 
-  /ink-testing-library/2.1.0_@types+react@18.0.11:
+  /ink-testing-library/2.1.0_@types+react@18.0.12:
     resolution: {integrity: sha512-7TNlOjJlJXB33vG7yVa+MMO7hCjaC1bCn+zdpSjknWoLbOWMaFdKc7LJvqVkZ0rZv2+akhjXPrcR/dbxissjUw==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -5171,10 +5171,10 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 18.0.11
+      '@types/react': 18.0.12
     dev: false
 
-  /ink/3.2.0_be42b9411d2b818ab9698e8c4a3f3720:
+  /ink/3.2.0_105ed41200946591595021fa8fe7ed91:
     resolution: {integrity: sha512-firNp1q3xxTzoItj/eOOSZQnYSlyrWks5llCTVX37nJ59K3eXbQ8PtzCguqo8YI19EELo5QxaKnJd4VxzhU8tg==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -5184,7 +5184,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 18.0.11
+      '@types/react': 18.0.12
       ansi-escapes: 4.3.2
       auto-bind: 4.0.0
       chalk: 4.1.2
@@ -7718,13 +7718,13 @@ packages:
     hasBin: true
     dev: false
 
-  /prisma/3.14.0:
-    resolution: {integrity: sha512-l9MOgNCn/paDE+i1K2fp9NZ+Du4trzPTJsGkaQHVBufTGqzoYHuNk8JfzXuIn0Gte6/ZjyKj652Jq/Lc1tp2yw==}
+  /prisma/3.15.0:
+    resolution: {integrity: sha512-HL1kGDuFi9PdhbVLYsQO9vAH9uRFAHk7ifUOQxSrzUDs7R4VfLtg45VvXz8VHwcgLY5h0OrDVe1TdEX7a4o9tg==}
     engines: {node: '>=12.6'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@prisma/engines': 3.14.0-36.2b0c12756921c891fec4f68d9444e18c7d5d4a6a
+      '@prisma/engines': 3.15.0-29.b9297dc3a59307060c1c39d7e4f5765066f38372
 
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
@@ -8109,7 +8109,7 @@ packages:
     dev: false
 
   /readline/1.3.0:
-    resolution: {integrity: sha1-xYDXfvLPyHUrEySYBg3JeTp6wBw=}
+    resolution: {integrity: sha512-k2d6ACCkiNYz222Fs/iNze30rRJ1iIicW7JuX/7/cozvih6YCkFZH+J6mAFDVgv0dRBaAyr4jDqC95R2y4IADg==}
     dev: false
 
   /recast/0.20.5:
@@ -8165,7 +8165,7 @@ packages:
     engines: {node: '>=8'}
 
   /remove-accents/0.4.2:
-    resolution: {integrity: sha1-CkPTqq4egNuRngeuJUsoXZ4ce7U=}
+    resolution: {integrity: sha512-7pXIJqJOq5tFgG1A2Zxti3Ht8jJF337m4sowbuHsW30ZnkQFnDzy9qBNhgzX8ZLW4+UBcXiiR7SwR6pokHsxiA==}
     dev: false
 
   /remove-trailing-separator/1.1.0:
