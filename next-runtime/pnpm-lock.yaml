@@ -6,7 +6,7 @@ specifiers:
   '@emotion/react': 11.9.3
   '@emotion/styled': 11.9.3
   '@prisma/client': 3.15.2
-  '@types/node': 17.0.45
+  '@types/node': 18.0.0
   '@types/react': 18.0.14
   esbuild: 0.14.46
   esbuild-register: 3.3.3
@@ -35,7 +35,7 @@ dependencies:
   rhodash: 2.1.0
 
 devDependencies:
-  '@types/node': 17.0.45
+  '@types/node': 18.0.0
   '@types/react': 18.0.14
   esbuild: 0.14.46
   esbuild-register: 3.3.3_esbuild@0.14.46
@@ -1242,20 +1242,20 @@ packages:
   /@types/accepts/1.3.5:
     resolution: {integrity: sha512-jOdnI/3qTpHABjM5cx1Hc0sKsPoYCp+DP/GJRGtDlPd7fiV9oXGGIcjW/ZOxLIvjGz8MA+uMZI9metHlgqbgwQ==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.0.0
     dev: false
 
   /@types/body-parser/1.19.2:
     resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==}
     dependencies:
       '@types/connect': 3.4.35
-      '@types/node': 17.0.45
+      '@types/node': 18.0.0
     dev: false
 
   /@types/busboy/0.3.2:
     resolution: {integrity: sha512-iEvdm9Z9KdSs/ozuh1Z7ZsXrOl8F4M/CLMXPZHr3QuJ4d6Bjn+HBMC5EMKpwpAo8oi8iK9GZfFoHaIMrrZgwVw==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.0.0
     dev: false
 
   /@types/bytes/3.1.1:
@@ -1265,7 +1265,7 @@ packages:
   /@types/connect/3.4.35:
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.0.0
     dev: false
 
   /@types/cookies/0.7.7:
@@ -1274,7 +1274,7 @@ packages:
       '@types/connect': 3.4.35
       '@types/express': 4.17.13
       '@types/keygrip': 1.0.2
-      '@types/node': 17.0.45
+      '@types/node': 18.0.0
     dev: false
 
   /@types/debug/4.1.7:
@@ -1286,7 +1286,7 @@ packages:
   /@types/express-serve-static-core/4.17.27:
     resolution: {integrity: sha512-e/sVallzUTPdyOTiqi8O8pMdBBphscvI6E4JYaKlja4Lm+zh7UFSSdW5VMkRbhDtmrONqOUHOXRguPsDckzxNA==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.0.0
       '@types/qs': 6.9.7
       '@types/range-parser': 1.2.4
     dev: false
@@ -1329,12 +1329,12 @@ packages:
   /@types/node-fetch/2.5.12:
     resolution: {integrity: sha512-MKgC4dlq4kKNa/mYrwpKfzQMB5X3ee5U6fSprkKpToBqBmX4nFZL9cW5jl6sWn+xpRJ7ypWh2yyqqr8UUCstSw==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.0.0
       form-data: 3.0.1
     dev: false
 
-  /@types/node/17.0.45:
-    resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
+  /@types/node/18.0.0:
+    resolution: {integrity: sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==}
 
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
@@ -1379,7 +1379,7 @@ packages:
     resolution: {integrity: sha512-nCkHGI4w7ZgAdNkrEu0bv+4xNV/XDqW+DydknebMOQwkpDGx8G+HTlj7R7ABI8i8nKxVw0wtKPi1D+lPOkh4YQ==}
     dependencies:
       '@types/mime': 1.3.2
-      '@types/node': 17.0.45
+      '@types/node': 18.0.0
     dev: false
 
   /@typescript-eslint/parser/5.22.0_b5e7v2qnwxfo6hmiq56u52mz3e:
