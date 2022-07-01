@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "pnpm fmt && next lint",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "deploy": "amplify publish"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.2.1",
@@ -19,6 +20,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@aws-amplify/cli": "9.1.0",
     "@types/node": "18.0.0",
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",

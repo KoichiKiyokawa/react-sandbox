@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nextchakra-dev-194912-authRole",
+      "UnauthRoleArn": "arn:aws:iam::877131159332:role/amplify-nextchakra-dev-194912-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::877131159332:role/amplify-nextchakra-dev-194912-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-nextchakra-dev-194912-deployment",
+      "UnauthRoleName": "amplify-nextchakra-dev-194912-unauthRole",
+      "StackName": "amplify-nextchakra-dev-194912",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:877131159332:stack/amplify-nextchakra-dev-194912/72575a00-f92b-11ec-9e3f-0e095be7648d",
+      "AmplifyAppId": "d3mf1bpo30j1yc"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3mf1bpo30j1yc",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}
