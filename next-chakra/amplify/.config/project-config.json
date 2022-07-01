@@ -6,12 +6,10 @@
     "framework": "react",
     "config": {
       "SourceDir": ".",
-      "DistributionDir": ".next",
+      "DistributionDir": "out",
       "BuildCommand": "pnpm build",
       "StartCommand": "pnpm start"
     }
   },
-  "providers": [
-    "awscloudformation"
-  ]
+  "providers": ["awscloudformation"]
 }
