@@ -22,7 +22,7 @@ specifiers:
   http-status-codes: 2.2.0
   npm-run-all: 4.1.5
   postcss: 8.4.14
-  postcss-cli: 9.1.0
+  postcss-cli: 10.0.0
   prettier: 2.7.1
   prisma: 4.0.0
   react: 18.2.0
@@ -64,7 +64,7 @@ devDependencies:
   eslint-config-prettier: 8.5.0_eslint@8.19.0
   npm-run-all: 4.1.5
   postcss: 8.4.14
-  postcss-cli: 9.1.0_postcss@8.4.14
+  postcss-cli: 10.0.0_postcss@8.4.14
   prettier: 2.7.1
   prisma: 4.0.0
   rimraf: 3.0.2
@@ -2230,11 +2230,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /array-union/3.0.1:
-    resolution: {integrity: sha512-1OvF9IbWwaeiM9VhzYXVQacMibxpXOMYVNIvMtKRyX9SImBXpKcFr8XvFDeEslCyuH/t6KRt7HEO94AlP8Iatw==}
-    engines: {node: '>=12'}
-    dev: true
-
   /array-unique/0.3.2:
     resolution: {integrity: sha512-SleRWjh9JUud2wH1hPs9rZBZ33H6T9HOiL0uwGnGx9FpE6wKGyfWugmbkEOIs6qWrZhg0LWeLziLrEwQJhs5mQ==}
     engines: {node: '>=0.10.0'}
@@ -4378,11 +4373,10 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /globby/12.2.0:
-    resolution: {integrity: sha512-wiSuFQLZ+urS9x2gGPl1H5drc5twabmm4m2gTR27XDFyjUHJUNsS8o/2aKyIF6IoBaR630atdher0XJ5g6OMmA==}
+  /globby/13.1.2:
+    resolution: {integrity: sha512-LKSDZXToac40u8Q1PQtZihbNdTYSNMuWe+K5l+oa6KgDzSvVrHXlJy40hUP522RjAIoNLJYBJi7ow+rbFpIhHQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
-      array-union: 3.0.1
       dir-glob: 3.0.1
       fast-glob: 3.2.11
       ignore: 5.2.0
@@ -6306,9 +6300,9 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /postcss-cli/9.1.0_postcss@8.4.14:
-    resolution: {integrity: sha512-zvDN2ADbWfza42sAnj+O2uUWyL0eRL1V+6giM2vi4SqTR3gTYy8XzcpfwccayF2szcUif0HMmXiEaDv9iEhcpw==}
-    engines: {node: '>=12'}
+  /postcss-cli/10.0.0_postcss@8.4.14:
+    resolution: {integrity: sha512-Wjy/00wBBEgQqnSToznxLWDnATznokFGXsHtF/3G8glRZpz5KYlfHcBW/VMJmWAeF2x49zjgy4izjM3/Wx1dKA==}
+    engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
       postcss: ^8.0.0
@@ -6317,10 +6311,10 @@ packages:
       dependency-graph: 0.11.0
       fs-extra: 10.1.0
       get-stdin: 9.0.0
-      globby: 12.2.0
+      globby: 13.1.2
       picocolors: 1.0.0
       postcss: 8.4.14
-      postcss-load-config: 3.1.4_postcss@8.4.14
+      postcss-load-config: 4.0.1_postcss@8.4.14
       postcss-reporter: 7.0.5_postcss@8.4.14
       pretty-hrtime: 1.0.3
       read-cache: 1.0.0
@@ -6367,6 +6361,23 @@ packages:
       lilconfig: 2.0.5
       postcss: 8.4.14
       yaml: 1.10.2
+    dev: true
+
+  /postcss-load-config/4.0.1_postcss@8.4.14:
+    resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
+    engines: {node: '>= 14'}
+    peerDependencies:
+      postcss: '>=8.0.9'
+      ts-node: '>=9.0.0'
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+      ts-node:
+        optional: true
+    dependencies:
+      lilconfig: 2.0.5
+      postcss: 8.4.14
+      yaml: 2.1.1
     dev: true
 
   /postcss-nested/5.0.6_postcss@8.4.14:
@@ -6438,7 +6449,7 @@ packages:
     dev: true
 
   /pretty-hrtime/1.0.3:
-    resolution: {integrity: sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=}
+    resolution: {integrity: sha512-66hKPCr+72mlfiSjlEB1+45IjXSqvVAIy6mocupoww4tBFE9R9IhwwUGoI4G++Tc9Aq+2rxOt0RFU6gPcrte0A==}
     engines: {node: '>= 0.8'}
     dev: true
 
@@ -6624,7 +6635,7 @@ packages:
       loose-envify: 1.4.0
 
   /read-cache/1.0.0:
-    resolution: {integrity: sha1-5mTvMRYRZsl1HNvo28+GtftY93Q=}
+    resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
     dependencies:
       pify: 2.3.0
     dev: true
@@ -8024,6 +8035,11 @@ packages:
   /yaml/1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
+    dev: true
+
+  /yaml/2.1.1:
+    resolution: {integrity: sha512-o96x3OPo8GjWeSLF+wOAbrPfhFOGY0W00GNaxCDv+9hkcDJEnev1yh8S7pgHF0ik6zc8sQLuL8hjHjJULZp8bw==}
+    engines: {node: '>= 14'}
     dev: true
 
   /yargs-parser/18.1.3:
