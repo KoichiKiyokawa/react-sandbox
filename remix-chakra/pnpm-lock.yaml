@@ -4,7 +4,7 @@ specifiers:
   '@chakra-ui/react': 2.2.1
   '@emotion/react': 11.9.3
   '@emotion/styled': 11.9.3
-  '@prisma/client': 3.15.2
+  '@prisma/client': 4.0.0
   '@remix-run/dev': 1.6.3
   '@remix-run/react': 1.6.3
   '@remix-run/serve': 1.6.3
@@ -24,7 +24,7 @@ dependencies:
   '@chakra-ui/react': 2.2.1_e9f3ccfcca4fab40d31ba7fcdf6f43f9
   '@emotion/react': 11.9.3_d9efaa4a57b9ddc48121b447e3437c81
   '@emotion/styled': 11.9.3_9f060d9dc2b4fcb488bb7788ce42d0cb
-  '@prisma/client': 3.15.2_prisma@4.0.0
+  '@prisma/client': 4.0.0_prisma@4.0.0
   '@remix-run/react': 1.6.3_react-dom@18.2.0+react@18.2.0
   '@remix-run/serve': 1.6.3_react-dom@18.2.0+react@18.2.0
   dayjs: 1.11.3
@@ -2339,9 +2339,9 @@ packages:
     resolution: {integrity: sha512-92FRmppjjqz29VMJ2dn+xdyXZBrMlE42AV6Kq6BwjWV7CNUW1hs2FtxSNLQE+gJhaZ6AAmYuO9y8dshhcBl7vA==}
     dev: false
 
-  /@prisma/client/3.15.2_prisma@4.0.0:
-    resolution: {integrity: sha512-ErqtwhX12ubPhU4d++30uFY/rPcyvjk+mdifaZO5SeM21zS3t4jQrscy8+6IyB0GIYshl5ldTq6JSBo1d63i8w==}
-    engines: {node: '>=12.6'}
+  /@prisma/client/4.0.0_prisma@4.0.0:
+    resolution: {integrity: sha512-g1h2OGoRo7anBVQ9Cw3gsbjwPtvf7i0pkGxKeZICtwkvE5CZXW+xZF4FZdmrViYkKaAShbISL0teNpu9ecpf4g==}
+    engines: {node: '>=14.17'}
     requiresBuild: true
     peerDependencies:
       prisma: '*'
@@ -2349,12 +2349,12 @@ packages:
       prisma:
         optional: true
     dependencies:
-      '@prisma/engines-version': 3.15.1-1.461d6a05159055555eb7dfb337c9fb271cbd4d7e
+      '@prisma/engines-version': 3.16.0-49.da41d2bb3406da22087b849f0e911199ba4fbf11
       prisma: 4.0.0
     dev: false
 
-  /@prisma/engines-version/3.15.1-1.461d6a05159055555eb7dfb337c9fb271cbd4d7e:
-    resolution: {integrity: sha512-e3k2Vd606efd1ZYy2NQKkT4C/pn31nehyLhVug6To/q8JT8FpiMrDy7zmm3KLF0L98NOQQcutaVtAPhzKhzn9w==}
+  /@prisma/engines-version/3.16.0-49.da41d2bb3406da22087b849f0e911199ba4fbf11:
+    resolution: {integrity: sha512-PiZhdD624SrYEjyLboI0X7OugNbxUzDJx9v/6ldTKuqNDVUCmRH/Z00XwDi/dgM4FlqOSO+YiUsSiSKjxxG8cw==}
     dev: false
 
   /@prisma/engines/3.16.0-49.da41d2bb3406da22087b849f0e911199ba4fbf11:
