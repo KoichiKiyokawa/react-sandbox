@@ -29,7 +29,6 @@ specifiers:
   react-dom: 18.2.0
   react-hook-form: 7.33.1
   react-icons: 4.4.0
-  remix: 1.6.3
   rimraf: 3.0.2
   tailwindcss: 3.1.4
   type-fest: 2.16.0
@@ -50,7 +49,6 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.33.1_react@18.2.0
   react-icons: 4.4.0_react@18.2.0
-  remix: 1.6.3
   zod: 3.17.3
 
 devDependencies:
@@ -6806,11 +6804,6 @@ packages:
       mdast-util-to-hast: 11.3.0
       unified: 10.1.2
     dev: true
-
-  /remix/1.6.3:
-    resolution: {integrity: sha512-9p0Rge/6URPVb5lJdwJBJivhbcfa/AdTs9d2V/hdOaoJPqHSrAWC6n/1wT0CjR4tkC7xvF38oS5n44UuHLtyiw==}
-    engines: {node: '>=14'}
-    dev: false
 
   /repeat-element/1.1.4:
     resolution: {integrity: sha512-LFiNfRcSu7KK3evMyYOuCzv3L10TW7yC1G2/+StMjK8Y6Vqd2MG7r/Qjw4ghtuCOjFvlnms/iMmLqpvW/ES/WQ==}
