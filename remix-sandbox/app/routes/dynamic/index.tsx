@@ -1,5 +1,6 @@
 import { useFieldArray, useForm } from "react-hook-form";
-import { type ActionFunction, Form } from "remix";
+import { ActionFunction } from "@remix-run/node";
+import { Form } from "@remix-run/react";
 import { Button } from "~/domains/ui/Button";
 import { TextInput } from "~/domains/ui/TextInput";
 

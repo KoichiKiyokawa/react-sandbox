@@ -1,4 +1,4 @@
-import { Form, Link, NavLink, useLocation } from "remix";
+import { Form, Link, NavLink, useLocation } from "@remix-run/react";
 
 type Props = {
   isLoggedIn: boolean;

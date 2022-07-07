@@ -1,4 +1,5 @@
 import type { LinksFunction, LoaderFunction } from "@remix-run/server-runtime";
+
 import {
   Links,
   LiveReload,
@@ -8,7 +9,8 @@ import {
   ScrollRestoration,
   useCatch,
   useLoaderData,
-} from "remix";
+} from "@remix-run/react";
+
 import { AuthService } from "./domains/auth/service.server";
 import { Header } from "./domains/ui/Header";
 import generatedStyle from "./styles/generated.css";

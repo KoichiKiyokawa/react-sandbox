@@ -1,4 +1,4 @@
-import { type ActionFunction, redirect } from "remix";
+import { ActionFunction, redirect } from "@remix-run/node";
 import { AuthService } from "~/domains/auth/service.server";
 
 export const action: ActionFunction = async ({ request }) => {

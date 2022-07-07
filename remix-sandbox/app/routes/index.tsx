@@ -1,5 +1,6 @@
 import StatusCode from "http-status-codes";
-import { type ActionFunction, Link, type LoaderFunction, redirect, useLoaderData } from "remix";
+import { ActionFunction, LoaderFunction, redirect } from "@remix-run/node";
+import { Link, useLoaderData } from "@remix-run/react";
 import {
   ArticleCard,
   type ArticleWithAuthorAndTag,

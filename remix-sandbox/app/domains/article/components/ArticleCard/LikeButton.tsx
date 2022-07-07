@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 import { FiHeart } from "react-icons/fi";
-import { Form } from "remix";
+import { Form } from "@remix-run/react";
 
 export const LikeButton = ({
   articleSlug,

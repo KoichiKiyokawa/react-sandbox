@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { type ActionFunction, useSearchParams } from "remix";
+import { ActionFunction } from "@remix-run/node";
+import { useSearchParams } from "@remix-run/react";
 import { Confirm } from "~/domains/multiple_form/components/steps/Confirm";
 import { Step1 } from "~/domains/multiple_form/components/steps/Step1";
 import { Step2 } from "~/domains/multiple_form/components/steps/Step2";

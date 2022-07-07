@@ -1,6 +1,6 @@
 import type { Article, Tag, User } from "@prisma/client";
 import dayjs from "dayjs";
-import { Link } from "remix";
+import { Link } from "@remix-run/react";
 import { LikeButton } from "./LikeButton";
 
 export type ArticleWithAuthorAndTag = Article & {
