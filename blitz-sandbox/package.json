@@ -29,13 +29,13 @@
     "react-dom": "18.2.0",
     "react": "18.2.0",
     "zod": "3.17.3",
-    "react-hook-form": "7.33.0",
-    "@hookform/resolvers": "2.9.3"
+    "react-hook-form": "7.33.1",
+    "@hookform/resolvers": "2.9.4"
   },
   "devDependencies": {
     "@types/preview-email": "2.0.1",
-    "@types/react": "18.0.14",
-    "eslint": "8.18.0",
+    "@types/react": "18.0.15",
+    "eslint": "8.19.0",
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
     "prettier-plugin-prisma": "3.14.0",
