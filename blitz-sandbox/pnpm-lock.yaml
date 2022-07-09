@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@hookform/resolvers': 2.9.4
+  '@hookform/resolvers': 2.9.5
   '@prisma/client': 4.0.0
   '@types/preview-email': 2.0.1
   '@types/react': 18.0.15
@@ -21,7 +21,7 @@ specifiers:
   zod: 3.17.3
 
 dependencies:
-  '@hookform/resolvers': 2.9.4_react-hook-form@7.33.1
+  '@hookform/resolvers': 2.9.5_react-hook-form@7.33.1
   '@prisma/client': 4.0.0_prisma@4.0.0
   blitz: 0.45.4_3030a244a6c1582374f601566db43d57
   react: 18.2.0
@@ -922,8 +922,8 @@ packages:
     resolution: {integrity: sha512-gfta+H8aziZsm8pZa0vj04KO6biEiisppNgA1kbJvFrrWu9Vm7eaUEy76DIxsuTaWvti5fkJVhllWc6ZTE+Mdw==}
     dev: false
 
-  /@hookform/resolvers/2.9.4_react-hook-form@7.33.1:
-    resolution: {integrity: sha512-rVqwNB5Z5J67QGsJWp9a46z4+MJq8YDUXX8mMIr6hEsGD4bs6c7Jtel+ZNvk0aFfywGRwIEMfmQUrpxjWQck3w==}
+  /@hookform/resolvers/2.9.5_react-hook-form@7.33.1:
+    resolution: {integrity: sha512-4XABrKdE4GpX6v2RZ+Ij1Wrl9qPEl5ZvVhFxROY+SZhP/6TU8gPw0LO4ZS9/GgIbTx3Pw1U8HmcXVAoGOq+7iA==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
