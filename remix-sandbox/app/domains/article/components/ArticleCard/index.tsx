@@ -2,6 +2,7 @@ import type { Article, Tag, User } from "@prisma/client";
 import dayjs from "dayjs";
 import { Link } from "@remix-run/react";
 import { LikeButton } from "./LikeButton";
+import type { Jsonify } from "type-fest";
 
 export type ArticleWithAuthorAndTag = Article & {
   author: Pick<User, "id" | "name">;
@@ -10,7 +11,7 @@ export type ArticleWithAuthorAndTag = Article & {
   hasLiked: boolean;
 };
 
-type Props = { data: ArticleWithAuthorAndTag; currentUserId: string };
+type Props = { data: Jsonify<ArticleWithAuthorAndTag>; currentUserId: string };
 
 const MAX_BODY_SHOW_LENGTH = 15;
 
