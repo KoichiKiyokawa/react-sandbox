@@ -1,5 +1,5 @@
 import StatusCode from "http-status-codes";
-import { type ActionFunction, type LoaderFunction, redirect } from "@remix-run/node";
+import { type ActionFunction, type LoaderFunction, redirect, LoaderArgs } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import {
   ArticleCard,
@@ -36,7 +36,7 @@ export const action: ActionFunction = async ({ request }) => {
 
 type LoaderData = { articles: ArticleWithAuthorAndTag[] };
 
-export const loader: LoaderFunction = async ({ request }): Promise<LoaderData> => {
+export const loader = async ({ request }: LoaderArgs): Promise<LoaderData> => {
   const currentUserId = await AuthService.getCurrentUserId(request);
   const data = await db.article.findMany({
     include: {
@@ -57,7 +57,7 @@ export const loader: LoaderFunction = async ({ request }): Promise<LoaderData> =
 };
 
 export default function Index() {
-  const { articles } = useLoaderData<LoaderData>();
+  const { articles } = useLoaderData<typeof loader>();
 
   return (
     <>
