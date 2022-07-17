@@ -1,6 +1,6 @@
-import StatusCode from "http-status-codes";
-import { type ActionFunction, type LoaderFunction, redirect, LoaderArgs } from "@remix-run/node";
+import { redirect, type ActionFunction, type LoaderArgs } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
+import { StatusCodes } from "http-status-codes";
 import {
   ArticleCard,
   type ArticleWithAuthorAndTag,
@@ -19,7 +19,7 @@ export const action: ActionFunction = async ({ request }) => {
 
       const articleSlug = form.get("articleSlug") as string;
       if (!articleSlug)
-        return new Response("articleSlug is needed", { status: StatusCode.BAD_REQUEST });
+        return new Response("articleSlug is needed", { status: StatusCodes.BAD_REQUEST });
 
       const like = await db.like.findFirst({
         where: { articleSlug, userId: currentUserId },

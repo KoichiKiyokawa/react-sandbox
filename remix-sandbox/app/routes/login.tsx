@@ -1,4 +1,4 @@
-import { ActionFunction, json } from "@remix-run/node";
+import { json, type ActionFunction } from "@remix-run/node";
 import { Form, Link, useActionData } from "@remix-run/react";
 import { loginSchema } from "~/domains/auth/schema";
 import { AuthService } from "~/domains/auth/service.server";
