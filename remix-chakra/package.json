@@ -16,7 +16,7 @@
     "@prisma/client": "4.1.0",
     "@remix-run/react": "1.6.5",
     "@remix-run/serve": "1.6.5",
-    "dayjs": "1.11.3",
+    "dayjs": "1.11.4",
     "framer-motion": "6.5.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
