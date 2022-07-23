@@ -10,7 +10,7 @@ specifiers:
   '@remix-run/serve': 1.6.5
   '@types/react': 18.0.15
   '@types/react-dom': 18.0.6
-  dayjs: 1.11.3
+  dayjs: 1.11.4
   esbuild-register: 3.3.3
   framer-motion: 6.5.1
   prettier: 2.7.1
@@ -27,7 +27,7 @@ dependencies:
   '@prisma/client': 4.1.0_prisma@4.1.0
   '@remix-run/react': 1.6.5_react-dom@18.2.0+react@18.2.0
   '@remix-run/serve': 1.6.5_react-dom@18.2.0+react@18.2.0
-  dayjs: 1.11.3
+  dayjs: 1.11.4
   framer-motion: 6.5.1_react-dom@18.2.0+react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -3395,8 +3395,8 @@ packages:
     resolution: {integrity: sha512-WboRycPNsVw3B3TL559F7kuBUM4d8CgMEvk6xEJlOp7OBPjt6G7z8WMWlD2rOFZLk6OYfFIUGsCOWzcQH9K2og==}
     engines: {node: '>= 6'}
 
-  /dayjs/1.11.3:
-    resolution: {integrity: sha512-xxwlswWOlGhzgQ4TKzASQkUhqERI3egRNqgV4ScR8wlANA/A9tZ7miXa44vTTKEq5l7vWoL5G57bG3zA+Kow0A==}
+  /dayjs/1.11.4:
+    resolution: {integrity: sha512-Zj/lPM5hOvQ1Bf7uAvewDaUcsJoI6JmNqmHhHl3nyumwe0XHwt8sWdOVAPACJzCebL8gQCi+K49w7iKWnGwX9g==}
     dev: false
 
   /deasync/0.1.24:
