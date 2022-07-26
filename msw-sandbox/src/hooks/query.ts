@@ -1,6 +1,5 @@
 import { useQuery as useQueryBase } from "@tanstack/react-query"
-
-const BASE_URL = "http://localhost:3000/api/"
+import { BASE_URL } from "../const"
 
 export const useQuery = <Data = unknown, Error = unknown>(
   keys: Array<string | number>
