@@ -37,7 +37,7 @@ export default function Dynamic() {
         </div>
       ))}
 
-      <Button type="button" onClick={() => append({})}>
+      <Button type="button" onClick={() => append({ value: "1" })}>
         Add
       </Button>
 
