@@ -5,7 +5,7 @@ specifiers:
   '@chakra-ui/react': ^2.2.1
   '@emotion/react': ^11
   '@emotion/styled': ^11
-  '@types/node': 18.6.0
+  '@types/node': 18.6.2
   '@types/react': 18.0.15
   '@types/react-dom': 18.0.6
   eslint: 8.20.0
@@ -29,7 +29,7 @@ dependencies:
 
 devDependencies:
   '@aws-amplify/cli': 9.1.0
-  '@types/node': 18.6.0
+  '@types/node': 18.6.2
   '@types/react': 18.0.15
   '@types/react-dom': 18.0.6
   eslint: 8.20.0
@@ -1246,8 +1246,8 @@ packages:
     resolution: {integrity: sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q==}
     dev: false
 
-  /@types/node/18.6.0:
-    resolution: {integrity: sha512-WZ/6I1GL0DNAo4bb01lGGKTHH8BHJyECepf11kWONg3OJoHq2WYOm16Es1V54Er7NTUXsbDCpKRKdmBc4X2xhA==}
+  /@types/node/18.6.2:
+    resolution: {integrity: sha512-KcfkBq9H4PI6Vpu5B/KoPeuVDAbmi+2mDBqGPGUgoL7yXQtcWGu2vJWmmRkneWK3Rh0nIAX192Aa87AqKHYChQ==}
     dev: true
 
   /@types/parse-json/4.0.0:
