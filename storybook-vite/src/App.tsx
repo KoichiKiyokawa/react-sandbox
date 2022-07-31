@@ -1,12 +1,14 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState } from "react"
+import logo from "./logo.svg"
+import "./App.css"
+import { Hoge } from "@/components/Hoge"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
+      <Hoge />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
@@ -27,7 +29,7 @@ function App() {
           >
             Learn React
           </a>
-          {' | '}
+          {" | "}
           <a
             className="App-link"
             href="https://vitejs.dev/guide/features.html"
