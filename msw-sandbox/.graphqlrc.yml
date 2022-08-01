@@ -1,0 +1,8 @@
+schema: "./schema.gql"
+documents: "./src/**/*.gql"
+generates:
+  ./src/gql/__generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node

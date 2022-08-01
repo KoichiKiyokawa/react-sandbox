@@ -6,9 +6,11 @@ type Todo = {
   done: boolean
 }
 
-export const IndexPage = () => {
+const IndexPage = () => {
   const { data } = useQuery<Todo[]>(["todos"])
 
   if (data === undefined) return <span>Loading...</span>
   return <div>{JSON.stringify(data)}</div>
 }
+
+export default IndexPage
