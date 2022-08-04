@@ -10,7 +10,7 @@ function App() {
         {Object.entries(pagePathToModules).map(([_path, mod]: any) => {
           const path = _path
             .replace(/^.*pages(.*?)(index)?\.tsx$/, "$1") // e.g. "./pages/foo/bar/[id].tsx" -> "foo/bar/[id]"
-            .replace(/\[(.+)\]/, ":$1") // e.g. "foo/bar/[id]" -> "foo/bar/:id"
+            .replace(/\[(.+?)\]/g, ":$1") // e.g. "foo/bar/[id]" -> "foo/bar/:id"
           const PageComponent = lazy(mod)
 
           console.log({ _path, path })
