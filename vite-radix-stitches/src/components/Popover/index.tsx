@@ -1,4 +1,4 @@
-import { styled } from "@stitches/react"
+import { styled } from "@/stitches.config"
 import * as PopoverPrimitive from "@radix-ui/react-popover"
 
 export const Popover = PopoverPrimitive.Root

@@ -1,4 +1,4 @@
-import { styled } from "@stitches/react"
+import { styled } from "@/stitches.config"
 import { ComponentPropsWithRef, forwardRef } from "react"
 
 export const Input = forwardRef<
