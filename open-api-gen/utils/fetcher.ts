@@ -49,9 +49,9 @@ export type GetResponseByPathAndHttpMethod<
 >
 
 type Options<Path extends keyof GeneratedPaths, Method extends HttpMethods> = {
-  params: GetPathParamsByPathAndHttpMethod<Path, Method>
-  body: GetRequestBodyByPathAndHttpMethod<Path, Method>
-  query: GetRequestQueryByPathAndHttpMethod<Path, Method>
+  params?: GetPathParamsByPathAndHttpMethod<Path, Method>
+  body?: GetRequestBodyByPathAndHttpMethod<Path, Method>
+  query?: GetRequestQueryByPathAndHttpMethod<Path, Method>
 }
 
 export type FetcherFunc<Method extends HttpMethods> = <
@@ -87,4 +87,9 @@ export const fetcher = {
 export const useFetcher = <Path extends keyof paths>(
   path: Path,
   options: Options<Path, "get">
-) => useSWR([path, options], fetcher.get)
+) =>
+  useSWR<
+    GetResponseByPathAndHttpMethod<Path, "get">,
+    any,
+    [Path, Options<Path, "get">]
+  >([path, options], fetcher.get)
