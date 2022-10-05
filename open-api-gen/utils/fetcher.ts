@@ -1,4 +1,5 @@
 import Ky from "ky"
+import useSWR from "swr"
 import { Get } from "type-fest"
 import { paths } from "../types/__generated"
 
@@ -47,15 +48,17 @@ export type GetResponseByPathAndHttpMethod<
   `${Method}.responses.200.content.application/json`
 >
 
+type Options<Path extends keyof GeneratedPaths, Method extends HttpMethods> = {
+  params: GetPathParamsByPathAndHttpMethod<Path, Method>
+  body: GetRequestBodyByPathAndHttpMethod<Path, Method>
+  query: GetRequestQueryByPathAndHttpMethod<Path, Method>
+}
+
 export type FetcherFunc<Method extends HttpMethods> = <
   Path extends GetPathsFilteredByHttpMethod<Method>
 >(
   path: Path,
-  options?: {
-    params: GetPathParamsByPathAndHttpMethod<Path, Method>
-    body: GetRequestBodyByPathAndHttpMethod<Path, Method>
-    query: GetRequestQueryByPathAndHttpMethod<Path, Method>
-  }
+  options?: Options<Path, Method>
 ) => Promise<GetResponseByPathAndHttpMethod<Path, Method>>
 
 const get: FetcherFunc<"get"> = (path, options) =>
@@ -81,4 +84,7 @@ export const fetcher = {
   delete: del,
 }
 
-export function useFetcher<Path extends keyof paths>(path: Path) {}
+export const useFetcher = <Path extends keyof paths>(
+  path: Path,
+  options: Options<Path, "get">
+) => useSWR([path, options], fetcher.get)
