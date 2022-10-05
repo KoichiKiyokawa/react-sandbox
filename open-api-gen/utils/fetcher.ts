@@ -34,6 +34,11 @@ export type GetRequestBodyByPathAndHttpMethod<
   Method extends HttpMethods
 > = Get<GeneratedPaths[Path], `${Method}.requestBody.content.application/json`>
 
+export type GetRequestQueryByPathAndHttpMethod<
+  Path extends keyof GeneratedPaths,
+  Method extends HttpMethods
+> = Get<GeneratedPaths[Path], `${Method}.parameters.query`>
+
 export type GetResponseByPathAndHttpMethod<
   Path extends keyof GeneratedPaths,
   Method extends HttpMethods
@@ -49,6 +54,7 @@ export type FetcherFunc<Method extends HttpMethods> = <
   options?: {
     params: GetPathParamsByPathAndHttpMethod<Path, Method>
     body: GetRequestBodyByPathAndHttpMethod<Path, Method>
+    query: GetRequestQueryByPathAndHttpMethod<Path, Method>
   }
 ) => Promise<GetResponseByPathAndHttpMethod<Path, Method>>
 

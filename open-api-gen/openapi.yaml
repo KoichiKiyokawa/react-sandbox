@@ -7,6 +7,19 @@ paths:
     get:
       summary: List all users
       operationId: listUsers
+      parameters:
+        - name: per
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: page
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
       responses:
         200:
           description: A paged array of users

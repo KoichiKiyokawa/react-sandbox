@@ -39,6 +39,12 @@ export interface components {
 
 export interface operations {
   listUsers: {
+    parameters: {
+      query: {
+        per: number;
+        page: number;
+      };
+    };
     responses: {
       /** A paged array of users */
       200: {
