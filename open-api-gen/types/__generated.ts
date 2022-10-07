@@ -5,12 +5,12 @@
 
 export interface paths {
   "/users": {
-    get: operations["listUsers"];
-    post: operations["createUser"];
-  };
+    get: operations["listUsers"]
+    post: operations["createUser"]
+  }
   "/users/{id}": {
-    get: operations["getUser"];
-  };
+    get: operations["getUser"]
+  }
 }
 
 export interface components {
@@ -20,70 +20,70 @@ export interface components {
        * Format: int64
        * @example 1
        */
-      id?: number;
+      id?: number
       /** @example john */
-      username?: string;
-      firstName?: string;
-      lastName?: string;
-      email?: string;
-      password?: string;
-      phone?: string;
+      username?: string
+      firstName?: string
+      lastName?: string
+      email?: string
+      password?: string
+      phone?: string
       /**
        * Format: int32
        * @description User Status
        */
-      userStatus?: number;
-    };
-  };
+      userStatus?: number
+    }
+  }
 }
 
 export interface operations {
   listUsers: {
     parameters: {
       query: {
-        per: number;
-        page: number;
-      };
-    };
+        per: number
+        page: number
+      }
+    }
     responses: {
       /** A paged array of users */
       200: {
         content: {
-          "application/json": components["schemas"]["User"][];
-        };
-      };
-    };
-  };
+          "application/json": components["schemas"]["User"][]
+        }
+      }
+    }
+  }
   createUser: {
     responses: {
       /** A paged array of users */
       200: {
         content: {
-          "application/json": components["schemas"]["User"];
-        };
-      };
-    };
+          "application/json": components["schemas"]["User"]
+        }
+      }
+    }
     requestBody: {
       content: {
-        "application/json": components["schemas"]["User"];
-      };
-    };
-  };
+        "application/json": components["schemas"]["User"]
+      }
+    }
+  }
   getUser: {
     parameters: {
       path: {
-        id: number;
-      };
-    };
+        id: number
+      }
+    }
     responses: {
       /** A paged array of users */
       200: {
         content: {
-          "application/json": components["schemas"]["User"];
-        };
-      };
-    };
-  };
+          "application/json": components["schemas"]["User"]
+        }
+      }
+    }
+  }
 }
 
 export interface external {}
