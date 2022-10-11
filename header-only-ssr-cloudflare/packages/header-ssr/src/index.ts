@@ -36,6 +36,9 @@ const assetFileExtensions = [
   ".gif",
 ]
 
+const isAssetFileRequest = (request: Request): boolean =>
+  assetFileExtensions.some((ext) => request.url.endsWith(ext))
+
 export default {
   async fetch(
     request: Request,
@@ -50,19 +53,19 @@ export default {
         },
       },
       {
+        // ここの指定を忘れないこと(2敗)
         ASSET_NAMESPACE: env.__STATIC_CONTENT,
         ASSET_MANIFEST: JSON.parse(manifestJSON),
         mapRequestToAsset: serveSinglePageApp,
       }
     )
-    if (assetFileExtensions.some((ext) => request.url.endsWith(ext)))
-      return asset
+    if (isAssetFileRequest(request)) return asset
 
-    const html = await asset.text()
     // e.g. https://example.workers.dev/ogp/1
     const id = request.url.match(new RegExp(`workers.dev/ogp/(.*)`))?.[1]
     if (id === undefined) return asset
 
+    const html = await asset.text()
     const ogp = generateOgpMetaTags(id)
     return new Response(html.replace("</head>", `${ogp}</head>`), {
       headers: {

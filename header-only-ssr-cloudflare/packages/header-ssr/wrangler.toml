@@ -2,9 +2,5 @@ name = "header-ssr"
 main = "src/index.ts"
 compatibility_date = "2022-10-11"
 
-kv_namespaces = [
-  { binding = "KV_STATIC", id = "a6b489bc683b476ca18dc276d73da8a1", preview_id = "ccb94a17d62649d5875c6c3c6c9106e5" }
-]
-
 [site]
 bucket = "../web/dist"
