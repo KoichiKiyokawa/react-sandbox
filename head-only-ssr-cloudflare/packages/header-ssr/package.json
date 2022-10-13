@@ -7,8 +7,8 @@
     "dev": "wrangler dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "wrangler publish",
-    "lint": "eslint --fix '**/*.{js,ts}' && prettier --write .",
-    "lint:ci": "eslint '**/*.{js,ts}' && prettier --check ."
+    "lint": "tsc --noEmit && eslint --fix '**/*.{js,ts}' && prettier --write .",
+    "lint:ci": "tsc --noEmit && eslint '**/*.{js,ts}' && prettier --check ."
   },
   "keywords": [],
   "author": "",

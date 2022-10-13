@@ -36,3 +36,5 @@ Example of response,
 - TypeScript
 - React
 - Vite
+- Pnpm
+- Monorepo
