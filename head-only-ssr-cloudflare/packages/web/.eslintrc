@@ -1,0 +1,7 @@
+{
+  "extends": ["../../.eslintrc"],
+  "env": {
+    "browser": true
+  },
+  "ignorePatterns": ["vite.config.ts"]
+}
