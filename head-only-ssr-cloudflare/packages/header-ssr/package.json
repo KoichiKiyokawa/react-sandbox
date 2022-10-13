@@ -14,7 +14,6 @@
   "license": "ISC",
   "devDependencies": {
     "@cloudflare/workers-types": "^3.16.0",
-    "eslint": "8.25.0",
     "eslint-config-airbnb-typescript-base": "4.0.2",
     "eslint-config-prettier": "8.5.0",
     "prettier": "2.7.1",
