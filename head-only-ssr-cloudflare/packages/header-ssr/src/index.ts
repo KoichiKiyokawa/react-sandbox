@@ -1,8 +1,11 @@
 import {
   getAssetFromKV,
   serveSinglePageApp,
-} from "@cloudflare/kv-asset-handler"
-import manifestJSON from "__STATIC_CONTENT_MANIFEST"
+} from "@cloudflare/kv-asset-handler";
+// eslint-disable-next-line import/no-unresolved
+import manifestJSON from "__STATIC_CONTENT_MANIFEST";
+
+/* global KVNamespace, Request, Response, ExecutionContext */
 
 /**
  * Welcome to Cloudflare Workers! This is your first worker.
@@ -23,7 +26,7 @@ export interface Env {
   //
   // Example binding to R2. Learn more at https://developers.cloudflare.com/workers/runtime-apis/r2/
   // MY_BUCKET: R2Bucket;
-  __STATIC_CONTENT: KVNamespace
+  __STATIC_CONTENT: KVNamespace;
 }
 
 const assetFileExtensions = [
@@ -34,10 +37,19 @@ const assetFileExtensions = [
   ".jpeg",
   ".svg",
   ".gif",
-]
+];
 
 const isAssetFileRequest = (request: Request): boolean =>
-  assetFileExtensions.some((ext) => request.url.endsWith(ext))
+  assetFileExtensions.some((ext) => request.url.endsWith(ext));
+
+function generateOgpMetaTags(id: string): string {
+  const description = `記事:${id}の説明`;
+  return `
+      <meta name="description" content="${description}" />
+      <meta property="og:title" content="記事：${id}のタイトル" />
+      <meta property="og:description" content="${description}" />
+    `;
+}
 
 export default {
   async fetch(
@@ -49,37 +61,29 @@ export default {
       {
         request,
         waitUntil(promise) {
-          return ctx.waitUntil(promise)
+          return ctx.waitUntil(promise);
         },
       },
       {
         // ここの指定を忘れないこと(2敗)
+        // eslint-disable-next-line no-underscore-dangle
         ASSET_NAMESPACE: env.__STATIC_CONTENT,
         ASSET_MANIFEST: JSON.parse(manifestJSON),
         mapRequestToAsset: serveSinglePageApp,
       }
-    )
-    if (isAssetFileRequest(request)) return asset
+    );
+    if (isAssetFileRequest(request)) return asset;
 
     // e.g. https://example.workers.dev/ogp/1
-    const id = request.url.match(new RegExp(`workers.dev/ogp/(.*)`))?.[1]
-    if (id === undefined) return asset
+    const id = request.url.match(/workers.dev\/ogp\/(.*)/)?.[1];
+    if (id === undefined) return asset;
 
-    const html = await asset.text()
-    const ogp = generateOgpMetaTags(id)
+    const html = await asset.text();
+    const ogp = generateOgpMetaTags(id);
     return new Response(html.replace("</head>", `${ogp}</head>`), {
       headers: {
         "content-type": "text/html;charset=UTF-8",
       },
-    })
+    });
   },
-}
-
-function generateOgpMetaTags(id: string): string {
-  const description = `記事:${id}の説明`
-  return `
-    <meta name="description" content="${description}" />
-    <meta property="og:title" content="記事：${id}のタイトル" />
-    <meta property="og:description" content="${description}" />
-  `
-}
+};
