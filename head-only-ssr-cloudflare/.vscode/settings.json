@@ -1,0 +1,4 @@
+{
+  // モノレポ対応
+  "eslint.workingDirectories": [{ "mode": "auto" }]
+}

@@ -1,7 +1,11 @@
 {
-  "extends": ["../../.eslintrc"],
-  "env": {
-    "browser": true
+  "root": true,
+  "extends": ["airbnb", "airbnb/hooks", "airbnb-typescript", "plugin:react/jsx-runtime", "prettier"],
+  "ignorePatterns": ["node_modules", "dist", "public"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
   },
-  "ignorePatterns": ["vite.config.ts"]
+  "rules": {
+    "react-hooks/exhaustive-deps": "error"
+  }
 }
