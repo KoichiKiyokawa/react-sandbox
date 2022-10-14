@@ -23,7 +23,7 @@ export interface Env {
   __STATIC_CONTENT: KVNamespace;
 }
 
-const assetFileExtensions = [".css", ".js", ".png", ".jpg", ".jpeg", ".svg", ".gif"];
+const assetFileExtensions = ["css", "js", "png", "jpg", "jpeg", "svg", "gif"];
 
 const isAssetFileRequest = (request: Request): boolean => assetFileExtensions.some((ext) => request.url.endsWith(ext));
 
