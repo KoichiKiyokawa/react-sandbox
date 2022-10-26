@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { use } from "react"
 import { db } from "../../lib/db"
 
 const getUser = (id: string) => {
@@ -12,6 +11,7 @@ export default async function UserShowPage({
   params: { id: string }
 }) {
   const user = await getUser(params.id)
+
   return (
     <div>
       <Link href="/">back</Link>
