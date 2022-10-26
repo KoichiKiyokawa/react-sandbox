@@ -13,7 +13,7 @@
     "@chakra-ui/react": "2.2.4",
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
-    "@prisma/client": "4.1.1",
+    "@prisma/client": "4.5.0",
     "framer-motion": "6.5.1",
     "next": "12.2.3",
     "next-runtime": "2.4.1",
@@ -28,7 +28,7 @@
     "esbuild-register": "3.3.3",
     "eslint": "8.20.0",
     "eslint-config-next": "12.2.3",
-    "prisma": "4.1.1",
+    "prisma": "4.5.0",
     "typescript": "4.7.4"
   },
   "prisma": {
