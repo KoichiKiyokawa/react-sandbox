@@ -6,7 +6,7 @@ specifiers:
   '@vitejs/plugin-react': ^2.0.1
   react: ^18.2.0
   react-dom: ^18.2.0
-  rome: ^0.8.0-next.ff4153b
+  rome: ^10.0.0
   typescript: ^4.6.4
   vite: ^3.0.7
 
@@ -18,7 +18,7 @@ devDependencies:
   '@types/react': 18.0.17
   '@types/react-dom': 18.0.6
   '@vitejs/plugin-react': 2.0.1_vite@3.0.9
-  rome: 0.8.0-next.ff4153b
+  rome: 10.0.0
   typescript: 4.8.2
   vite: 3.0.9
 
@@ -335,43 +335,43 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@rometools/cli-darwin-arm64/0.8.0-next.ff4153b:
-    resolution: {integrity: sha512-P0BCJyN50Go7U5AG2Ujh8rIwmnaGpOqYqpsmF2J9hRX8zdMiIpYdbmAG6q0B6kibmwYcwS0+JgIdrYn4bl9Hpg==}
+  /@rometools/cli-darwin-arm64/10.0.0:
+    resolution: {integrity: sha512-JT7JccEtKyFDHXy0MxhwHN4Zc94s/kW+0aTczb1ChAoCStfjj5jWzv/yQnm+HFw5Vf3ukAocLsDNRN6d9gQYbQ==}
     cpu: [arm64]
     os: [darwin]
     dev: true
     optional: true
 
-  /@rometools/cli-darwin-x64/0.8.0-next.ff4153b:
-    resolution: {integrity: sha512-d9PuyMo4Nc16/YrWaskU+2mygYK1+Vg5GjHJswX51fkUsNlVbNFqDtYLce6m1Oe7UAh0GcsViOvF3jw7fDncbQ==}
+  /@rometools/cli-darwin-x64/10.0.0:
+    resolution: {integrity: sha512-HORYhz8eM3L3XePPNBhU44zFpTVfhpuO4B7fjdfho7z9kwTW22M0fVvuPrxxPauxmin7gHM8lxCD2jHxabg34Q==}
     cpu: [x64]
     os: [darwin]
     dev: true
     optional: true
 
-  /@rometools/cli-linux-arm64/0.8.0-next.ff4153b:
-    resolution: {integrity: sha512-evoUPlk5t6LshpGA9bLB1+42sakKZspyAOJP5P5Fp9HQc9Lvg7c3H5dSosSPSsKK3EVk9ClNVNJq9XMKS5qABQ==}
+  /@rometools/cli-linux-arm64/10.0.0:
+    resolution: {integrity: sha512-/L3jxo9RUwJ+uvDvAPCquAw10ccpZDuzADfZff5tHd6Fzv28cAToC3JrN/2miGpur0Fx/NIZIPbAsdI4NWGIRA==}
     cpu: [arm64]
     os: [linux]
     dev: true
     optional: true
 
-  /@rometools/cli-linux-x64/0.8.0-next.ff4153b:
-    resolution: {integrity: sha512-vjMS1l32GC1YZC0ed9Ryr85IDYWKb4gcLgLaGTiaGEgB8tjlWAvB4h8IdomT8bJYSYjgdZOHuV5lTJ5pI2VfKg==}
+  /@rometools/cli-linux-x64/10.0.0:
+    resolution: {integrity: sha512-KC6CDeSR4haRfxmfrvCn8+NzQ7X31pDjFgD+m+PAbSXOeMr/KHmU7eDsjC3d47ORYYkYXqhx9VxHe1w3IEShMg==}
     cpu: [x64]
     os: [linux]
     dev: true
     optional: true
 
-  /@rometools/cli-win32-arm64/0.8.0-next.ff4153b:
-    resolution: {integrity: sha512-W5sUoDXuE7+bK/hNtafctYT+lfxlLacqeGsw7apFczXa8c7H+SrcHneveTwzl0iUxY2R+XY9wUe4aDa+v+zYlw==}
+  /@rometools/cli-win32-arm64/10.0.0:
+    resolution: {integrity: sha512-8XWjx7Z1dMp9q4Lvi+ax4+Y8vkbp7JHVdfrTSMQTyUA9ofaW6ah1h9iGPuKic057VTZGX66/KazC5qNTbrlckQ==}
     cpu: [arm64]
     os: [win32]
     dev: true
     optional: true
 
-  /@rometools/cli-win32-x64/0.8.0-next.ff4153b:
-    resolution: {integrity: sha512-zpEhtqM5K3WfxDv2/bgyXOU6R33lfwuDbehM7eMsaRgwMIA7vbLenxX7Y/hpgPqhZ2MpodJhFLuK8m9yIQ7Rxw==}
+  /@rometools/cli-win32-x64/10.0.0:
+    resolution: {integrity: sha512-mAf3f32oE919cZ86KVMR/X0VOs+C16jEUyt1ww2UPw/rKUmm0DNfuT6/m4FQW8GEHdCBC8z3zdRVCd05VK7UJg==}
     cpu: [x64]
     os: [win32]
     dev: true
@@ -821,18 +821,18 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rome/0.8.0-next.ff4153b:
-    resolution: {integrity: sha512-Hf1gx01l+6JRRKK4XSThLC7d7f8QuFTU5OyaSnGdCd0M//uBVBKSt5b9v9TWK6fT98ZjKMvmMOcZItHwLVJx7g==}
+  /rome/10.0.0:
+    resolution: {integrity: sha512-dQnIlzgHDt94N4JoFaqe9e2aDAZfdmyGOW4UaefMztDph41mt75Mg0aeJ/C7JgcIOLbp9D4LD+omyUB5YFUUPw==}
     engines: {node: '>=14.*'}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      '@rometools/cli-darwin-arm64': 0.8.0-next.ff4153b
-      '@rometools/cli-darwin-x64': 0.8.0-next.ff4153b
-      '@rometools/cli-linux-arm64': 0.8.0-next.ff4153b
-      '@rometools/cli-linux-x64': 0.8.0-next.ff4153b
-      '@rometools/cli-win32-arm64': 0.8.0-next.ff4153b
-      '@rometools/cli-win32-x64': 0.8.0-next.ff4153b
+      '@rometools/cli-darwin-arm64': 10.0.0
+      '@rometools/cli-darwin-x64': 10.0.0
+      '@rometools/cli-linux-arm64': 10.0.0
+      '@rometools/cli-linux-x64': 10.0.0
+      '@rometools/cli-win32-arm64': 10.0.0
+      '@rometools/cli-win32-x64': 10.0.0
     dev: true
 
   /safe-buffer/5.1.2:
