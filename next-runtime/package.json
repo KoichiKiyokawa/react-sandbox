@@ -14,7 +14,7 @@
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
     "@prisma/client": "4.5.0",
-    "framer-motion": "6.5.1",
+    "framer-motion": "7.10.3",
     "next": "12.2.3",
     "next-runtime": "2.4.1",
     "react": "18.2.0",
