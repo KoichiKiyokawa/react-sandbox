@@ -8,7 +8,7 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json pnpm-lock.yaml ./
-RUN corepack enable pnpm && pnpm i --frozen-lockfile && pnpm gen && pnpm prune --prod
+RUN corepack enable pnpm && pnpm i --frozen-lockfile
 
 # Rebuild the source code only when needed
 FROM node:18-alpine AS builder
@@ -21,7 +21,7 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN pnpm build
+RUN corepack enable pnpm && pnpm gen && pnpm build && pnpm prune --prod
 
 # If using npm comment out above and use below instead
 # RUN npm run build
