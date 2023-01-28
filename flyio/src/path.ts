@@ -10,7 +10,7 @@ type PathToParams = {
 
 /**
  * @example
- * buildPath('posts/[id]', { id: 1 }) // => 'posts/1'
+ * buildPath('/posts/[id]', { id: 1 }) // => '/posts/1'
  */
 export function buildPath<Path extends keyof PathToParams>(
   path: Path,
@@ -32,7 +32,7 @@ export function buildPath<Path extends keyof PathToParams>(
   if (pathParams === undefined) return path
 
   return (
-    path.replace(/\[(\w+)\]/g, (_, key) => pathParams[key]) +
+    path.replace(/\[(\w+)\]/g, (_, key) => (pathParams as any)[key]) +
     (pathParams.searchParams
       ? '?' + new URLSearchParams(pathParams.searchParams as any).toString()
       : '') +
@@ -42,7 +42,7 @@ export function buildPath<Path extends keyof PathToParams>(
 
 /**
  * @example
- * echoPath('posts/[id]') // => 'posts/[id]'
+ * echoPath('/posts/[id]') // => '/posts/[id]'
  */
 export function echoPath<Path extends keyof PathToParams>(path: Path): string {
   return path
