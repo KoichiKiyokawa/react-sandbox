@@ -1,0 +1,43 @@
+{
+  "name": "next-trpc-stack",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "rome check . && rome format --write .",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@next/font": "13.1.6",
+    "@prisma/client": "4.9.0",
+    "@tanstack/react-query": "4.23.0",
+    "@trpc/client": "10.9.0",
+    "@trpc/next": "10.9.0",
+    "@trpc/react-query": "10.9.0",
+    "@trpc/server": "10.9.0",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zod": "3.20.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.0-beta.36",
+    "@storybook/addon-interactions": "^7.0.0-beta.36",
+    "@storybook/addon-links": "^7.0.0-beta.36",
+    "@storybook/blocks": "^7.0.0-beta.36",
+    "@storybook/nextjs": "^7.0.0-beta.36",
+    "@storybook/react": "^7.0.0-beta.36",
+    "@storybook/testing-library": "^0.0.13",
+    "@tsconfig/next-strictest": "1.0.1",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "prisma": "4.9.0",
+    "rome": "11.0.0",
+    "storybook": "^7.0.0-beta.36",
+    "typescript": "4.9.4"
+  }
+}
