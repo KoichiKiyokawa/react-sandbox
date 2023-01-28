@@ -1,3 +1,3 @@
 export const enum CookieKey {
-  UserId = "user-id",
+	UserId = "user-id",
 }

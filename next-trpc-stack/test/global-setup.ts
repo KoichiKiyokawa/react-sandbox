@@ -1,9 +1,9 @@
-import { execSync } from "child_process"
+import { execSync } from "child_process";
 
 export async function setup() {
-  process.env.DATABASE_URL =
-    "postgresql://postgres:postgres@localhost:5432/test"
+	process.env.DATABASE_URL =
+		"postgresql://postgres:postgres@localhost:5432/test";
 
-  execSync("pnpm prisma migrate reset --force")
-  execSync("pnpm prisma db push")
+	execSync("pnpm prisma migrate reset --force");
+	execSync("pnpm prisma db push");
 }

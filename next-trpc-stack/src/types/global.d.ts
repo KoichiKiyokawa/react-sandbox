@@ -1,5 +1,5 @@
 declare module NodeJS {
-  interface ProcessEnv {
-    DATABASE_URL: string
-  }
+	interface ProcessEnv {
+		DATABASE_URL: string;
+	}
 }
