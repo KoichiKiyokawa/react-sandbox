@@ -34,6 +34,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
           cache-dependency-path: head-only-ssr-cloudflare/pnpm-lock.yaml
-      - run: pnpm i
+      - run: pnpm i --frozen-lockfile
       - run: pnpm lint:ci
       - run: pnpm build

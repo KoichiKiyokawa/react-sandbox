@@ -1,14 +1,14 @@
-name: next-runtime
+name: next-trpc-stack
 on:
   push:
     paths:
-      - next-runtime/**
+      - next-trpc-stack/**
       - .github/**
     branches:
       - main
   pull_request:
     paths:
-      - next-runtime/**
+      - next-trpc-stack/**
       - .github/**
     branches:
       - main
@@ -18,13 +18,13 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: next-runtime
+        working-directory: next-trpc-stack
     strategy:
       matrix:
         node-version:
-          - 14.x
           - 16.x
           - 17.x
+          - 18.x
     steps:
       - uses: actions/checkout@v3
       - run: corepack enable pnpm
@@ -32,11 +32,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          # cache: pnpm
-          cache-dependency-path: next-runtime/pnpm-lock.yaml
+          cache: pnpm
+          cache-dependency-path: next-trpc-stack/pnpm-lock.yaml
       - run: pnpm i --frozen-lockfile
-      - run: pnpm prisma generate
-      - run: pnpm lint
-      - run: pnpm tsc --noEmit
-      - run: pnpm run build
-      # - run: npm test
+      - run: pnpm codegen
+      - run: pnpm lint:ci
+      - run: pnpm build
+      - run: docker-compose up db -d
+      - run: pnpm test
