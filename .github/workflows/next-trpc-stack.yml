@@ -38,5 +38,5 @@ jobs:
       - run: pnpm codegen
       - run: pnpm lint:ci
       - run: pnpm build
-      - run: docker-compose up db -d
+      - run: docker compose up db -d
       - run: pnpm test
