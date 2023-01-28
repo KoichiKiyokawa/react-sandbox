@@ -1,5 +1,6 @@
 import { z } from "zod"
 import { procedure, router } from "@/lib/trpc/server"
+import { authRouter } from "../auth/router/auth.router"
 
 export const appRouter = router({
   hello: procedure
@@ -13,6 +14,7 @@ export const appRouter = router({
         greeting: `hello ${input.text}`,
       }
     }),
+  auth: authRouter,
 })
 
 // export type definition of API
