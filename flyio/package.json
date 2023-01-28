@@ -1,0 +1,34 @@
+{
+  "name": "flyio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "gen": "prisma generate",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@next/font": "13.1.5",
+    "@prisma/client": "4.9.0",
+    "next": "13.1.5",
+    "next-superjson-plugin": "^0.5.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.42.1",
+    "superjson": "^1.12.2"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.5",
+    "prisma": "4.9.0",
+    "tsx": "3.12.2",
+    "typescript": "4.9.4"
+  },
+  "packageManager": "pnpm@7.26.0"
+}
