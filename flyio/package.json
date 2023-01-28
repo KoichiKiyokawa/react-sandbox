@@ -10,7 +10,8 @@
     "lint": "next lint",
     "seed": "tsx prisma/seed.ts",
     "db-proxy": "fly proxy 5432:5432 -a next-app-sandbox-db",
-    "deploy": "fly deploy"
+    "deploy": "fly deploy",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@next/font": "13.1.5",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@hookform/resolvers": "2.9.10",
     "@kiyoshiro/type-safe-path": "0.0.3",
+    "@playwright/test": "1.30.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
