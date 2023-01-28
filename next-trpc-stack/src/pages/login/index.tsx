@@ -1,4 +1,4 @@
-import { loginSchema } from "@/features/auth/schema/login.schema";
+import { loginSchema } from "@/features/auth/schemas/login.schema";
 import Link from "next/link";
 import { trpc } from "@/lib/trpc/client";
 import { zodResolver } from "@hookform/resolvers/zod";
