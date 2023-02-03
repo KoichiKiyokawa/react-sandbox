@@ -15,18 +15,18 @@
   },
   "dependencies": {
     "@hookform/resolvers": "2.9.10",
-    "@next/font": "13.1.5",
+    "@next/font": "13.1.6",
     "@prisma/client": "4.9.0",
-    "@tanstack/react-query": "4.23.0",
-    "@trpc/client": "10.9.0",
-    "@trpc/next": "10.9.0",
-    "@trpc/react-query": "10.9.0",
-    "@trpc/server": "10.9.0",
-    "next": "13.1.5",
+    "@tanstack/react-query": "4.24.4",
+    "@trpc/client": "10.9.1",
+    "@trpc/next": "10.9.1",
+    "@trpc/react-query": "10.9.1",
+    "@trpc/server": "10.9.1",
+    "next": "13.1.6",
     "next-superjson-plugin": "0.5.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.42.1",
+    "react-hook-form": "7.43.0",
     "superjson": "1.12.2",
     "zod": "3.20.2"
   },
@@ -36,13 +36,13 @@
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
-    "eslint": "8.32.0",
-    "eslint-config-next": "13.1.5",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
     "prisma": "4.9.0",
     "tsx": "3.12.2",
-    "typescript": "4.9.4"
+    "typescript": "4.9.5"
   },
-  "packageManager": "pnpm@7.26.0",
+  "packageManager": "pnpm@7.26.3",
   "prettier": {
     "printWidth": 100
   }
