@@ -84,12 +84,15 @@ export const fetcher = {
   delete: del,
 }
 
-export const useFetcher = <Path extends keyof paths>(
+export const useFetcher = <
+  Path extends keyof paths,
+  Method extends HttpMethods = "get"
+>(
   path: Path,
-  options: Options<Path, "get">
+  options: { method?: Method } & Options<Path, Method>
 ) =>
   useSWR<
-    GetResponseByPathAndHttpMethod<Path, "get">,
+    GetResponseByPathAndHttpMethod<Path, Method>,
     any,
-    [Path, Options<Path, "get">]
-  >([path, options], fetcher.get)
+    [Path, Options<Path, Method>]
+  >([path, options], fetcher[options.method ?? "get"] as any)
