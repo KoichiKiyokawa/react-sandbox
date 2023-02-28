@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@aws-amplify/cli': 9.2.1
+  '@aws-amplify/cli': 10.8.1
   '@chakra-ui/react': ^2.2.1
   '@emotion/react': ^11
   '@emotion/styled': ^11
@@ -28,7 +28,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
 
 devDependencies:
-  '@aws-amplify/cli': 9.2.1
+  '@aws-amplify/cli': 10.8.1
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
@@ -40,8 +40,8 @@ devDependencies:
 
 packages:
 
-  /@aws-amplify/cli/9.2.1:
-    resolution: {integrity: sha512-EqpyRFyUEGoV/A43DpjdfSKlQfWXBJ7BTY1roEnGbke0NEIAdTc+dULJTRPzNdzRuU5CluyQp4KjnDFrFvTlIg==}
+  /@aws-amplify/cli/10.8.1:
+    resolution: {integrity: sha512-q8Tmsbk8dTuSSZLzInAivZJEq1w3jncct17yXN+6/pQPvEAYws1Tz0RAb6sVGMdHjY5Rs2sTpvkSE6m2ZQgm4g==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
