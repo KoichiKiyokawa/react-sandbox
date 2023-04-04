@@ -1,0 +1,3 @@
+.wrapper {
+  @apply border rounded-md p-4 m-4 lg:border-red-400;
+}
