@@ -9,8 +9,11 @@ class UserService {
     return this.db.select().from(users).all()
   }
 
-  create(data: InferModel<typeof users>) {
-    return this.db.insert(users).values(data)
+  create(data: Omit<InferModel<typeof users>, "id">) {
+    return this.db
+      .insert(users)
+      .values({ ...data, id: crypto.randomUUID() })
+      .run()
   }
 }
 
