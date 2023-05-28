@@ -1,0 +1,33 @@
+{
+  "name": "cloudflare-next-on-pages-d1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
+    "build": "next build",
+    "build:pages": "next-on-pages",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "pnpm build:pages && wrangler pages deploy .vercel/output/static --compatibility-flag=nodejs_compat"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.26.1",
+    "next": "13.4.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "1.0.1",
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "autoprefixer": "10.4.14",
+    "concurrently": "8.0.1",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.4",
+    "postcss": "8.4.23",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.0.4",
+    "wrangler": "3.0.1"
+  }
+}
