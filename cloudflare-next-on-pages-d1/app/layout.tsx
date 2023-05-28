@@ -3,7 +3,7 @@ import { Inter } from "next/font/google"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const runtime = process.env.NODE_ENV === "production" ? "edge" : "node"
+export const runtime = "edge"
 
 export const metadata = {
   title: "Create Next App",

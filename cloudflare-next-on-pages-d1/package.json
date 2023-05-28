@@ -9,7 +9,7 @@
     "build:pages": "next-on-pages",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "pnpm build:pages && wrangler pages deploy .vercel/output/static",
+    "deploy": "NODE_ENV='production' pnpm build:pages && wrangler pages deploy .vercel/output/static",
     "generate": "drizzle-kit generate:sqlite --config=drizzle.config.json",
     "up": "drizzle-kit up:sqlite"
   },

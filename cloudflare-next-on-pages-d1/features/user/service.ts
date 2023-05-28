@@ -1,6 +1,6 @@
 import { DB, db } from "@/db"
 import { users } from "@/db/schema/user"
-import { InferModel } from "drizzle-orm"
+import { InferModel, eq } from "drizzle-orm"
 
 class UserService {
   constructor(private readonly db: DB) {}
@@ -14,6 +14,10 @@ class UserService {
       .insert(users)
       .values({ ...data, id: crypto.randomUUID() })
       .run()
+  }
+
+  delete(id: string) {
+    return this.db.delete(users).where(eq(users.id, id)).run()
   }
 }
 
