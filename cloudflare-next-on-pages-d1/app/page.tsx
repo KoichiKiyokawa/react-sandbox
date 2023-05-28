@@ -1,4 +1,4 @@
-import { userService } from "@/services/user"
+import { userService } from "@/features/user/service"
 
 export default async function Home() {
   const users = await userService.findAll()

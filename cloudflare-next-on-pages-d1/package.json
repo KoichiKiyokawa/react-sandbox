@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
+    "dev": "next dev",
+    "dev:pages": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
     "build": "next build",
     "build:pages": "next-on-pages",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "pnpm build:pages && wrangler pages deploy .vercel/output/static"
+    "deploy": "pnpm build:pages && wrangler pages deploy .vercel/output/static",
+    "generate": "drizzle-kit generate:sqlite --config=drizzle.config.json",
+    "up": "drizzle-kit up:sqlite"
   },
   "dependencies": {
     "drizzle-orm": "0.26.1",
@@ -19,10 +22,13 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "1.0.1",
     "@cloudflare/workers-types": "4.20230518.0",
+    "@types/better-sqlite3": "^7.6.4",
     "@types/react": "18.2.7",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
+    "better-sqlite3": "8.4.0",
     "concurrently": "8.0.1",
+    "drizzle-kit": "0.18.1",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "postcss": "8.4.23",
