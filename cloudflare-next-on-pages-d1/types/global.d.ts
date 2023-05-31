@@ -1,5 +1,5 @@
 declare namespace NodeJS {
   interface ProcessEnv {
-    readonly DB: D1Database
+    DB: D1Database
   }
 }

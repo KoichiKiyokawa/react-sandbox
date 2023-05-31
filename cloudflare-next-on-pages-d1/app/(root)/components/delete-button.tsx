@@ -1,6 +1,6 @@
 "use client"
 
-import { deleteUser } from "../../action"
+import { deleteUser } from "../action"
 
 export const DeleteButton = ({ userId }: { userId: string }) => {
   return (

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:pages": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
+    "dev:pages": "wrangler pages dev --d1=DB --compatibility-flag=nodejs_compat -- next dev",
     "build": "next build",
     "build:pages": "next-on-pages",
     "start": "next start",

@@ -1,10 +1,10 @@
-import { drizzle } from "drizzle-orm/d1"
 import Database from "better-sqlite3"
-import { drizzle as drizzleDev } from "drizzle-orm/better-sqlite3"
+import { drizzle } from "drizzle-orm/d1"
 
-export const db =
-  process.env.NODE_ENV === "development"
-    ? drizzleDev(new Database("dev.db"))
-    : drizzle(process.env.DB)
+// if (process.env.NODE_ENV === "development") {
+//   process.env.DB = new Database("dev.db") as unknown as D1Database
+// }
+
+export const db = drizzle(process.env.DB)
 
 export type DB = typeof db

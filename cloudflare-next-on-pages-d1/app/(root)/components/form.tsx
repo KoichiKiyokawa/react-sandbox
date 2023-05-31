@@ -1,7 +1,7 @@
 "use client"
 
 import { FormEventHandler, useTransition } from "react"
-import { createUser } from "../../action"
+import { createUser } from "../action"
 
 export type FormValue = {
   name: string
