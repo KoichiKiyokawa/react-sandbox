@@ -12,9 +12,14 @@ processes = []
 
 [env]
   PORT = "8080"
+  DATABASE_URL="file:/litefs/my.db"
 
 [experimental]
   auto_rollback = true
+
+[mounts]
+  source = "litefs"
+  destination = "/var/lib/litefs"
 
 [[services]]
   http_checks = []
