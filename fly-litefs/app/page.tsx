@@ -1,8 +1,7 @@
 import { db } from "@/lib/db";
-import Image from "next/image";
 import bigImage from "@/public/big.jpg";
 import { cookies } from "next/headers";
-import { revalidatePath } from "next/cache";
+import Image from "next/image";
 import { Form } from "./components/form";
 
 export default async function Home() {
