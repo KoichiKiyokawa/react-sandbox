@@ -1,12 +1,8 @@
-"use client";
+import { Metadata } from "next";
+import AboutPage from "./inner";
 
-import Link from "next/link";
+export const metadata: Metadata = {
+  title: "This is about page!!!!!!!",
+};
 
-export default function AboutPage() {
-  return (
-    <div>
-      <h1>this is about page</h1>
-      <Link href="/">home</Link>
-    </div>
-  );
-}
+export default AboutPage;
