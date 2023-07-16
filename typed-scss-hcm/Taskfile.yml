@@ -1,0 +1,21 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default: pnpm run task --list-all
+
+  dev:
+    desc: Run development server
+    deps: [dev:next, dev:scss]
+  dev:next: pnpm next dev
+  dev:scss: pnpm task generate:scss -- --watch
+
+  generate:scss: "pnpm hcm './**/*.module.scss' --webpackResolveAlias='{\"@\": \".\"}' {{.CLI_ARGS}}"
+
+  build: pnpm next build
+  start: pnpm next start
+  lint: pnpm next lint
