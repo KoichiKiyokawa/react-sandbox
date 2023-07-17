@@ -4,6 +4,8 @@ export default defineConfig({
   // Whether to use css reset
   preflight: true,
 
+  minify: true,
+
   // Where to look for your css declarations
   include: ["./{app,components}/**/*.{js,jsx,ts,tsx}"],
 
