@@ -1,3 +1,4 @@
+import { DeleteButtonWithForm } from "@/components/DeleteButtonWithForm";
 import { db } from "@/lib/db";
 import {
   Button,
@@ -10,9 +11,9 @@ import {
   TableTr,
 } from "@mantine/core";
 import { deleteUser, updateUser } from "./action";
-import { userKey } from "./helper";
-import { DeleteButtonWithForm } from "@/components/DeleteButtonWithForm";
 import { EditableName } from "./components/EditableName";
+import { userKey } from "./helper";
+import Link from "next/link";
 
 const formatDate = (date: Date): string => {
   const y = date.getFullYear();
@@ -27,6 +28,9 @@ export default async function Home() {
 
   return (
     <Container>
+      <Button component={Link} href="/new">
+        New
+      </Button>
       <Table>
         <TableThead>
           <TableTr>

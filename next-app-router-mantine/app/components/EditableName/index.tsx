@@ -24,7 +24,7 @@ export const EditableName: React.FC<Props> = ({ id, defaultValue, action }) => {
   return (
     <Flex w={252} direction="row" justify="space-between" align="center">
       {isEditing ? (
-        <form method="post" onSubmit={handleSubmit}>
+        <form method="POST" onSubmit={handleSubmit}>
           <input type="hidden" name="id" value={id} />
           <Input
             name="name"

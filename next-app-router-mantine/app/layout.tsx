@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { Inter } from "next/font/google";
+import { FlashNotification } from "@/components/FlashNotification";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,10 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body className={inter.className}>
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider>
+          <FlashNotification />
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );

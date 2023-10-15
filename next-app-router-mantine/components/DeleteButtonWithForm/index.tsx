@@ -15,7 +15,7 @@ export const DeleteButtonWithForm: React.FC<Props> = ({
 }) => {
   return (
     <form
-      method="post"
+      method="POST"
       action={action}
       onSubmit={(e) => window.confirm("OK？") || e.preventDefault()}
     >
