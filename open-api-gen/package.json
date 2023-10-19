@@ -20,7 +20,7 @@
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "eslint": "8.33.0",
-    "eslint-config-next": "12.3.4",
+    "eslint-config-next": "13.5.6",
     "openapi-typescript": "5.4.1",
     "tsd": "0.25.0",
     "type-fest": "3.5.4",
