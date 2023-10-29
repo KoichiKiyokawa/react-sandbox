@@ -51,4 +51,22 @@ describe("ref", () => {
     render(<Wrapper />);
     await waitFor(() => expect(screen.getByRole("link")).toHaveFocus());
   });
+
+  test("props given through button is respected", () => {
+    render(
+      <Button render={<Link href="/" id="link" />} id="button">
+        hoge
+      </Button>
+    );
+
+    expect(screen.getByRole("link")).toHaveAttribute("id", "button");
+  });
+});
+
+describe("children", () => {
+  test("children given through button is respected", () => {
+    render(<Button render={<Link href="/">link</Link>}>button</Button>);
+
+    expect(screen.getByRole("link")).toHaveTextContent("button");
+  });
 });
