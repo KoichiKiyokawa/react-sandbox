@@ -1,0 +1,39 @@
+name: polymorphic-component
+on:
+  push:
+    paths:
+      - polymorphic-component/**
+      - .github/**
+    branches:
+      - main
+  pull_request:
+    paths:
+      - polymorphic-component/**
+      - .github/**
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: polymorphic-component
+    strategy:
+      matrix:
+        node-version:
+          - 18.x
+          - 20.x
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable pnpm
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          # cache: pnpm
+          cache-dependency-path: polymorphic-component/pnpm-lock.yaml
+      - run: pnpm i --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm tsc --noEmit
+      - run: pnpm test
