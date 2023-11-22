@@ -1,26 +1,31 @@
-import { cloneElement, forwardRef, isValidElement } from "react";
-
-type Common = {
-  variant?: "primary" | "secondary";
-  children?: React.ReactNode;
-};
+import { cloneElement, forwardRef } from "react";
+import styles from "./index.module.scss";
+import clsx from "clsx";
 
 export type ButtonProps =
-  | ({ element: React.ReactElement } & Common)
-  | ({ element?: undefined } & Common &
-      React.ComponentPropsWithoutRef<"button">);
+  | React.PropsWithChildren<{
+      variant?: "primary" | "secondary";
+      right?: React.ReactElement;
+    }> &
+      (
+        | { element: React.ReactElement<HTMLElement> }
+        | ({ element?: undefined } & React.ComponentPropsWithoutRef<"button">)
+      );
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, variant, element, ...props }, ref) => {
-    if (isValidElement(element)) {
-      return cloneElement(element, undefined, children);
-    } else {
-      return (
-        <button ref={ref} {...props}>
-          {children}
-        </button>
-      );
-    }
+  ({ children, variant, right, element, ...buttonProps }, ref) => {
+    return cloneElement(
+      element ?? <button ref={ref} {...buttonProps} />,
+      {
+        className: clsx(
+          styles.button,
+          element?.props.className,
+          "className" in buttonProps && buttonProps.className
+        ),
+      },
+      children,
+      right
+    );
   }
 );
 

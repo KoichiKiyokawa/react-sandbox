@@ -1,6 +1,7 @@
-import { expectTypeOf, test } from "vitest";
-import Button from ".";
+import { render } from "@testing-library/react";
 import Link from "next/link";
+import { describe, expect, test } from "vitest";
+import Button from ".";
 
 test("type check", () => {
   <Button variant="primary">hoge</Button>;
@@ -12,4 +13,59 @@ test("type check", () => {
   <Button variant="primary" type="submit" element={<Link href="/" />}>
     hoge
   </Button>;
+});
+
+describe("snapshot", () => {
+  test("with right", () => {
+    const { asFragment } = render(
+      <Button variant="primary" right={<p>right</p>}>
+        hoge
+      </Button>
+    );
+
+    expect(asFragment()).toMatchInlineSnapshot(`
+    <DocumentFragment>
+      <button
+        class="button"
+      >
+        hoge
+        <p>
+          right
+        </p>
+      </button>
+    </DocumentFragment>
+  `);
+  });
+
+  test("without right", () => {
+    const { asFragment } = render(<Button variant="primary">hoge</Button>);
+
+    expect(asFragment()).toMatchInlineSnapshot(`
+      <DocumentFragment>
+        <button
+          class="button"
+        >
+          hoge
+        </button>
+      </DocumentFragment>
+    `);
+  });
+
+  test("className joining", () => {
+    const { asFragment } = render(
+      <Button variant="primary" element={<a className="a-class" />}>
+        hoge
+      </Button>
+    );
+
+    expect(asFragment()).toMatchInlineSnapshot(`
+      <DocumentFragment>
+        <a
+          class="button a-class"
+        >
+          hoge
+        </a>
+      </DocumentFragment>
+    `);
+  });
 });
