@@ -24,7 +24,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ),
       },
       children,
-      right
+      <span className={styles.right}>{right}</span>
     );
   }
 );

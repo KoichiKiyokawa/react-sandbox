@@ -24,17 +24,21 @@ describe("snapshot", () => {
     );
 
     expect(asFragment()).toMatchInlineSnapshot(`
-    <DocumentFragment>
-      <button
-        class="button"
-      >
-        hoge
-        <p>
-          right
-        </p>
-      </button>
-    </DocumentFragment>
-  `);
+      <DocumentFragment>
+        <button
+          class="button"
+        >
+          hoge
+          <span
+            class="right"
+          >
+            <p>
+              right
+            </p>
+          </span>
+        </button>
+      </DocumentFragment>
+    `);
   });
 
   test("without right", () => {
@@ -46,6 +50,9 @@ describe("snapshot", () => {
           class="button"
         >
           hoge
+          <span
+            class="right"
+          />
         </button>
       </DocumentFragment>
     `);
@@ -64,6 +71,9 @@ describe("snapshot", () => {
           class="button a-class"
         >
           hoge
+          <span
+            class="right"
+          />
         </a>
       </DocumentFragment>
     `);

@@ -1,4 +1,11 @@
 .button {
+  position: relative;
   max-width: 480px;
   border-radius: 12px;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 4px;
 }
