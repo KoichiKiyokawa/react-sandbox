@@ -4,36 +4,41 @@ import styles from "../../render/button/index.module.css";
 
 export type ButtonProps = {
   size?: "small" | "medium" | "large";
+  disabled?: boolean;
+  rightIcon?: React.ReactElement;
 } & (
   | {
       asChild: true;
-      children: React.ReactNode;
+      children: React.ReactElement;
     }
-  | ({ children?: React.ReactNode } & React.ComponentPropsWithoutRef<"button">)
+  | ({
+      asChild?: false;
+      children?: React.ReactNode;
+    } & React.ComponentPropsWithoutRef<"button">)
 );
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { size, ...props },
+  { size, disabled, rightIcon, asChild = false, children, ...buttonProps },
   ref
 ) {
-  if ("asChild" in props) {
-    if (isValidElement(props.children)) {
-      return cloneElement(props.children, {
-        className: clsx(styles.button, props.children.props.className),
-      } as any);
-    } else {
-      return props.children;
-    }
-  }
+  const shouldActAsChild = asChild && isValidElement(children);
 
-  return (
-    <button
-      {...props}
-      ref={ref}
-      className={clsx(styles.button, props.className)}
-    >
-      Button
-    </button>
+  return cloneElement(
+    shouldActAsChild ? (
+      children
+    ) : (
+      <button ref={ref} type="button" disabled={disabled} {...buttonProps} />
+    ),
+    {
+      className: clsx(
+        styles.button,
+        shouldActAsChild && children.props.className,
+        "className" in buttonProps && buttonProps.className
+      ),
+      ...(disabled ? { "aria-disabled": true } : {}),
+    },
+    shouldActAsChild ? children.props.children : children,
+    rightIcon ? <span className={styles.right}>{rightIcon}</span> : null
   );
 });
 
