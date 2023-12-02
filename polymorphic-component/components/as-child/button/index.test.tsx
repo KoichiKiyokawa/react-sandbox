@@ -20,7 +20,7 @@ describe("snapshot", () => {
   `);
   });
 
-  test("snapshot (as button + disabled", () => {
+  test("snapshot (as button + disabled)", () => {
     const { asFragment } = render(
       <Button disabled className="foo">
         hoge
@@ -41,7 +41,7 @@ describe("snapshot", () => {
     `);
   });
 
-  test("snapshot (as button + aria-disabled", () => {
+  test("snapshot (as button + aria-disabled)", () => {
     const { asFragment } = render(
       <Button aria-disabled className="foo">
         hoge
@@ -106,7 +106,7 @@ describe("snapshot", () => {
   `);
   });
 
-  test("snapshot (as link)", () => {
+  test("snapshot (as link + right icon)", () => {
     const { asFragment } = render(
       <Button asChild rightIcon={<Icon />}>
         <a href="/hoge" className="link">
@@ -128,6 +128,34 @@ describe("snapshot", () => {
             <svg />
           </span>
         </a>
+      </DocumentFragment>
+    `);
+  });
+
+  test("nested", () => {
+    const { asFragment } = render(
+      <Button asChild>
+        <Button asChild>
+          <a href="/hoge" className="link">
+            hoge
+          </a>
+        </Button>
+      </Button>
+    );
+
+    expect(asFragment()).toMatchInlineSnapshot(`
+      <DocumentFragment>
+        <button
+          class="button button"
+          type="button"
+        >
+          <a
+            class="link"
+            href="/hoge"
+          >
+            hoge
+          </a>
+        </button>
       </DocumentFragment>
     `);
   });
