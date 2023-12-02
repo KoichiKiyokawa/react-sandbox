@@ -50,9 +50,6 @@ describe("snapshot", () => {
           class="button"
         >
           hoge
-          <span
-            class="right"
-          />
         </button>
       </DocumentFragment>
     `);
@@ -71,9 +68,6 @@ describe("snapshot", () => {
           class="button a-class"
         >
           hoge
-          <span
-            class="right"
-          />
         </a>
       </DocumentFragment>
     `);
