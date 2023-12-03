@@ -6,12 +6,14 @@
 	"javascript": {
 		"formatter": {
 			"semicolons": "asNeeded"
-		}
+		},
+		"globals": ["React"]
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"correctness": { "all": true }
 		}
 	}
 }
