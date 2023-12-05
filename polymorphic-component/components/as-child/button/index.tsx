@@ -1,34 +1,27 @@
-import clsx from "clsx";
 import { cloneElement, forwardRef, isValidElement } from "react";
 import styles from "../../render/button/index.module.css";
+import clsx from "clsx";
 
 export type ButtonProps = {
-  size?: "small" | "medium" | "large";
+  variant?: "priamry" | "secondary";
   disabled?: boolean;
+  leftIcon?: React.ReactElement;
   rightIcon?: React.ReactElement;
 } & (
-  | {
-      asChild: true;
-      children: React.ReactElement;
-    }
-  | ({
-      asChild?: false;
-    } & React.ComponentPropsWithoutRef<"button">)
+  | { asChild: true; children: React.ReactElement }
+  | ({ asChild?: false } & React.ComponentPropsWithoutRef<"button">)
 );
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { size, disabled, rightIcon, asChild = false, children, ...buttonProps },
+  { variant = "priamry", disabled, leftIcon, rightIcon, asChild = false, children, ...buttonProps },
   ref
 ) {
   const shouldActAsChild = asChild && isValidElement(children);
 
   return cloneElement(
-    shouldActAsChild ? (
-      children
-    ) : (
-      <button ref={ref} type="button" disabled={disabled} {...buttonProps} />
-    ),
+    shouldActAsChild ? children : <button ref={ref} type="button" disabled={disabled} {...buttonProps} />,
     {
+      "data-variant": variant,
       className: clsx(
         styles.button,
         shouldActAsChild && children.props.className,
@@ -36,8 +29,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
       ),
       ...(disabled && { "aria-disabled": true, href: undefined }),
     },
+    leftIcon ? <span className={styles.leftIcon}>{rightIcon}</span> : null,
     shouldActAsChild ? children.props.children : children,
-    rightIcon ? <span className={styles.right}>{rightIcon}</span> : null
+    rightIcon ? <span className={styles.rightIcon}>{rightIcon}</span> : null
   );
 });
 

@@ -29,5 +29,8 @@
     "sass": "1.69.5",
     "type-fest": "4.6.0",
     "vitest": "0.34.6"
+  },
+  "prettier": {
+    "printWidth": 120
   }
 }

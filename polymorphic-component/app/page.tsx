@@ -1,6 +1,7 @@
 "use client";
 
 import RenderButton from "@/components/render/button";
+import AsChildButton from "@/components/as-child/button";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
@@ -10,5 +11,13 @@ export default function Home() {
     buttonRef.current?.focus();
   }, []);
 
-  return <RenderButton ref={buttonRef}>hoge</RenderButton>;
+  return (
+    <div>
+      <RenderButton ref={buttonRef}>hoge</RenderButton>
+      <AsChildButton disabled>as child</AsChildButton>
+      <AsChildButton asChild disabled>
+        <a href="https://example.com">as child</a>
+      </AsChildButton>
+    </div>
+  );
 }

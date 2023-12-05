@@ -9,15 +9,16 @@ describe("snapshot", () => {
     const { asFragment } = render(<Button className="foo">hoge</Button>);
 
     expect(asFragment()).toMatchInlineSnapshot(`
-    <DocumentFragment>
-      <button
-        class="button foo"
-        type="button"
-      >
-        hoge
-      </button>
-    </DocumentFragment>
-  `);
+      <DocumentFragment>
+        <button
+          class="button foo"
+          data-variant="priamry"
+          type="button"
+        >
+          hoge
+        </button>
+      </DocumentFragment>
+    `);
   });
 
   test("snapshot (as button + disabled)", () => {
@@ -32,6 +33,7 @@ describe("snapshot", () => {
         <button
           aria-disabled="true"
           class="button foo"
+          data-variant="priamry"
           disabled=""
           type="button"
         >
@@ -53,6 +55,7 @@ describe("snapshot", () => {
         <button
           aria-disabled="true"
           class="button foo"
+          data-variant="priamry"
           type="button"
         >
           hoge
@@ -72,11 +75,12 @@ describe("snapshot", () => {
       <DocumentFragment>
         <button
           class="button foo"
+          data-variant="priamry"
           type="button"
         >
           hoge
           <span
-            class="right"
+            class="rightIcon"
           >
             <svg />
           </span>
@@ -95,15 +99,16 @@ describe("snapshot", () => {
     );
 
     expect(asFragment()).toMatchInlineSnapshot(`
-    <DocumentFragment>
-      <a
-        class="button link"
-        href="/hoge"
-      >
-        hoge
-      </a>
-    </DocumentFragment>
-  `);
+      <DocumentFragment>
+        <a
+          class="button link"
+          data-variant="priamry"
+          href="/hoge"
+        >
+          hoge
+        </a>
+      </DocumentFragment>
+    `);
   });
 
   test("snapshot (as link + right icon)", () => {
@@ -119,11 +124,12 @@ describe("snapshot", () => {
       <DocumentFragment>
         <a
           class="button link"
+          data-variant="priamry"
           href="/hoge"
         >
           hoge
           <span
-            class="right"
+            class="rightIcon"
           >
             <svg />
           </span>
@@ -147,6 +153,7 @@ describe("snapshot", () => {
       <DocumentFragment>
         <button
           class="button button"
+          data-variant="priamry"
           type="button"
         >
           <a
