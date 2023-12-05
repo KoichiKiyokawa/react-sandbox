@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Button from ".";
 import { describe, expect, test } from "vitest";
 
@@ -158,6 +158,18 @@ describe("snapshot", () => {
         </button>
       </DocumentFragment>
     `);
+  });
+});
+
+describe("behavior", () => {
+  test("href should be removed when disabled and render as link", () => {
+    render(
+      <Button disabled asChild>
+        <a href="https://example.com">should be removed</a>
+      </Button>
+    );
+
+    expect(screen.getByText("should be removed")).not.toHaveAttribute("href");
   });
 });
 

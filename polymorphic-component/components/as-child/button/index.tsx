@@ -13,7 +13,6 @@ export type ButtonProps = {
     }
   | ({
       asChild?: false;
-      children?: React.ReactNode;
     } & React.ComponentPropsWithoutRef<"button">)
 );
 
@@ -35,7 +34,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
         shouldActAsChild && children.props.className,
         "className" in buttonProps && buttonProps.className
       ),
-      ...(disabled ? { "aria-disabled": true } : {}),
+      ...(disabled && { "aria-disabled": true, href: undefined }),
     },
     shouldActAsChild ? children.props.children : children,
     rightIcon ? <span className={styles.right}>{rightIcon}</span> : null
