@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Button from ".";
 import { describe, expect, test } from "vitest";
+import { useEffect, useRef } from "react";
 
 describe("snapshot", () => {
   const Icon = () => <svg />;
@@ -177,6 +178,44 @@ describe("behavior", () => {
     );
 
     expect(screen.getByText("should be removed")).not.toHaveAttribute("href");
+  });
+
+  test("ref(button)", () => {
+    const Component = () => {
+      const ref = useRef<HTMLButtonElement>(null);
+
+      useEffect(() => {
+        ref.current?.focus();
+      });
+
+      return <Button ref={ref}>hoge</Button>;
+    };
+
+    render(<Component />);
+
+    expect(screen.getByText("hoge")).toHaveFocus();
+  });
+
+  test("ref(link)", () => {
+    const Component = () => {
+      const ref = useRef<HTMLAnchorElement>(null);
+
+      useEffect(() => {
+        ref.current?.focus();
+      });
+
+      return (
+        <Button asChild>
+          <a href="..." ref={ref}>
+            hoge
+          </a>
+        </Button>
+      );
+    };
+
+    render(<Component />);
+
+    expect(screen.getByText("hoge")).toHaveFocus();
   });
 });
 
