@@ -3,7 +3,7 @@ import styles from "../../render/button/index.module.css";
 import clsx from "clsx";
 
 export type ButtonProps = {
-  variant?: "priamry" | "secondary";
+  variant?: "primary" | "secondary";
   disabled?: boolean;
   leftIcon?: React.ReactElement;
   rightIcon?: React.ReactElement;
