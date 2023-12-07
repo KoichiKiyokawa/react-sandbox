@@ -226,5 +226,8 @@ describe("type check", () => {
 
     // @ts-expect-error children should be ReactElement
     <Button asChild>hoge</Button>;
+
+    // @ts-expect-error cannot pass ref when use `asChild`
+    <Button asChild ref={null}></Button>;
   });
 });

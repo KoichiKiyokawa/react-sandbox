@@ -7,10 +7,7 @@ export type ButtonProps = {
   disabled?: boolean;
   leftIcon?: React.ReactElement;
   rightIcon?: React.ReactElement;
-} & (
-  | { asChild: true; children: React.ReactElement }
-  | ({ asChild?: false } & React.ComponentPropsWithoutRef<"button">)
-);
+} & ({ asChild: true; children: React.ReactElement } | ({ asChild?: false } & React.ComponentPropsWithRef<"button">));
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   { variant = "priamry", disabled, leftIcon, rightIcon, asChild = false, children, ...buttonProps },
@@ -33,6 +30,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     shouldActAsChild ? children.props.children : children,
     rightIcon ? <span className={styles.rightIcon}>{rightIcon}</span> : null
   );
-});
+}) as React.FC<ButtonProps>;
 
 export default Button;
