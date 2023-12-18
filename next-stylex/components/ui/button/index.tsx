@@ -1,7 +1,7 @@
 import { cloneElement, forwardRef, isValidElement } from "react";
-import stylex, { StyleXStyles } from "@stylexjs/stylex";
+import stylex from "@stylexjs/stylex";
 
-export type ButtonProps = {
+type ButtonProps = {
   variant?: "primary" | "secondary";
   disabled?: boolean;
   leftIcon?: React.ReactElement;
@@ -10,9 +10,19 @@ export type ButtonProps = {
   | { asChild: true; children: React.ReactElement }
   | ({
       asChild?: false;
-      stylex?: StyleXStyles;
     } & React.ComponentPropsWithRef<"button">)
 );
+
+const buttonStyles = stylex.create({
+  base: {},
+  primary: {},
+  secondary: {},
+});
+
+const iconStyles = stylex.create({
+  left: {},
+  right: {},
+});
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   {
@@ -31,7 +41,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   return cloneElement(
     shouldActAsChild ? (
       disabled ? (
-        <div />
+        <div aria-disabled />
       ) : (
         children
       )
@@ -39,27 +49,21 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
       <button ref={ref} type="button" disabled={disabled} {...buttonProps} />
     ),
     {
-      "data-variant": variant,
       ...stylex.props(
         buttonStyles.base,
         buttonStyles[variant],
-        shouldActAsChild && children.props.stylex,
-        "stylex" in buttonProps && buttonProps.stylex
+        shouldActAsChild && children.props.style,
+        (buttonProps as any).style
       ),
-      ...(disabled && { "aria-disabled": true }),
     },
-    leftIcon ? <span {...stylex.props(iconStyles)}>{leftIcon}</span> : null,
+    leftIcon ? (
+      <span {...stylex.props(iconStyles.left)}>{leftIcon}</span>
+    ) : null,
     shouldActAsChild ? children.props.children : children,
-    rightIcon ? <span className={styles.rightIcon}>{rightIcon}</span> : null
+    rightIcon ? (
+      <span {...stylex.props(iconStyles.right)}>{rightIcon}</span>
+    ) : null
   );
 }) as React.FC<ButtonProps>;
 
 export default Button;
-
-const buttonStyles = stylex.create({
-  base: {},
-  primary: {},
-  secondary: {},
-});
-
-const iconStyles = stylex.create({});
