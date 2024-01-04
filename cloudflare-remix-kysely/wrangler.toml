@@ -1,0 +1,5 @@
+[[d1_databases]]
+binding = "DB"
+database_name = "mydb"
+database_id = "<database_id>"
+migrations_dir = ".wrangler/migrations"
