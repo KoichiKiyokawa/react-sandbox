@@ -1,11 +1,11 @@
-import { LoaderFunction } from "@remix-run/cloudflare";
+import { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
-import { db } from "~/lib/db";
+import { UserService } from "~/features/user/service.server";
 
-export const loader = (async () => {
-  const users = await db.selectFrom("User").selectAll().execute();
+export const loader = async ({ context }: LoaderFunctionArgs) => {
+  const users = await new UserService(context).findAll();
   return { users };
-}) satisfies LoaderFunction;
+};
 
 export default function UserIndexPage() {
   const { users } = useLoaderData<typeof loader>();

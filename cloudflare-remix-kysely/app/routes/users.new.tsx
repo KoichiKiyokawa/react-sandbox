@@ -1,27 +1,11 @@
-import { ActionFunction } from "@remix-run/cloudflare";
-import { z } from "zod";
-import { db } from "~/lib/db";
-import { randomUUID } from "crypto";
+import { ActionFunctionArgs } from "@remix-run/cloudflare";
+import { UserService } from "~/features/user/service.server";
 
-const CreateUserSchema = z.object({
-  email: z.string().email(),
-  name: z.string().min(3).max(32),
-});
+export const action = async ({ request, context }: ActionFunctionArgs) => {
+  const userService = new UserService(context);
 
-export const action = (async ({ request }) => {
-  const res = CreateUserSchema.safeParse(
-    Object.fromEntries(await request.formData())
-  );
-  if (!res.success)
-    return {
-      error: "Invalid form data",
-    };
-
-  await db
-    .insertInto("User")
-    .values({ id: randomUUID(), ...res.data })
-    .execute();
-}) satisfies ActionFunction;
+  await userService.create(Object.fromEntries(await request.formData()));
+};
 
 export default function UserNewPage() {
   return <form action=""></form>;
