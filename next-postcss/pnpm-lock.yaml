@@ -35,6 +35,9 @@ dependencies:
   postcss-preset-env:
     specifier: ^9.4.0
     version: 9.4.0(postcss@8.4.35)
+  postcss-pxtorem:
+    specifier: ^6.1.0
+    version: 6.1.0(postcss@8.4.35)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -3030,6 +3033,14 @@ packages:
     dependencies:
       postcss: 8.4.35
       postcss-selector-parser: 6.0.15
+    dev: false
+
+  /postcss-pxtorem@6.1.0(postcss@8.4.35):
+    resolution: {integrity: sha512-ROODSNci9ADal3zUcPHOF/K83TiCgNSPXQFSbwyPHNV8ioHIE4SaC+FPOufd8jsr5jV2uIz29v1Uqy1c4ov42g==}
+    peerDependencies:
+      postcss: ^8.0.0
+    dependencies:
+      postcss: 8.4.35
     dev: false
 
   /postcss-replace-overflow-wrap@4.0.0(postcss@8.4.35):

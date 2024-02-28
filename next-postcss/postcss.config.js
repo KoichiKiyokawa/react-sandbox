@@ -7,6 +7,7 @@ module.exports = {
       path: [path.resolve(__dirname, "styles")],
     },
     "postcss-mixins": {},
+    "postcss-pxtorem": {},
     "postcss-preset-env": {
       autoprefixer: {
         flexbox: "no-2009",

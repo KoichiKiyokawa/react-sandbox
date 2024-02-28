@@ -1,7 +1,8 @@
-@import url("variables.css");
-@import url("mixins.css");
+@import "variables.css";
+@import "mixins.css";
 
 .main {
+  margin-top: 20px;
   .title {
     max-width: 30px;
     overflow-x: scroll;
