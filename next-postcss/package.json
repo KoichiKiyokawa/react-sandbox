@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently 'next dev' \"tcm -w -p 'app/**/*.module.css' .\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint && stylelint '**/*.css'"
@@ -12,6 +12,7 @@
     "@types/node": "20.11.21",
     "@types/react": "18.2.60",
     "@types/react-dom": "18.2.19",
+    "concurrently": "^8.2.2",
     "eslint": "8.57.0",
     "eslint-config-next": "14.1.0",
     "next": "14.1.0",
@@ -25,6 +26,7 @@
     "stylelint": "^16.2.1",
     "stylelint-config-property-sort-order-smacss": "^10.0.0",
     "stylelint-config-standard": "^36.0.0",
+    "typed-css-modules": "^0.9.1",
     "typescript": "5.3.3"
   }
 }
