@@ -1,0 +1,16 @@
+@import url("variables.css");
+@import url("mixins.css");
+
+.main {
+  .title {
+    font-size: 20px;
+    overflow-x: scroll;
+    max-width: 30px;
+
+    @mixin hide-scrollbar;
+
+    @media (--medium-viewport) {
+      font-size: 32px;
+    }
+  }
+}
