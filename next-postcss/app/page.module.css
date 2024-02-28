@@ -3,9 +3,9 @@
 
 .main {
   .title {
-    font-size: 20px;
-    overflow-x: scroll;
     max-width: 30px;
+    overflow-x: scroll;
+    font-size: 20px;
 
     @mixin hide-scrollbar;
 

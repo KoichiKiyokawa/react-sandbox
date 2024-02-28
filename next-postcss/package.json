@@ -22,6 +22,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "stylelint": "^16.2.1",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
     "stylelint-config-standard": "^36.0.0",
     "typescript": "5.3.3"
   }
