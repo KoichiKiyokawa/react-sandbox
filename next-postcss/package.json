@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently 'next dev' \"tcm -w -p 'app/**/*.module.css' .\"",
+    "dev": "concurrently 'next dev' \"tcm -w -p 'app/**/*.module.css' -o generated\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint && stylelint '**/*.css'"
