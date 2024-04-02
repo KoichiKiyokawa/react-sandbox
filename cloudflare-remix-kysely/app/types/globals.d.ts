@@ -1,3 +1,5 @@
+import { type dbClient } from "../lib/db.server";
+
 declare namespace NodeJS {
   interface ProcessEnv {
     NODE_ENV: "development" | "production";
@@ -9,7 +11,6 @@ declare module "@remix-run/cloudflare" {
     env: {
       DB: D1Database;
     };
+    db: ReturnType<typeof dbClient>;
   }
 }
-
-export {};
