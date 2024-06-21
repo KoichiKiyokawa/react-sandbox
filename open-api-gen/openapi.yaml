@@ -29,6 +29,18 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int64
+                  message:
+                    type: string
     post:
       summary: Create an user
       operationId: createUser
