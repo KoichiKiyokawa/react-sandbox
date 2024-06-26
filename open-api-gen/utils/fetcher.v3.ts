@@ -14,7 +14,7 @@ type StrictTupleKey = ArgumentsTuple | null | undefined | false;
 type StrictKey = StrictTupleKey | (() => StrictTupleKey);
 
 export function useSWRWrapper<Data, Error, SWRKey extends StrictKey>(
-  key: SWRKey,
+  key: SWRKey | null,
   fetcher: (key: SWRKey) => Promise<{ data?: Data; error?: Error }>,
   config?: SWRConfiguration
 ) {
@@ -30,6 +30,8 @@ export function useSWRWrapper<Data, Error, SWRKey extends StrictKey>(
   );
 }
 
+type AdditionalInit = { swrConfig?: SWRConfiguration; shouldFetch?: boolean };
+
 export function useFetcher<
   Method extends Uppercase<HttpMethod>,
   Path extends PathsWithMethod<paths, Lowercase<Method>>,
@@ -38,11 +40,11 @@ export function useFetcher<
   method: Method,
   path: Path,
   ...init: HasRequiredKeys<Init> extends never
-    ? [(Init & { swrConfig?: SWRConfiguration } & { [key: string]: unknown })?] // note: the arbitrary [key: string]: addition MUST happen here after all the inference happens (otherwise TS can’t infer if it’s required or not)
-    : [Init & { swrConfig?: SWRConfiguration } & { [key: string]: unknown }]
+    ? [(Init & AdditionalInit & { [key: string]: unknown })?] // note: the arbitrary [key: string]: addition MUST happen here after all the inference happens (otherwise TS can’t infer if it’s required or not)
+    : [Init & AdditionalInit & { [key: string]: unknown }]
 ) {
   return useSWRWrapper(
-    [path, ...init],
+    init?.[0]?.shouldFetch === false ? null : [path, ...init],
     ([path, ...args]) =>
       (client[method] as any)(path, ...args) as Promise<
         FetchResponse<paths[Path][Lowercase<Method>], Init, "application/json">
@@ -62,5 +64,4 @@ const useMain = () => {
   const { data, error } = useFetcher("GET", "/users", {
     params: { query: { per: 10, page: 0 } },
   });
-  const res = useFetcher("GET", "/users/{id}", { params: { path: { id: 1 } } });
 };
