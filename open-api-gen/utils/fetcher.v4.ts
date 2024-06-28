@@ -74,9 +74,16 @@ export function useFetcher<
   }
 ) {
   const { pause = false, swrConfig, ...requestOptions } = options;
-  const [method, path] = methodWithPath.split(" ");
+  const [method, path] = methodWithPath.split(" ", 1);
   return useSWR<Data, Error>(
-    pause ? null : [path, requestOptions.params],
+    pause
+      ? null
+      : [
+          path,
+          // @ts-expect-error `path` field conditionally exists
+          requestOptions.params?.path,
+          requestOptions.params?.query,
+        ].filter(Boolean),
     () => {
       // @ts-expect-error
       const func = client[method];

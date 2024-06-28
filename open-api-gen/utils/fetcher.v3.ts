@@ -4,25 +4,25 @@ import {
   HttpMethod,
   PathsWithMethod,
 } from "openapi-typescript-helpers";
-import useSWR, { SWRConfiguration } from "swr";
+import useSWR, { BareFetcher, SWRConfiguration } from "swr";
 import { paths } from "../types/__generated";
 
 const client = createClient<paths>();
 
-type ArgumentsTuple = readonly [any, ...unknown[]];
-type StrictTupleKey = ArgumentsTuple | null | undefined | false;
-type StrictKey = StrictTupleKey | (() => StrictTupleKey);
-
-export function useSWRWrapper<Data, Error, SWRKey extends StrictKey>(
-  key: SWRKey | null,
-  fetcher: (key: SWRKey) => Promise<{ data?: Data; error?: Error }>,
-  config?: SWRConfiguration
+export function useSWRWrapper<
+  Data,
+  Error,
+  Key extends [keyof paths, ...unknown[]]
+>(
+  key: Key | null,
+  fetcher: (key: Key) => Promise<{ data?: Data; error?: Error }>,
+  config?: SWRConfiguration<Data, Error>
 ) {
-  return useSWR<Data | undefined, Error>(
+  return useSWR<Data, Error>(
     key,
-    async (key: SWRKey) => {
+    async (key: Key) => {
       const { data, error } = await fetcher(key);
-      if (error) throw error;
+      if (data === undefined) throw error;
 
       return data;
     },
@@ -56,9 +56,12 @@ const useMain = () => {
   const per = 1;
   const page = 1;
   const res = useSWRWrapper(
-    ["/users", per, page] as const,
+    ["/users", per, page],
     async ([path, per_, page_]) =>
-      client.GET(path, { params: { query: { per: per_, page: page_ } } })
+      client.GET(path, {
+        params: { query: { per: per_, page: page_ } },
+      }),
+    {}
   );
 
   const { data, error } = useFetcher("GET", "/users", {
