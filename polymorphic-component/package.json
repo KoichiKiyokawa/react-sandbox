@@ -10,24 +10,24 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@types/node": "20.8.9",
-    "@types/react": "18.2.33",
-    "@types/react-dom": "18.2.14",
-    "eslint": "8.52.0",
-    "eslint-config-next": "14.0.0",
-    "next": "14.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.2.2"
+    "@types/node": "20.14.9",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.4",
+    "next": "14.2.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.5.2"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "6.1.4",
-    "@testing-library/react": "14.0.0",
-    "@vitejs/plugin-react-swc": "3.4.0",
+    "@testing-library/jest-dom": "6.4.6",
+    "@testing-library/react": "14.3.1",
+    "@vitejs/plugin-react-swc": "3.7.0",
     "clsx": "^2.0.0",
     "happy-dom": "^12.10.3",
-    "sass": "1.69.5",
-    "type-fest": "4.6.0",
+    "sass": "1.77.6",
+    "type-fest": "4.20.1",
     "vitest": "0.34.6"
   },
   "prettier": {
