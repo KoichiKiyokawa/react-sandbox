@@ -21,7 +21,7 @@
     "kysely": "0.27.1",
     "kysely-d1": "^0.3.0",
     "miniflare": "3.20231218.0",
-    "prisma-kysely": "1.7.1",
+    "prisma-kysely": "1.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "zod": "3.22.4"
@@ -39,7 +39,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prisma": "5.7.1",
+    "prisma": "5.22.0",
     "typescript": "^5.1.0",
     "wrangler": "^3.8.0"
   },

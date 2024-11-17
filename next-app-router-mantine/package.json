@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@mantine/core": "7.1.2",
-    "@prisma/client": "5.4.2",
+    "@prisma/client": "5.22.0",
     "@tabler/icons-react": "2.39.0",
     "@types/node": "20.8.4",
     "@types/react": "18.2.28",
@@ -19,7 +19,7 @@
     "eslint": "8.51.0",
     "eslint-config-next": "13.5.4",
     "next": "13.5.4",
-    "prisma": "5.4.2",
+    "prisma": "5.22.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.2.2"
