@@ -83,6 +83,7 @@ export function useFetcher<
           // @ts-expect-error `path` field conditionally exists
           requestOptions.params?.path,
           requestOptions.params?.query,
+          requestOptions.headers,
         ].filter(Boolean),
     () => {
       // @ts-expect-error
