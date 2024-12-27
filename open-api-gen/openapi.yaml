@@ -45,6 +45,7 @@ paths:
       summary: Create an user
       operationId: createUser
       requestBody:
+        required: true
         content:
           application/json:
             schema:

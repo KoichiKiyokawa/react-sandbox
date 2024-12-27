@@ -4,7 +4,7 @@ import {
   HttpMethod,
   PathsWithMethod,
 } from "openapi-typescript-helpers";
-import useSWR, { BareFetcher, SWRConfiguration } from "swr";
+import useSWR, { SWRConfiguration } from "swr";
 import { paths } from "../types/__generated";
 
 const client = createClient<paths>();
