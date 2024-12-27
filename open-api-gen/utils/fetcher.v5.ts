@@ -57,4 +57,8 @@ function Component() {
   const {} = useSWRWrapper(["/users", per, page], ([path]) =>
     client.GET(path, { params: { query: { per, page } } })
   );
+
+  const {} = useSWR(["/users" as const, per, page], ([path]) =>
+    client.GET(path, { params: { query: { per, page } } })
+  );
 }
