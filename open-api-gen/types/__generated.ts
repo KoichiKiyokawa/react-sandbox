@@ -51,8 +51,8 @@ export type components = {
             id?: number;
             /** @example john */
             username?: string;
-            firstName?: string;
-            lastName?: string;
+            first_name?: string;
+            last_name?: string;
             email?: string;
             password?: string;
             phone?: string;
@@ -60,7 +60,7 @@ export type components = {
              * Format: int32
              * @description User Status
              */
-            userStatus?: number;
+            user_status?: number;
         };
     };
     responses: never;

@@ -4,23 +4,30 @@ import useSWRMutation, { SWRMutationConfiguration } from "swr/mutation";
 import useSWRInfinite, {
   SWRInfiniteConfiguration,
   SWRInfiniteKeyLoader,
-  SWRInfiniteResponse,
 } from "swr/infinite";
 import { paths } from "../types/__generated";
+import camelcaseKeys from "camelcase-keys";
 
 const client = createClient<paths>();
 
 function $queryKey<Method extends keyof paths[Path], Path extends keyof paths>(
-  _method: Method,
+  method: Method,
   path: Path,
-  options: FetchOptions<paths[Path][Method]>
+  { tags, ...options }: FetchOptions<paths[Path][Method]> & { tags?: string[] }
 ) {
-  return [path, options] as const;
+  return { method, path, options, tags } as const;
 }
 
-type ResultPromise<Data, Error> = Promise<
-  { data: Data; error?: never } | { data?: never; error: Error }
->;
+type Result<Data, Error> =
+  | { data: Data; error?: never }
+  | { data?: never; error: Error };
+
+type ResultPromise<Data, Error> = Promise<Result<Data, Error>>;
+
+function toThrowable<Data, Error>(res: Result<Data, Error>) {
+  if (res.data !== undefined) return res.data as Data;
+  throw res.error;
+}
 
 export function useSWRWithResultPromise<Data, Error, Key extends SWRKey>(
   key: Key | null,
@@ -29,12 +36,7 @@ export function useSWRWithResultPromise<Data, Error, Key extends SWRKey>(
 ) {
   return useSWR<Data, Error>(
     key,
-    async (key: Key) => {
-      const { data, error } = await fetcher(key);
-      if (data === undefined) throw error;
-
-      return data;
-    },
+    (key: Key) => fetcher(key).then(toThrowable),
     config
   );
 }
@@ -50,12 +52,7 @@ export function useSWRInfiniteWithResultPromise<
 ) {
   return useSWRInfinite<Data, Error>(
     getKey,
-    async (key) => {
-      const { data, error } = await fetcher(key);
-      if (data === undefined) throw error;
-
-      return data;
-    },
+    (key) => fetcher(key).then(toThrowable),
     config
   );
 }
@@ -71,7 +68,7 @@ export function useSWRMutationWithResultPromise<
 ) {
   return useSWRMutation<Data, Error, Key>(
     key,
-    async (path, data) => {
+    async (key) => {
       const { data, error } = await fetcher(key);
       if (data === undefined) throw error;
 
@@ -81,15 +78,28 @@ export function useSWRMutationWithResultPromise<
   );
 }
 
+async function action() {
+  const res = await client.request("get", "/users", {
+    params: { query: { per: 1, page: 1 } },
+  });
+}
+
 function Component() {
   const per = 1;
   const page = 1;
   const isPending = false;
-  const { data } = useSWRWithResultPromise(
+  const { data, error } = useSWRWithResultPromise(
     isPending
       ? null
       : $queryKey("get", "/users", { params: { query: { per, page } } }),
-    (args) => client.GET(...args)
+    ({ method, path, options }) =>
+      client
+        .request(method, path, options)
+        .then((res) =>
+          res.data !== undefined
+            ? { data: camelcaseKeys(res.data), error: undefined }
+            : { data: undefined, error: res.error }
+        )
   );
 
   const { data: data2 } = useSWRInfiniteWithResultPromise(
