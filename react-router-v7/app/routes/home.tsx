@@ -8,8 +8,9 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export const headers: Route.HeadersFunction = () =>
-  new HeaderBuilder().cacheControl({ maxAge: "1m" }).build();
+export const headers: Route.HeadersFunction = () => ({
+  "Cache-Control": "max-age=60",
+});
 
 export default function Home() {
   return <Welcome />;
