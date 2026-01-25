@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^4.0.10",
-    "graphql": "16.6.0",
+    "graphql": "16.12.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
