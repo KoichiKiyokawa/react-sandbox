@@ -9,30 +9,30 @@
     "deploy": "gcloud app deploy --project kiyo-dev-944"
   },
   "dependencies": {
-    "@chakra-ui/icons": "2.0.17",
-    "@chakra-ui/react": "2.4.9",
-    "@emotion/react": "11.10.5",
-    "@emotion/styled": "11.10.5",
+    "@chakra-ui/icons": "2.2.4",
+    "@chakra-ui/react": "2.10.9",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
     "@prisma/client": "4.5.0",
     "framer-motion": "6.5.1",
-    "next": "12.3.4",
-    "next-runtime": "2.4.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "12.3.7",
+    "next-runtime": "2.4.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "rhodash": "2.2.0"
   },
   "devDependencies": {
-    "@types/node": "18.11.18",
-    "@types/react": "18.0.27",
-    "esbuild": "0.17.5",
-    "esbuild-register": "3.4.2",
-    "eslint": "8.33.0",
-    "eslint-config-next": "12.3.4",
+    "@types/node": "18.19.130",
+    "@types/react": "18.3.28",
+    "esbuild": "0.27.3",
+    "esbuild-register": "3.6.0",
+    "eslint": "8.57.1",
+    "eslint-config-next": "12.3.7",
     "prisma": "4.5.0",
     "typescript": "4.9.5"
   },
   "prisma": {
     "seed": "node -r esbuild-register prisma/seed.ts"
   },
-  "packageManager": "pnpm@7.26.3"
+  "packageManager": "pnpm@7.33.7"
 }
