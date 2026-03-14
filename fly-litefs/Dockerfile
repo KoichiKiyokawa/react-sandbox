@@ -44,7 +44,7 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 # To run prisma command in production
 COPY --from=builder /app/prisma ./prisma
 
-COPY --from=flyio/litefs:0.4 /usr/local/bin/litefs /usr/local/bin/litefs
+COPY --from=flyio/litefs:0.5 /usr/local/bin/litefs /usr/local/bin/litefs
 COPY config/litefs.yml /etc/litefs.yml
 
 RUN apk --no-cache add ca-certificates fuse3
