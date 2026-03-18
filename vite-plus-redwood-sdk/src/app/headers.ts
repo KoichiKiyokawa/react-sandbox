@@ -3,6 +3,11 @@ import { RouteMiddleware } from "rwsdk/router";
 export const setCommonHeaders =
   (): RouteMiddleware =>
   ({ response, rw: { nonce } }) => {
+    if (import.meta.env.VITE_IS_DEV_SERVER) {
+      // Avoid stale RSC/client module metadata during normal reloads in dev.
+      response.headers.set("Cache-Control", "no-store, must-revalidate");
+    }
+
     if (!import.meta.env.VITE_IS_DEV_SERVER) {
       // Forces browsers to always use HTTPS for a specified time period (2 years)
       response.headers.set(
@@ -26,6 +31,6 @@ export const setCommonHeaders =
     // Defines trusted sources for content loading and script execution:
     response.headers.set(
       "Content-Security-Policy",
-      `default-src 'self'; script-src 'self' 'unsafe-eval' 'nonce-${nonce}' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'self'; frame-src 'self' https://challenges.cloudflare.com; object-src 'none';`,
+      `default-src 'self'; script-src 'self' 'unsafe-eval' 'nonce-${nonce}' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' ws://127.0.0.1:5173 ws://localhost:5173 http://127.0.0.1:5173 http://localhost:5173; frame-ancestors 'self'; frame-src 'self' https://challenges.cloudflare.com; object-src 'none';`,
     );
   };

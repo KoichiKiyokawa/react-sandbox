@@ -12,6 +12,17 @@ export const Document: React.FC<{ children: React.ReactNode }> = ({
         content="RedwoodSDK, Drizzle, and SQLite powered todo app."
       />
       <title>Todo Flow</title>
+      <link
+        rel="icon"
+        href="/favicon-light.svg"
+        media="(prefers-color-scheme: light)"
+      />
+      <link
+        rel="icon"
+        href="/favicon-dark.svg"
+        media="(prefers-color-scheme: dark)"
+      />
+      <link rel="icon" href="/favicon-light.svg" />
       <link rel="stylesheet" href={appStyles} />
       <link rel="modulepreload" href="/src/client.tsx" />
     </head>

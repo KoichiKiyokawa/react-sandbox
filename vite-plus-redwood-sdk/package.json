@@ -25,6 +25,9 @@
     "vp:preview": "vp preview",
     "lint": "vp lint .",
     "format": "vp fmt .",
+    "browser:init": "playwright-cli install",
+    "browser:list": "playwright-cli list",
+    "browser:close": "playwright-cli close-all",
     "db:generate": "drizzle-kit generate",
     "db:migrate:local": "wrangler d1 migrations apply DB --local",
     "db:migrate:remote": "wrangler d1 migrations apply DB"
@@ -39,11 +42,13 @@
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.26.1",
     "@cloudflare/workers-types": "4.20260307.1",
+    "@playwright/cli": "^0.1.1",
     "@tailwindcss/vite": "^4.2.2",
     "@types/node": "~25.3.5",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "drizzle-kit": "^0.31.10",
+    "playwright": "^1.58.2",
     "tailwindcss": "^4.2.2",
     "typescript": "5.9.3",
     "vite": "7.3.1",
