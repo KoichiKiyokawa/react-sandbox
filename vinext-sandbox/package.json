@@ -19,8 +19,8 @@
     "@libsql/client": "^0.17.0",
     "drizzle-orm": "^0.45.1",
     "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.0",
@@ -28,15 +28,16 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@vitejs/plugin-rsc": "0.5.20",
+    "@vitejs/plugin-rsc": "0.5.21",
     "babel-plugin-react-compiler": "1.0.0",
     "dotenv": "^17.3.1",
     "drizzle-kit": "^0.31.9",
+    "esbuild": "^0.27.3",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
     "typescript": "^5",
-    "vinext": "^0.0.5",
-    "vite": "^7.3.1"
+    "vinext": "^0.0.30",
+    "vite": "^8.0.0"
   },
   "type": "module"
 }
