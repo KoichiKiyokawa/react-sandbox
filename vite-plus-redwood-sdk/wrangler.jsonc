@@ -1,0 +1,39 @@
+{
+  // Schema reference for wrangler configuration
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  // Name of your worker
+  "name": "vite-plus-redwood-sdk",
+
+  // Entry point for your worker
+  "main": "src/worker.tsx",
+
+  // Compatibility settings
+  "compatibility_date": "2025-08-21",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Assets configuration
+  "assets": {
+    "binding": "ASSETS"
+  },
+
+  // Observability settings
+  "observability": {
+    "enabled": true
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "todo-app",
+      "database_id": "11111111-1111-1111-1111-111111111111",
+      "preview_database_id": "DB",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  // Environment variables
+  "vars": {
+    // Add your environment variables here
+  }
+}

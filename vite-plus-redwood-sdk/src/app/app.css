@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --font-serif: "Fraunces", serif;
+}
+
+@layer base {
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(201, 95, 50, 0.18), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(47, 125, 92, 0.16), transparent 28%),
+      #f4efe7;
+  }
+}

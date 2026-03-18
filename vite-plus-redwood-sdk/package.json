@@ -1,0 +1,60 @@
+{
+  "name": "vite-plus-redwood-sdk",
+  "version": "1.0.0",
+  "description": "A bare-bones RedwoodSDK starter",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev",
+    "dev:init": "rw-scripts dev-init",
+    "preview": "vite preview",
+    "worker:run": "rw-scripts worker-run",
+    "clean": "pnpm run clean:vite",
+    "clean:vite": "rm -rf ./node_modules/.vite",
+    "release": "rw-scripts ensure-deploy-env && pnpm run clean && pnpm run build && wrangler deploy",
+    "generate": "rw-scripts ensure-env && wrangler types --include-runtime false",
+    "check": "pnpm run generate && pnpm run types",
+    "types": "tsc",
+    "vp:build": "vp build",
+    "vp:dev": "vp dev",
+    "vp:preview": "vp preview",
+    "lint": "vp lint .",
+    "format": "vp fmt .",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "db:migrate:remote": "wrangler d1 migrations apply DB"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-server-dom-webpack": "19.2.4",
+    "rwsdk": "1.0.2"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.26.1",
+    "@cloudflare/workers-types": "4.20260307.1",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/node": "~25.3.5",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "drizzle-kit": "^0.31.10",
+    "tailwindcss": "^4.2.2",
+    "typescript": "5.9.3",
+    "vite": "7.3.1",
+    "vite-plus": "^0.1.12",
+    "wrangler": "4.71.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "workerd"
+    ]
+  }
+}
