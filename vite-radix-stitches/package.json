@@ -11,7 +11,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@radix-ui/react-popover": "1.0.3",
+    "@radix-ui/react-popover": "1.1.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -24,7 +24,7 @@
     "@storybook/addon-links": "^6.5.9",
     "@storybook/builder-vite": "^0.4.0",
     "@storybook/react": "^6.5.9",
-    "@storybook/testing-library": "^0.0.13",
+    "@storybook/testing-library": "^0.2.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
@@ -34,5 +34,5 @@
     "vite": "^3.0.0",
     "vite-tsconfig-paths": "3.6.0"
   },
-  "packageManager": "pnpm@7.26.3"
+  "packageManager": "pnpm@7.33.7"
 }
